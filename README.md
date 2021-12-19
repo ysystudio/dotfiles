@@ -6,28 +6,26 @@ _Use it at your own risk._
 
 - [macOS](./devices/mac.md)
 - [Linux Ubuntu](./devices/ubuntu.md)
-- [iPadOS](./devices/ipad.md)
-- [iOS](./devices/iphone.md)
 
 ## Folder Policy
 
-All code projects are managed in `~/dev`, common folders:
+All code projects are managed in `~/dev/misc/dotfils`, common folders:
 
 ```sh
-~/dev/changkun.de
-~/dev/golang.design
-~/dev/godev # golang.org repositories
-~/dev/wild  # code for temporary use
+iterm2/ # iterm2 config
+OS/ # general os setting
+nvim/ # neovim config
+zsh/ #zsh config with zinit
+
 ```
 
-Managing multiple go versions:
+Two install script:
 
 ```sh
-~/goes/go       # just an alias to an inused go version
-~/goes/go1.17.1 # a specific version
+mac-install.sh   
+ubuntu-install.sh  
 ```
-
 
 ## License
 
-MIT | Copyright &copy; 2016-2021 [Changkun Ou](https://changkun.de)
+MIT | Copyright &copy; 2021-2022
