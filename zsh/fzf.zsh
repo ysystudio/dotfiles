@@ -4,7 +4,7 @@ export FZF_DEFAULT_OPTS='--bind=ctrl-t:top,change:top --bind ctrl-j:down,ctrl-k:
 #export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_DEFAULT_COMMAND='fd'
 export FZF_CTRL_T_COMMAND="git ls-files --cached --others --exclude-standard | fd --typy f --type 1 $FD_OPTIONS"
-ezport FZF_ALT_C_COMMAND="fd --type d $FD_OPTIONS"
+export FZF_ALT_C_COMMAND="fd --type d $FD_OPTIONS"
 export FZF_COMPLETION_TRIGGER='\'
 
 export FZF_TMUX=1

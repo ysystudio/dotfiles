@@ -1,55 +1,52 @@
-# this script setup my personal ubuntu setup
-# the setup workflow has been used for the following purpose:
-# - digital ocean
-# - personal desktop
-# - perf work desktop
+# WARNING: PLEASE DO NOT USE THIS SCRIPT, JUST MANUALLY FOLLOW THE STEPS
+################# support tools install#################
+brew install wget curl autojump fzf git lua fd lazygit ranger zsh zinit node youtube-dl tmux cmake cmake-docs 
+sudo port rmtrash
+# To install useful key bindings and fuzzy completion:
+# $(brew --prefix)/opt/fzf/install
 
-## install basic tools, grouped line by line
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y ssh git vim zsh tmux docker.io
-sudo apt install -y build-essential clang cmake libboost-dev libssl-dev
-sudo apt install -y linux-tools-$(uname -r) linux-tools-generic graphviz
-sudo apt install -y redis wine64
-sudo apt install -y texlive-full pandoc nodejs npm 
-sudo apt install -y httpie vegeta kubectl doctl hugo
-sudo apt install -y xbindkeys xbindkeys-config xclip
-sudo apt install -y tree youtube-dl
-
-## install `oh-my-zsh`
+##############install zshrc ############################
 cd ~/dev/dotfiles
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 mv ~/.zshrc ~/.zshrc_old
-ln -s zsh/zshrc-linux.conf ~/.zshrc
-ln zsh/changkun.zsh-theme ~/.oh-my-zsh/themes/
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+ln -s zsh/zshrc ~/.zshrc
 source ~/.zshrc
 
-## install python
-apt install -y python3-pip
-pip3 install virtualenv scipy numpy pandas jupyter tensorflow scikit-learn matplotlib seaborn pillow pyyaml requests
+############# install neovim ############################
+sudo port install neovim
+# gitui required by tui git operations
+# ripgrep required by telescope word search engine
+# ripgrep required by telescope-zoxide
+# sqlite required by telescope-frecency
+# fd required by telescope file search engine
+# yarn required by markdown preview
+# nerd-fonts-ibm-plex-mono required by devicons
+brew install git gitui zoxide ripgrep sqlite fd yarn 
 
-# install golang
-GOVERSION=$(curl -s 'https://golang.org/dl/?mode=json' | grep '"version"' | sed 1q | awk '{print $2}' | tr -d ',"')  # get latest go version
-GOARCH=$(if [[ $(uname -m) == "x86_64" ]] ; then echo amd64; else echo $(uname -m); fi) # get either amd64 or arm64 (darwin/m1)
-wget https://dl.google.com/go/$GOVERSION.linux-$GOARCH.tar.gz
-tar xvf $GOVERSION.linux-$GOARCH.tar.gz && rm $GOVERSION.linux-$GOARCH.tar.gz
-mv ~/goes/go ~/goes/$GOVERSION
-ln -s ~/goes/$GOVERSION ~/goes/go
-source ~/.zshrc
+# nodejs, neovim-git required by copilot.
+# neovim version >= 0.6
+brew install nodejs neovim-git
 
-# install vim config
-cd ~/dev/dotfiles
-ln vim/vimrc.config ~/.vimrc
-mkdir -p ~/.vim/colors/
-ln vim/colors/jellybeans.vim ~/.vim/colors/jellybeans.vim
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PlugInstall +qall
-~/.vim/plugged/YouCompleteMe/install.py --go-completer
+# for neovim python module
+pip install neovim --user
 
-# install tmux config
-ln tmux/tmux.conf ~/.tmux.conf
-ln tmux/tmux.local.conf ~/.tmux.conf.local
+# clone
+git clone https://github.com/ayamir/nvimdots ~/.config/nvim
+# cd ~/.local/share/nvim/site/pack/packer/opt/fzy-lua-native and make all to recompile
+# original bin for 10.15
 
-# fonts
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts && ./install.sh && cd .. && rm -rf fonts
+# sync plugins(maybe need multiple times)
+nvim +PackerSync
+#如果需要使用coc分支的：
+# cd ~/.config/nvim & git switch coc
+
+
+#################### alaritty - fastest terminal####################
+apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+
+sudo add-apt-repository ppa:mmstick76/alacritty
+sudo apt install alacritty
+
+#################### fonts###########################################
+# If you are using powerlevel10k, p10k configure can install the recommended font for you. 
+# or you can download the nerd font from:https://www.nerdfonts.com/font-downloads
+

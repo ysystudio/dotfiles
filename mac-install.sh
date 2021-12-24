@@ -1,6 +1,6 @@
 # WARNING: PLEASE DO NOT USE THIS SCRIPT, JUST MANUALLY FOLLOW THE STEPS
 
-# basic development environment
+########## basic development environment###################
 xcode-select --install
 # macport install
 # go to official https://www.macports.org/install.php download your macos related dmg
@@ -18,9 +18,7 @@ sudo port rmtrash
 # To install useful key bindings and fuzzy completion:
 # $(brew --prefix)/opt/fzf/install
 ##############install zshrc ###########################
-cd ~/dev/dotfiles
-mv ~/.zshrc ~/.zshrc_old
-ln -s zsh/zshrc-mac.conf ~/.zshrc
+ln -s ~/dev/dotfiles/zsh/zshrc ~/.zshrc
 source ~/.zshrc
 
 ############# install neovim config#####################
@@ -32,7 +30,7 @@ sudo port install neovim
 # fd required by telescope file search engine
 # yarn required by markdown preview
 # nerd-fonts-ibm-plex-mono required by devicons
-brew install git gitui zoxide ripgrep sqlite fd yarn nerd-fonts-ibm-plex-mono
+brew install git gitui zoxide ripgrep sqlite fd yarn 
 
 # nodejs, neovim-git required by copilot.
 # neovim version >= 0.6
@@ -51,15 +49,12 @@ nvim +PackerSync
 #如果需要使用coc分支的：
 # cd ~/.config/nvim & git switch coc
 
-################## install tmux config########################
-ln tmux/tmux.conf ~/.tmux.conf
-ln tmux/tmux.local.conf ~/.tmux.conf.local
 
 #################### fonts ###################################
-# If you are using iTerm2 or Termux, p10k configure can install the recommended font for you. 
-# Simply answer Yes when asked whether to install Meslo Nerd Font.
-brew install font-go-mono-nerd-font
+# If you are using powerlevel10k, p10k configure can install the recommended font for you. 
+# or you can install the nerd font 
+brew tap homebrew/cask-fonts
+brew install font-FiraCode-nerd-font
 
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts && ./install.sh && cd .. && rm -rf fonts
+
 

@@ -1,5 +1,5 @@
-source /usr/local/opt/zinit/zinit.zsh
-
+# source /usr/local/opt/zinit/zinit.zsh
+source /home/linuxbrew/.linuxbrew/opt/zinit/zinit.zsh
 
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 zinit depth=1 lucid nocd for \
