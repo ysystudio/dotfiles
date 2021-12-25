@@ -1,7 +1,9 @@
-source /usr/local/opt/zinit/zinit.zsh
+# source /usr/local/opt/zinit/zinit.zsh
+source /opt/homebrew/opt/zinit/zinit.zsh
 #source /home/linuxbrew/.linuxbrew/opt/zinit/zinit.zsh
 
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+POWERLEVEL9K_INSTANT_PROMPT=off
 zinit depth=1 lucid nocd for \
     romkatv/powerlevel10k
 
@@ -32,7 +34,7 @@ zinit snippet OMZP::sublime
 zinit snippet OMZP::gitignore
 zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::zsh-interactive-cd
-zinit snippet OMZP::git
+#zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::common-aliases
 
