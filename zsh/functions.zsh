@@ -1,5 +1,5 @@
 function proxy_on () {
-    PORT="49473"
+    PORT=$LOCAL_PROXY_PORT
     if [ -n "$1" ]
     then
       PORT="$1"
@@ -8,30 +8,33 @@ function proxy_on () {
     export HTTP_PROXY=http://127.0.0.1:$PORT
     export HTTPS_PROXY=http://127.0.0.1:$PORT
     echo -e "终端代理已开启。"
+    env | grep -i proxy
 }
 
 function proxy_off (){
     export HTTP_PROXY=""
     export HTTPS_PROXY=""
     echo -e "终端代理已关闭。"
+    env | grep -i proxy
 
 }
 
 function git_proxy_on (){
-    PORT="49473"
+    PORT=$LOCAL_PROXY_PORT
     if [ -n "$1" ]
     then
       PORT="$1"
     fi
     git config --global http.proxy http://127.0.0.1:$PORT
     git config --global https.proxy https://127.0.0.1:$PORT
+    git config -l | grep proxy 
 
 }
 
 function git_proxy_off (){
     git config --global --unset http.proxy
     git config --global --unset https.proxy
-
+    git config -l | grep proxy
 }
 function wifi_on (){
     nmcli c up "HUAWEI P40 Pro+"

@@ -1,6 +1,8 @@
 # source /usr/local/opt/zinit/zinit.zsh
-source /opt/homebrew/opt/zinit/zinit.zsh
+# source /opt/homebrew/opt/zinit/zinit.zsh
 #source /home/linuxbrew/.linuxbrew/opt/zinit/zinit.zsh
+
+source $ZI_HOME/zinit.zsh
 
 zinit depth=1 lucid nocd for \
     romkatv/powerlevel10k
