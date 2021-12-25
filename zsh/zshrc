@@ -12,6 +12,7 @@ source ~/dev/dotfiles/zsh/mappings.zsh
 source ~/dev/dotfiles/zsh/plugins.zsh
 source ~/dev/dotfiles/zsh/fzf.zsh
 source ~/dev/dotfiles/zsh/aliases.zsh
+source ~/dev/dotfiles/zsh/completion.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
