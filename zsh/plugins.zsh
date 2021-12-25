@@ -1,5 +1,5 @@
-# source /usr/local/opt/zinit/zinit.zsh
-source /home/linuxbrew/.linuxbrew/opt/zinit/zinit.zsh
+source /usr/local/opt/zinit/zinit.zsh
+#source /home/linuxbrew/.linuxbrew/opt/zinit/zinit.zsh
 
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 zinit depth=1 lucid nocd for \
@@ -8,7 +8,7 @@ zinit depth=1 lucid nocd for \
 # 快速目录跳转
 # [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-zinit light Aloxaf/fzf-tab
+#zinit light Aloxaf/fzf-tab
 zinit light paulirish/git-open
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-history-substring-search

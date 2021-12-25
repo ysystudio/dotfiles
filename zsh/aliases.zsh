@@ -27,4 +27,9 @@ alias nt="sh -c 'cd $(pwd); st' > /dev/null 2>&1 &"
 alias lo='lsof -p $(fps) +w'
 alias py="python"
 alias ni='nmcli'
-# alias rm='rmtrash'
+
+#for mac
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+alias sl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias rm='rmtrash'
+
