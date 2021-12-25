@@ -1,4 +1,4 @@
-function proxy_on() {
+function proxy_on () {
     PORT="49473"
     if [ -n "$1" ]
     then
@@ -17,6 +17,22 @@ function proxy_off (){
 
 }
 
+function git_proxy_on (){
+    PORT="49473"
+    if [ -n "$1" ]
+    then
+      PORT="$1"
+    fi
+    git config --global http.proxy http://127.0.0.1:$PORT
+    git config --global https.proxy https://127.0.0.1:$PORT
+
+}
+
+function git_proxy_off (){
+    git config --global --unset http.proxy
+    git config --global --unset https.proxy
+
+}
 function wifi_on (){
     nmcli c up "HUAWEI P40 Pro+"
     nmcli c down "Wired connection 1"
