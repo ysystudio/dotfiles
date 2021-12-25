@@ -2,13 +2,9 @@
 source /opt/homebrew/opt/zinit/zinit.zsh
 #source /home/linuxbrew/.linuxbrew/opt/zinit/zinit.zsh
 
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-POWERLEVEL9K_INSTANT_PROMPT=off
 zinit depth=1 lucid nocd for \
     romkatv/powerlevel10k
 
-# 快速目录跳转
-# [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 # if can not load , try to zinit delete OMZP::name and re do source .zshrc
 
 zinit light paulirish/git-open
