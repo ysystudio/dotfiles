@@ -13,6 +13,10 @@ source ~/.zshrc
 ln -s ~/dev/dotfiles/ranger ~/.config/ranger
 source ~/.config/ranger
 
+############## link lazygit###########################
+ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
+source ~/.config/lazygit
+
 ############# install neovim ############################
 sudo port install neovim
 # gitui required by tui git operations
