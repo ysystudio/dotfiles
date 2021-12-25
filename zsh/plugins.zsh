@@ -1,5 +1,5 @@
-# source /usr/local/opt/zinit/zinit.zsh
-source /opt/homebrew/opt/zinit/zinit.zsh
+source /usr/local/opt/zinit/zinit.zsh
+# source /opt/homebrew/opt/zinit/zinit.zsh
 #source /home/linuxbrew/.linuxbrew/opt/zinit/zinit.zsh
 
 zinit depth=1 lucid nocd for \

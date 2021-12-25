@@ -8,12 +8,14 @@ function proxy_on () {
     export HTTP_PROXY=http://127.0.0.1:$PORT
     export HTTPS_PROXY=http://127.0.0.1:$PORT
     echo -e "终端代理已开启。"
+    env | grep -i proxy 
 }
 
 function proxy_off (){
     export HTTP_PROXY=""
     export HTTPS_PROXY=""
     echo -e "终端代理已关闭。"
+    env | grep -i proxy
 
 }
 
@@ -25,12 +27,14 @@ function git_proxy_on (){
     fi
     git config --global http.proxy http://127.0.0.1:$PORT
     git config --global https.proxy https://127.0.0.1:$PORT
+    env | grep -i proxy
 
 }
 
 function git_proxy_off (){
     git config --global --unset http.proxy
     git config --global --unset https.proxy
+    env | grep -i proxy
 
 }
 function wifi_on (){
