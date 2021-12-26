@@ -8,7 +8,7 @@ function proxy_on () {
     export HTTP_PROXY=http://127.0.0.1:$PORT
     export HTTPS_PROXY=http://127.0.0.1:$PORT
     echo -e "终端代理已开启。"
-    env | grep -i proxy
+    env | grep -i proxy 
 }
 
 function proxy_off (){
@@ -73,4 +73,3 @@ function wifi_off (){
     export NO_PROXY="127.0.0.1,localhost"
     echo -e "终端代理已开启。"
     env | grep -i proxy
-}
