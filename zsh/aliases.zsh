@@ -26,10 +26,17 @@ alias nb='newsboat -r'
 alias nt="sh -c 'cd $(pwd); st' > /dev/null 2>&1 &"
 alias lo='lsof -p $(fps) +w'
 alias py="python"
-alias ni='nmcli'
 
-#for mac
+#if [ "$(uname)" == "Darwin" ]; then
+if [[ $OSTYPE == darwin* ]]; then
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-alias sl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias rm='rmtrash'
+alias sl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+fi
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+lias ni='nmcli'
+fi
+
+
 
