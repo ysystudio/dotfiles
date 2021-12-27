@@ -6,10 +6,16 @@ sudo port rmtrash
 # $(brew --prefix)/opt/fzf/install
 
 ##############install zshrc ############################
-cd ~/dev/dotfiles
-mv ~/.zshrc ~/.zshrc_old
-ln -s zsh/zshrc ~/.zshrc
+ln -s ~/dev/dotfiles/zsh/zshrc ~/.zshrc
 source ~/.zshrc
+
+############## link ranger###########################
+ln -s ~/dev/dotfiles/ranger ~/.config/ranger
+source ~/.config/ranger
+
+############## link lazygit###########################
+ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
+source ~/.config/lazygit
 
 ############# install neovim ############################
 sudo port install neovim
@@ -25,12 +31,12 @@ brew install git gitui zoxide ripgrep sqlite fd yarn
 # nodejs, neovim-git required by copilot.
 # neovim version >= 0.6
 brew install nodejs neovim-git
-
 # for neovim python module
 pip install neovim --user
 
-# clone
-git clone https://github.com/ayamir/nvimdots ~/.config/nvim
+# link config
+ln -s ~/dev/dotfiles/nvim ~/.config/nvim
+# git clone https://github.com/ayamir/nvimdots ~/.config/nvim
 # cd ~/.local/share/nvim/site/pack/packer/opt/fzy-lua-native and make all to recompile
 # original bin for 10.15
 
@@ -42,9 +48,10 @@ nvim +PackerSync
 
 #################### alaritty - fastest terminal####################
 apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
-
 sudo add-apt-repository ppa:mmstick76/alacritty
 sudo apt install alacritty
+# link the config
+ln -s ~/dev/dotfiles/alacritty ~/.config/alacritty
 
 #################### fonts###########################################
 # If you are using powerlevel10k, p10k configure can install the recommended font for you. 

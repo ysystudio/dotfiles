@@ -10,17 +10,23 @@ xcode-select --install
 
 # brew install
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
-# https://mirror.tuna.tsinghua.edu.cn/help/homebrew/, to change the source
-
+# https://mirror.tuna.tsinghua.edu.cn/help/homebrew/, to change the sources
 # support tools install
 brew install wget curl autojump fzf git lua fd lazygit ranger zsh zinit node youtube-dl tmux cmake cmake-docs 
 sudo port rmtrash
 # To install useful key bindings and fuzzy completion:
 # $(brew --prefix)/opt/fzf/install
-##############install zshrc ###########################
+############## link zshrc ###########################
 ln -s ~/dev/dotfiles/zsh/zshrc ~/.zshrc
 source ~/.zshrc
 
+############## link ranger###########################
+ln -s ~/dev/dotfiles/ranger ~/.config/ranger
+source ~/.config/ranger
+
+############## link lazygit###########################
+ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
+source ~/.config/lazygit
 ############# install neovim config#####################
 sudo port install neovim
 # gitui required by tui git operations
@@ -31,16 +37,15 @@ sudo port install neovim
 # yarn required by markdown preview
 # nerd-fonts-ibm-plex-mono required by devicons
 brew install git gitui zoxide ripgrep sqlite fd yarn 
-
 # nodejs, neovim-git required by copilot.
 # neovim version >= 0.6
 yay -S nodejs neovim-git
-
 # for neovim python module
 pip install neovim --user
 
-# clone
-git clone https://github.com/ayamir/nvimdots ~/.config/nvim
+# link the config
+ln -s ~/dev/dotfiles/nvim ~/.config/nvim
+# git clone https://github.com/ayamir/nvimdots ~/.config/nvim
 # cd ~/.local/share/nvim/site/pack/packer/opt/fzy-lua-native and make all to recompile
 # original bin for 10.15
 

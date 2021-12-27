@@ -1,14 +1,11 @@
-# source /usr/local/opt/zinit/zinit.zsh
-source /home/linuxbrew/.linuxbrew/opt/zinit/zinit.zsh
+# check the real path , for example by brew infor zinit,set the ZI_HOME 
+source $ZI_HOME/zinit.zsh
 
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 zinit depth=1 lucid nocd for \
     romkatv/powerlevel10k
 
-# 快速目录跳转
-# [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# if can not load , try to zinit delete OMZP::name and re do source .zshrc
 
-zinit light Aloxaf/fzf-tab
 zinit light paulirish/git-open
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-history-substring-search
@@ -32,6 +29,7 @@ zinit snippet OMZP::sublime
 zinit snippet OMZP::gitignore
 zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::zsh-interactive-cd
+zinit snippet OMZP::git-prompt
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::common-aliases
