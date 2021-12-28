@@ -68,19 +68,19 @@ colors:
     white: '#e5e5e5'
 
 font:
-  size: 16
+  size: 14 
   # 字体
   normal:
-    family: 'FiraCode Nerd Font'
+    family: 'FiraCode NF'
     style: Regular
   bold:
-    family: 'FiraCode Nerd Font'
+    family: 'FiraCode NF'
     style: Bold
   italic:
-    family: 'FiraCode Nerd Font'
+    family: 'FiraCode NF'
     style: Italic
   bold_italic:
-    family: 'FiraCode Nerd Font'
+    family: 'FiraCode NF'
     style: Bold Italic
 
   # 细描边

@@ -35,7 +35,7 @@ alias sl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 fi
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-lias ni='nmcli'
+alias ni='nmcli'
 fi
 
 
