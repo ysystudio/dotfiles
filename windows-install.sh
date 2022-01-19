@@ -1,7 +1,16 @@
 # WARNING: PLEASE DO NOT USE THIS SCRIPT, JUST MANUALLY FOLLOW THE STEPS
 ################# tools install#################
 choco install wget curl fzf lua lazygit 
-
+# alacritty 0.9.0
+# FiraCode 6.2
+# fzf 0.29.0
+# lazygit 0.32.2
+# lua 5.1.5.52
+# neovim 0.6.1
+# nodejs 17.4.0
+# nodejs.install 17.4.0
+# vim 8.2.4141
+# yarn 1.22.15
 
 # ##############install zshrc ############################
 # ln -s ~/dev/dotfiles/zsh/zshrc ~/.zshrc
