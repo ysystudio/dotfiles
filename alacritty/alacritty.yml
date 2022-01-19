@@ -1,3 +1,17 @@
+# Shell
+#
+# 随终端打开时启动的 Shell
+#
+# Default:
+#   - (macOS) /bin/bash --login
+#   - (Linux/BSD) user login shell
+#   - (Windows) powershell
+shell:
+  # program: "C:/Program Files/Git/bin/bash.exe"
+  program: "C:/msys64/usr/bin/bash.exe"
+  args:
+    - --login
+
 # 自动刷新
 live_config_reload: true
 # Tab 缩进
