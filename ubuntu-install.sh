@@ -1,10 +1,20 @@
 # WARNING: PLEASE DO NOT USE THIS SCRIPT, JUST MANUALLY FOLLOW THE STEPS
+#change apt source
+sudo cp -f /etc/apt/sources.list /etc/apt/sources.list.bk
+sudo cp -f ./sources.list /etc/apt/sources.list
+
+#proxy
+#explore MY_PROXY=* in profile, and use the function proxy_on and git_proxy_on
+
+#install homebrew from https://brew.idayer.com/
+/bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install.sh)"
+
 ################# support tools install#################
 brew install wget curl autojump fzf git lua fd lazygit ranger zsh zinit node youtube-dl tmux cmake cmake-docs 
-sudo port rmtrash
-# To install useful key bindings and fuzzy completion:
-# $(brew --prefix)/opt/fzf/install
 
+# 改变默认 shel 为 zsh：
+apt install zsh -y
+chsh -s /bin/zsh
 ##############install zshrc ############################
 ln -s ~/dev/dotfiles/zsh/zshrc ~/.zshrc
 source ~/.zshrc

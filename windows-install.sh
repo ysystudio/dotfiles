@@ -25,7 +25,8 @@ ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
 source ~/.config/lazygit
 
 ############# install neovim ############################
-sudo port install neovim
+choco install neovim
+git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 # gitui required by tui git operations
 # ripgrep required by telescope word search engine
 # ripgrep required by telescope-zoxide
@@ -43,7 +44,7 @@ pip install neovim --user
 
 # link config
 # ln -s ~/dev/dotfiles/nvim ~/.config/nvim
-ln -s ~/dev/dotfiles/nvim ~/AppData/Local/nvim
+mklink /D ~/AppData/Local/nvim ~/dev/dotfiles/nvim
 # git clone https://github.com/ayamir/nvimdots ~/.config/nvim
 # cd ~/.local/share/nvim/site/pack/packer/opt/fzy-lua-native and make all to recompile
 # original bin for 10.15
