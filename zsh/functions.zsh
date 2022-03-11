@@ -25,6 +25,12 @@ function git_proxy_on (){
     git config -l | grep proxy
 }
 
+function git_init_email (){
+    git config --global user.email "ysystudio@gmail.com"
+    git config --global user.name 'ysystudio'
+    git config -l
+}
+
 function git_proxy_off (){
     git config --global --unset http.proxy
     git config --global --unset https.proxy
