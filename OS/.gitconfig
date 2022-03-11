@@ -1,0 +1,28 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+# [user]
+# 	name = Yu Shark
+# 	email = shark.yu@thalesgroup.com
+[http]
+	sslVerify = false
+	postBuffer = 1048576000
+	version = HTTP/1.1
+	proxy = http://10.160.84.32:8080
+[https]
+	sslVerify = false
+	proxy = http://10.160.84.32:8080
+[core] 
+	editor = sublime
+	excludesfile = ~/.gitignore_global
+[user]
+	name = ysystudio
+	email = ysystudio@gmail.com
+[commit]
+	template = ~/.stCommitMsg
+
+
+[credential]
+	helper = store
