@@ -34,5 +34,5 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::common-aliases
 
-zinit ice svn
-zinit snippet OMZ::plugins/extract
+# zinit ice svn
+# zinit snippet OMZ::plugins/extract
