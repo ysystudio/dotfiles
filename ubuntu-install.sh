@@ -44,8 +44,7 @@ source ~/.config/lazygit
 brew install neovim
 brew install gitui zoxide ripgrep sqlite fd yarn svn
 # gitui required by tui git operations
-# ripgrep required by telescope word search engine
-# ripgrep required by telescope-zoxide
+# ripgrep required by telescope word search engine ,telescope-zoxide
 # sqlite required by telescope-frecency
 # fd required by telescope file search engine
 # yarn required by markdown preview
@@ -54,6 +53,7 @@ brew install gitui zoxide ripgrep sqlite fd yarn svn
 # nodejs, neovim-git required by copilot.
 # neovim version >= 0.6
 brew install nodejs neovim-git
+
 # for neovim python module
 pip install neovim --user
 
@@ -61,6 +61,7 @@ pip install neovim --user
 ln -s ~/dev/dotfiles/nvim ~/.config/nvim
 # sync plugins(maybe need multiple times)
 nvim +PackerSync
+
 #如果需要使用coc分支的：
 # cd ~/.config/nvim & git switch coc
 

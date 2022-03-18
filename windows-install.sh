@@ -9,67 +9,32 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 choco -v
 choco upgrade chocolatey
 
-choco install wget curl fzf lua lazygit 
-# alacritty 0.9.0
-# FiraCode 6.2
-# fzf 0.29.0
-# lazygit 0.32.2
-# lua 5.1.5.52
-# neovim 0.6.1
-# nodejs 17.4.0
-# nodejs.install 17.4.0
-# vim 8.2.4141
-# yarn 1.22.15
-
-# ##############install zshrc ############################
-# ln -s ~/dev/dotfiles/zsh/zshrc ~/.zshrc
-# source ~/.zshrc
-
-# ############## link ranger###########################
-# ln -s ~/dev/dotfiles/ranger ~/.config/ranger
-# source ~/.config/ranger
+############# install usefull tool ############################
+choco install wget curl fzf lua lazygit microsoft-windows-terminal FiraCode 
+choco install wsl-ubuntu-2004
 
 ############## link lazygit###########################
 ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
 source ~/.config/lazygit
 
 ############# install neovim ############################
+choco install git gitui ripgrep fd lua
 choco install neovim
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 # gitui required by tui git operations
-# ripgrep required by telescope word search engine
-# ripgrep required by telescope-zoxide
-# sqlite required by telescope-frecency
+# ripgrep required by telescope word search engine telescope-zoxide
 # fd required by telescope file search engine
-# yarn required by markdown preview
+## yarn required by markdown preview
+## sqlite required by telescope-frecency
 # nerd-fonts-ibm-plex-mono required by devicons
-brew install git gitui zoxide ripgrep sqlite fd yarn 
 
-# nodejs, neovim-git required by copilot.
-# neovim version >= 0.6
-brew install nodejs neovim-git
 # for neovim python module
 pip install neovim --user
-
 # link config
 # ln -s ~/dev/dotfiles/nvim ~/.config/nvim
 mklink /D ~/AppData/Local/nvim ~/dev/dotfiles/nvim
-# git clone https://github.com/ayamir/nvimdots ~/.config/nvim
-# cd ~/.local/share/nvim/site/pack/packer/opt/fzy-lua-native and make all to recompile
-# original bin for 10.15
-
 # sync plugins(maybe need multiple times)
 nvim +PackerSync
-#如果需要使用coc分支的：
-# cd ~/.config/nvim & git switch coc
 
 
-#################### alaritty - fastest terminal####################
-choco install alacritty
-# link the config
-ln -s ~/dev/dotfiles/alacritty ~/.config/alacritty
-
-#################### fonts###########################################
-# If you are using powerlevel10k, p10k configure can install the recommended font for you. 
-choco install FiraCode
 
