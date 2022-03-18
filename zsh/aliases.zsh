@@ -27,7 +27,6 @@ alias nt="sh -c 'cd $(pwd); st' > /dev/null 2>&1 &"
 alias lo='lsof -p $(fps) +w'
 alias py="python"
 
-#if [ "$(uname)" == "Darwin" ]; then
 if [[ $OSTYPE == darwin* ]]; then
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias rm='rmtrash'
