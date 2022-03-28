@@ -61,5 +61,11 @@ nvim +PackerSync
 brew tap homebrew/cask-fonts
 brew install font-FiraCode-nerd-font
 
+#xmake Installation
+# via curl
+zsh <(curl -fsSL https://xmake.io/shget.text)
+
+
+
 
 

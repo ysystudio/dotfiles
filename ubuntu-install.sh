@@ -79,5 +79,9 @@ sudo apt install alacritty
 # link the config
 ln -s ~/dev/dotfiles/alacritty ~/.config/alacritty
 
+#xmake Installation
+# via curl
+zsh <(curl -fsSL https://xmake.io/shget.text)
+
 
 
