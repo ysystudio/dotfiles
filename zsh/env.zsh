@@ -20,6 +20,7 @@ export PATH=$PATH:/usr/local/bin
 # export PATH=$PATH:$LOCALPROG/flutter/bin/cache/dart-sdk/bin
 # export PATH="$PATH":"$HOME/.pub-cache/bin"
 # export FLUTTER_ROOT=$LOCALPROG/flutter
+export PATH=$PATH:/home/cogent/anaconda3/envs/cling/bin
 export TERM=xterm-256color
 export TERM_ITALICS=true
 export RANGER_LOAD_DEFAULT_RC="false"
