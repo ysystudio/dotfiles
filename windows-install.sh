@@ -17,24 +17,6 @@ choco install wsl-ubuntu-2004
 ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
 source ~/.config/lazygit
 
-############# install neovim ############################
-choco install git gitui ripgrep fd lua
-choco install neovim
-git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
-# gitui required by tui git operations
-# ripgrep required by telescope word search engine telescope-zoxide
-# fd required by telescope file search engine
-## yarn required by markdown preview
-## sqlite required by telescope-frecency
-# nerd-fonts-ibm-plex-mono required by devicons
-
-# for neovim python module
-pip install neovim --user
-# link config
-# ln -s ~/dev/dotfiles/nvim ~/.config/nvim
-mklink /D ~/AppData/Local/nvim ~/dev/dotfiles/nvim
-# sync plugins(maybe need multiple times)
-nvim +PackerSync
 
 
 
