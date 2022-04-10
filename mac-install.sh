@@ -32,7 +32,8 @@ source ~/.config/lazygit
 
 ############# install neovim config#####################
 curl https://sh.rustup.rs -sSf | sh
-brew install neovim  # sudo port install neovim
+brew install neovim yarn npm 
+# sudo port install neovim nodejs yarn npm
 
 
 # install lunarvim
