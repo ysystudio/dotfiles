@@ -13,7 +13,7 @@ xcode-select --install
 # https://mirror.tuna.tsinghua.edu.cn/help/homebrew/, to change the sources
 
 ########### support tools install  ####################
-brew install wget curl autojump fzf git lua fd lazygit ranger zsh zinit node youtube-dl tmux cmake cmake-docs 
+brew install wget curl autojump fzf git lua fd lazygit ranger zsh zinit node tmux cmake cmake-docs 
 sudo port rmtrash
 # To install useful key bindings and fuzzy completion:
 # $(brew --prefix)/opt/fzf/install
@@ -31,8 +31,9 @@ ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
 source ~/.config/lazygit
 
 ############# install neovim config#####################
-sudo port install neovim
-brew install neovim
+curl https://sh.rustup.rs -sSf | sh
+brew install neovim  # sudo port install neovim
+
 
 # install lunarvim
 # Add the following lines to /etc/hosts to accelerate your installation.
