@@ -18,24 +18,40 @@ function proxy_off (){
     echo -e "终端代理已关闭。"
     env | grep -i proxy
 }
-
 function git_proxy_on (){
     git config --global http.proxy $MY_PROXY
     git config --global https.proxy $MY_PROXY
     git config -l | grep proxy
 }
-
 function git_init_email (){
     git config --global user.email "ysystudio@gmail.com"
     git config --global user.name 'ysystudio'
     git config -l
 }
-
 function git_proxy_off (){
     git config --global --unset http.proxy
     git config --global --unset https.proxy
     git config -l | grep proxy
 }
+function npm_proxy_on (){
+    npm config set proxy=$MY_PROXY
+    npm config set https-proxy=$MY_PROXY
+    npm config list | grep proxy
+}
+function npm_proxy_off (){
+    npm config delete   proxy  
+    npm config delete   https-proxy
+    npm config list | grep proxy
+}
+function yarn_proxy_on (){
+    yarn config set proxy $MY_PROXY
+    yarn config set https-proxy $MY_PROXY
+}
+function yarn_proxy_off (){
+    yarn config delete   proxy  
+    yarn config delete   https-proxy
+}
+
 function wifi_on (){
     nmcli c up "HUAWEI P40 Pro+"
     nmcli c down "Wired connection 1"
@@ -43,6 +59,8 @@ function wifi_on (){
 
     proxy_off
     git_proxy_off
+    yarn_proxy_off
+    npm_proxy_off
 
 }
 
@@ -56,4 +74,8 @@ function wifi_off (){
 
     proxy_on
     git_proxy_on
+    yarn_proxy_on
+    npm_proxy_on
 }
+
+
