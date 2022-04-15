@@ -89,10 +89,13 @@ return {
     keys = {'i', 'a', 'I', 'A', 'c', 'o', 'O'},
   },
 
-  -- {
-  --   "williamboman/nvim-lsp-installer",
-  --   -- opt = true,
-  --   -- after = "nvim-lspconfig",
-  -- },
+  {
+    "williamboman/nvim-lsp-installer",
+    opt = true,
+    after = "nvim-lspconfig",
+    setup = function()
+        require("core.utils").packer_lazy_load "vim-lsp-installer"
+    end,
+  },
 
 }

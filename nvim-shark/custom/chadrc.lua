@@ -17,7 +17,7 @@ M.options = {
    mouse = "a",
    number = true,
    numberwidth = 2,
-   relativenumber = false,
+   relativenumber = true,
    expandtab = true,
    shiftwidth = 2,
    smartindent = true,
@@ -60,7 +60,7 @@ M.ui = {
 local userPlugins = require "custom.plugins" -- path to table
 
 M.plugins = {
-   install = userPlugins,
+
    -- enable/disable plugins (false for disable)
    status = {
       blankline = true, -- indentline stuff
@@ -115,6 +115,7 @@ M.plugins = {
      dashboard = "custom.plugins.dashboard",
    },
    default_plugin_remove = {},
+   install = userPlugins,
 }
 
 -- Don't use a single keymap twice
