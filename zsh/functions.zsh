@@ -77,5 +77,23 @@ function wifi_off (){
     yarn_proxy_on
     npm_proxy_on
 }
+function brew_disable() {
+	export PATH=${PATH##*"/.linuxbrew/bin:"}
+	export PATH=${PATH##*"/.linuxbrew/sbin:"}
+	export MANPATH=${MANPATH##*"/.linuxbrew/share/man:"}
+	export INFOPATH=${INFOPATH##*"/.linuxbrew/share/info:"}
+}
 
+function brew_enable() {
+	BREW='/home/linuxbrew/.linuxbrew'
+	brew_disable
+	export PATH="$BREW/bin:$BREW/sbin:$PATH"
+	export MANPATH="$BREW/share/man:$MANPATH"
+	export INFOPATH="$BREW/share/info:$INFOPATH"
+	export HOMEBREW_NO_AUTO_UPDATE=1
+}
+
+function brew() {
+    PATH="/home/linuxbrew/.linuxbrew/bin:$PATH" /home/linuxbrew/.linuxbrew/bin/brew "$@"
+}
 
