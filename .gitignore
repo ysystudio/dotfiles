@@ -13,7 +13,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-Neovim-from-scratch/
+lvim/plugin
 .Python
 build/
 develop-eggs/
