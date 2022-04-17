@@ -2,22 +2,22 @@ return {
   -- 平滑滚动
   {
     "karb94/neoscroll.nvim",
-     opt = true,
-     config = function()
-        require("neoscroll").setup()
-     end,
+    opt = true,
+    config = function()
+      require("neoscroll").setup()
+    end,
 
-     -- lazy loading
-     setup = function()
-       require("core.utils").packer_lazy_load "neoscroll.nvim"
-     end,
+    -- lazy loading
+    setup = function()
+      require("core.utils").packer_lazy_load "neoscroll.nvim"
+    end,
   },
 
   -- 历史修改记录
   {
-        "mbbill/undotree",
-        opt = true,
-        cmd = "UndotreeToggle",
+    "mbbill/undotree",
+    opt = true,
+    cmd = "UndotreeToggle",
   },
 
   -- 多光标
@@ -29,7 +29,7 @@ return {
   -- 增删改引号
   {
     "tpope/vim-surround",
-    keys = {"c", "d", "S"},
+    keys = { "c", "d", "S" },
   },
 
   -- 快速选中
@@ -60,7 +60,7 @@ return {
   {
     "skywind3000/asynctasks.vim",
     requires = "skywind3000/asyncrun.vim",
-    cmd = {"AsyncTask", "AsyncTaskEdit"},
+    cmd = { "AsyncTask", "AsyncTaskEdit" },
     opt = true
   },
 
@@ -86,24 +86,25 @@ return {
   -- 自动切换输入法
   {
     "lilydjwg/fcitx.vim",
-    keys = {'i', 'a', 'I', 'A', 'c', 'o', 'O'},
+    keys = { 'i', 'a', 'I', 'A', 'c', 'o', 'O' },
   },
 
   {
     "williamboman/nvim-lsp-installer",
-  --   opt = true,
-  --   after = "nvim-lspconfig",
-  --   setup = function()
-  --       require("core.utils").packer_lazy_load "vim-lsp-installer"
-  --   end,
+    --   opt = true,
+    --   after = "nvim-lspconfig",
+    --   setup = function()
+    --       require("core.utils").packer_lazy_load "vim-lsp-installer"
+    --   end,
   },
 
   {
-      "jose-elias-alvarez/null-ls.nvim",
-      after = "nvim-lspconfig",
-      config = function()
-         require("custom.plugins.null-ls-config").setup()
-      end,
-   },
+    "jose-elias-alvarez/null-ls.nvim",
+    after = "nvim-lspconfig",
+    config = function()
+      require("custom.plugins.null-ls-config").setup()
+    end,
+  },
+
 
 }

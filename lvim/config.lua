@@ -25,7 +25,10 @@ lvim.keys.normal_mode['sj'] = ':set splitright<CR>:split<CR>'
 lvim.keys.normal_mode['sk'] = ':set nosplitright<CR>:split<CR>'
 -- 保存时用suda写入
 lvim.keys.normal_mode['<A-s>'] = ':SudaWrite<CR>'
-
+-- 一键编译/运行/编译运行
+lvim.keys.normal_mode['<F7>'] = ':w<CR> | :AsyncTask file-build<CR>'
+lvim.keys.normal_mode['<F5>'] = ':w<CR> | :AsyncTask file-run<CR>'
+lvim.keys.normal_mode['<F9>'] = ':w<CR> | :AsyncTask file-build<CR> | :AsyncTask file-run<CR>'
 
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = false
@@ -71,7 +74,7 @@ lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
-
+lvim.builtin.dap.active = true
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
@@ -94,11 +97,6 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
-  { "folke/tokyonight.nvim" },
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
   -- 多光标
   {
     "mg979/vim-visual-multi",
@@ -114,6 +112,24 @@ lvim.plugins = {
     "lilydjwg/fcitx.vim",
     keys = { 'i', 'a', 'I', 'A', 'c', 'o', 'O' },
   },
+  -- markdown 预览
+  {
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
+    config = function()
+      vim.g.mkdp_auto_start = 1
+    end,
+  },
+
+  -- 现代任务系统
+  {
+    "skywind3000/asynctasks.vim",
+    requires = "skywind3000/asyncrun.vim",
+    cmd = { "AsyncTask", "AsyncTaskEdit" },
+    opt = true
+  },
+
 
 }
 
