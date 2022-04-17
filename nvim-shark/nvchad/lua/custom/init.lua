@@ -65,8 +65,8 @@ vim.g.asynctasks_term_pos = 'bottom'
 vim.g.asynctasks_term_rows = 15
 
 -- vim-table-mode更改为markdown语法
-vim.g.table_mode_corner='|'
+vim.g.table_mode_corner = '|'
 
 -- 自动切换输入法配置
-vim.o.ttimeoutlen=0
+vim.o.ttimeoutlen = 0
 -------------------杂项配置---------------------

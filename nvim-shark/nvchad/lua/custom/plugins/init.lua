@@ -91,11 +91,19 @@ return {
 
   {
     "williamboman/nvim-lsp-installer",
-    opt = true,
-    after = "nvim-lspconfig",
-    setup = function()
-        require("core.utils").packer_lazy_load "vim-lsp-installer"
-    end,
+  --   opt = true,
+  --   after = "nvim-lspconfig",
+  --   setup = function()
+  --       require("core.utils").packer_lazy_load "vim-lsp-installer"
+  --   end,
   },
+
+  {
+      "jose-elias-alvarez/null-ls.nvim",
+      after = "nvim-lspconfig",
+      config = function()
+         require("custom.plugins.null-ls-config").setup()
+      end,
+   },
 
 }
