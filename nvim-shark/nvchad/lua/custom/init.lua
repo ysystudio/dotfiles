@@ -4,6 +4,7 @@ local map = require("core.utils").map
 -- Ctrl+q退出
 map('n', '<C-q>', ':q<CR>')
 
+map('n', '<leader>q', ':q<CR>')
 -- 快速分屏
 map('n', 'sl', ':set splitright<CR>:vsplit<CR>')
 map('n', 'sh', ':set nosplitright<CR>:vsplit<CR>')
