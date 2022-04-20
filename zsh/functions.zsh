@@ -51,6 +51,20 @@ function yarn_proxy_off (){
     yarn config delete   proxy  
     yarn config delete   https-proxy
 }
+function all_proxy_on () { 
+    proxy_on
+    git_proxy_on
+    npm_proxy_on
+    yarn_proxy_on
+}
+
+function all_proxy_off (){
+    proxy_off
+    git_proxy_off
+    npm_proxy_off
+    yarn_proxy_off
+}
+
 
 function wifi_on (){
     nmcli c up "HUAWEI P40 Pro+"

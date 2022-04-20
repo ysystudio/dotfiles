@@ -32,6 +32,9 @@ lvim.plugins = {
     cmd = { "AsyncTask", "AsyncTaskEdit" },
     opt = true
   },
+  {
+    "github/copilot.vim"
+  },
 
 
 }
