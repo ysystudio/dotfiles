@@ -48,8 +48,8 @@ lvim.plugins = {
     setup = function()
       vim.g.indentLine_enabled = 1
       vim.g.indent_blankline_char = "|"
-      vim.g.indent_blankline_filetype_exclude = {"help", "terminal", "dashboard"}
-      vim.g.indent_blankline_buftype_exclude = {"terminal"}
+      vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard" }
+      vim.g.indent_blankline_buftype_exclude = { "terminal" }
       vim.g.indent_blankline_show_trailing_blankline_indent = false
       vim.g.indent_blankline_show_first_indent_level = false
       vim.g.indent_blankline_show_current_context_indent = true
@@ -58,9 +58,43 @@ lvim.plugins = {
     end,
   },
 
-  -- real time code
   {
-  "metakirby5/codi.vim",
-  cmd = "Codi",
-  },
+    "tmhedberg/SimpylFold",
+  }
+  -- -- code runner
+  -- {
+  --   'CRAG666/code_runner.nvim',
+  --   requires = 'nvim-lua/plenary.nvim',
+
+  --   require('code_runner').setup {
+  --     term = {
+  --       position = "vert",
+  --       size = 15,
+  --       mode = "startinsert"
+  --     },
+  --     filetype = {
+  --       java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
+  --       python = "python -U",
+  --       typescript = "deno run",
+  --       rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt"
+  --     },
+  --     project = {
+  --       ["~/deno/example"] = {
+  --         name = "ExapleDeno",
+  --         description = "Project with deno using other command",
+  --         file_name = "http/main.ts",
+  --         command = "deno run --allow-net"
+  --       },
+  --       ["~/cpp/example"] = {
+  --         name = "ExapleCpp",
+  --         description = "Project with make file",
+  --         command = "make buid & cd buid/ & ./compiled_file"
+  --       },
+  --     },
+  --   },
+
+  -- },
+
+
+
 }
