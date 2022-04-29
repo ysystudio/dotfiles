@@ -17,6 +17,10 @@ choco install wsl-ubuntu-2004
 ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
 source ~/.config/lazygit
 
-
+#################### alaritty - fastest terminal####################
+choco install alacritty
+# link the config
+rm %Home%
+ln -s ~/dev/dotfiles/alacritty ~/.config/alacritty
 
 
