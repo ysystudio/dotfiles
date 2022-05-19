@@ -2,6 +2,7 @@
 
 ########## basic development environment###################
 xcode-select --install
+
 # macport install
 # go to official https://www.macports.org/install.php download your macos related dmg
 # python install
@@ -33,7 +34,6 @@ source ~/.config/lazygit
 ############# install neovim config#####################
 curl https://sh.rustup.rs -sSf | sh
 brew install neovim yarn npm 
-# sudo port install neovim nodejs yarn npm
 
 
 # install lunarvim

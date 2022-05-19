@@ -29,7 +29,7 @@ alias py="python"
 
 if [[ $OSTYPE == darwin* ]]; then
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-alias rm='rmtrash'
+# alias rm='rmtrash'
 alias sl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 fi
 
