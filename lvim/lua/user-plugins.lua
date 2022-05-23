@@ -15,15 +15,16 @@ lvim.plugins = {
     "lilydjwg/fcitx.vim",
     keys = { 'i', 'a', 'I', 'A', 'c', 'o', 'O' },
   },
-  -- markdown 预览
-  {
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    ft = "markdown",
-    config = function()
-      vim.g.mkdp_auto_start = 1
-    end,
-  },
+
+  -- -- markdown 预览
+  -- {
+  --   "iamcco/markdown-preview.nvim",
+  --   run = "cd app && npm install",
+  --   ft = "markdown",
+  --   config = function()
+  --     vim.g.mkdp_auto_start = 1
+  --   end,
+  -- },
 
   -- 现代任务系统
   {
@@ -33,7 +34,7 @@ lvim.plugins = {
     opt = true,
   },
 
-  -- ai auto comp
+  -- ai auto complementary
   {
     "github/copilot.vim",
     config = function()

@@ -1,5 +1,18 @@
--- lvim is the global options object
 
+-- 禁用多光标警告
+vim.g.VM_show_warnings = 0
+
+-- 设置asynctasks窗口排版
+vim.g.asynctasks_term_pos = 'bottom'
+vim.g.asynctasks_term_rows = 15
+
+-- vim-table-mode更改为markdown语法
+vim.g.table_mode_corner = '|'
+
+-- 自动切换输入法配置
+vim.o.ttimeoutlen = 0
+
+-- lvim is the global options object
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
@@ -12,7 +25,11 @@ lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.nvimtree.setup.view.relativenumber = false
 lvim.builtin.dap.active = true
+lvim.builtin.treesitter.ignore_install = { "haskell" }
+lvim.builtin.treesitter.highlight.enabled = true
+
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
@@ -29,9 +46,6 @@ lvim.builtin.treesitter.ensure_installed = {
   "yaml",
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enabled = true
-lvim.builtin.nvimtree.setup.view.relativenumber = false
 
 -- generic LSP settings
 

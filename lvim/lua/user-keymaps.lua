@@ -15,21 +15,11 @@ lvim.keys.normal_mode['sk'] = ':set nosplitright<CR>:split<CR>'
 lvim.keys.normal_mode['<A-s>'] = ':SudaWrite<CR>'
 
 -- 一键编译/运行/编译运行
-lvim.keys.normal_mode['<F7>'] = ':w<CR> | :AsyncTask file-build<CR>'
 lvim.keys.normal_mode['<F5>'] = ':w<CR> | :AsyncTask file-run<CR>'
+lvim.keys.normal_mode['<F7>'] = ':w<CR> | :AsyncTask file-build<CR>'
 lvim.keys.normal_mode['<F9>'] = ':w<CR> | :AsyncTask file-build<CR> | :AsyncTask file-run<CR>'
--- 禁用多光标警告
-vim.g.VM_show_warnings = 0
-
--- 设置asynctasks窗口排版
-vim.g.asynctasks_term_pos = 'bottom'
-vim.g.asynctasks_term_rows = 15
-
--- vim-table-mode更改为markdown语法
-vim.g.table_mode_corner = '|'
-
--- 自动切换输入法配置
-vim.o.ttimeoutlen = 0
+lvim.keys.normal_mode['<f6>'] = ':w<CR> | :AsyncTask project-run<CR>'
+lvim.keys.normal_mode['<f8>'] = ':w<CR> | :AsyncTask project-build<CR>'
 
 -- -- code runner
 -- vim.api.nvim_set_keymap('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })
