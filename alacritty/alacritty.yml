@@ -17,8 +17,8 @@ live_config_reload: true
 # Tab 缩进
 tabspaces: 4
 # 背景透明度
-window_opacity: 0.6
-
+window_opacity: 0.8
+    
 window:
   # 窗口大小
   dimensions:

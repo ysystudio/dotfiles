@@ -19,7 +19,7 @@ fi
 ###########################################################
 
 
-if [[ $OSTYPE == darwin17* ]]; then
+if [[ $OSTYPE == darwin1* ]]; then
 export MY_PROXY=http://127.0.0.1:49473
 eval $(/usr/local/Homebrew/bin/brew shellenv) #ckbrew
 

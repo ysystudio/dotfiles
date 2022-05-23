@@ -19,35 +19,42 @@ function proxy_off (){
     env | grep -i proxy
 }
 function git_proxy_on (){
+    echo -e "git"
     git config --global http.proxy $MY_PROXY
     git config --global https.proxy $MY_PROXY
     git config -l | grep proxy
 }
 function git_init_email (){
+    echo -e "git"
     git config --global user.email "ysystudio@gmail.com"
     git config --global user.name 'ysystudio'
     git config -l
 }
 function git_proxy_off (){
+    echo -e "git"
     git config --global --unset http.proxy
     git config --global --unset https.proxy
     git config -l | grep proxy
 }
 function npm_proxy_on (){
+    echo -e "npm"
     npm config set proxy=$MY_PROXY
     npm config set https-proxy=$MY_PROXY
     npm config list | grep proxy
 }
 function npm_proxy_off (){
+    echo -e "npm"
     npm config delete   proxy  
     npm config delete   https-proxy
     npm config list | grep proxy
 }
 function yarn_proxy_on (){
+    echo -e "yarn"
     yarn config set proxy $MY_PROXY
     yarn config set https-proxy $MY_PROXY
 }
 function yarn_proxy_off (){
+    echo -e "yarn"
     yarn config delete   proxy  
     yarn config delete   https-proxy
 }
@@ -92,20 +99,6 @@ function wifi_off (){
     npm_proxy_on
 }
 
-
-# Codi
-# Usage: codi [filetype] [filename]
-codi() {
-  local syntax="${1:-python}"
-  shift
-  vim -c \
-    "let g:startify_disable_at_vimenter = 1 |\
-    set bt=nofile ls=0 noru nonu nornu |\
-    hi ColorColumn ctermbg=NONE |\
-    hi VertSplit ctermbg=NONE |\
-    hi NonText ctermfg=0 |\
-    Codi $syntax" "$@"
-}
 
 
 # function brew_disable() {

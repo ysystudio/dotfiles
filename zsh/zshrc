@@ -24,13 +24,18 @@ source ~/dev/dotfiles/zsh/fzf.zsh
 source ~/dev/dotfiles/zsh/aliases.zsh
 source ~/dev/dotfiles/zsh/completion.zsh
 
+#turn on proxy
 if [[ $MY_PROXY == http* ]]; then
-all_proxy_on
+if [[ $OSTYPE == darwin* ]]; then
+    git_proxy_on
+fi
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    all_proxy_on
+fi
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 
