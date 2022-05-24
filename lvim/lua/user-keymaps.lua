@@ -18,8 +18,9 @@ lvim.keys.normal_mode['<A-s>'] = ':SudaWrite<CR>'
 lvim.keys.normal_mode['<F5>'] = ':w<CR> | :AsyncTask file-run<CR>'
 lvim.keys.normal_mode['<F7>'] = ':w<CR> | :AsyncTask file-build<CR>'
 lvim.keys.normal_mode['<F9>'] = ':w<CR> | :AsyncTask file-build<CR> | :AsyncTask file-run<CR>'
-lvim.keys.normal_mode['<f6>'] = ':w<CR> | :AsyncTask project-run<CR>'
-lvim.keys.normal_mode['<f8>'] = ':w<CR> | :AsyncTask project-build<CR>'
+lvim.keys.normal_mode['<f4>'] = ':w<CR> | :AsyncTask project-create<CR>'
+lvim.keys.normal_mode['<f6>'] = ':w<CR> | :AsyncTask project-build<CR>'
+lvim.keys.normal_mode['<f8>'] = ':w<CR> | :AsyncTask project-run<CR>'
 
 -- -- code runner
 -- vim.api.nvim_set_keymap('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })

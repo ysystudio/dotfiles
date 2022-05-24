@@ -41,6 +41,7 @@ brew install neovim yarn npm
 # mirror.ghproxy.com github.com
 # mirror.ghproxy.com raw.githubusercontent.com
 # https://www.lunarvim.org/01-installing.html#prerequisites
+rm -rf ~/.local/share/lunarvim
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 
 #################### fonts ###################################
@@ -57,6 +58,8 @@ ln -s ~/dev/dotfiles/alacritty ~/.config/alacritty
 #xmake Installation
 # via curl
 zsh <(curl -fsSL https://xmake.io/shget.text)
+# by brew
+brew install xmake
 
 
 
