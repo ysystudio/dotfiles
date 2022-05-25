@@ -19,57 +19,73 @@ function proxy_off (){
     env | grep -i proxy
 }
 function git_proxy_on (){
-    echo -e "git"
+    echo -e "git 代理已开启"
     git config --global http.proxy $MY_PROXY
     git config --global https.proxy $MY_PROXY
     git config -l | grep proxy
 }
 function git_init_email (){
-    echo -e "git"
+    echo -e "git 初始化邮箱"
     git config --global user.email "ysystudio@gmail.com"
     git config --global user.name 'ysystudio'
     git config -l
 }
 function git_proxy_off (){
-    echo -e "git"
+    echo -e "git 代理已关闭"
     git config --global --unset http.proxy
     git config --global --unset https.proxy
     git config -l | grep proxy
 }
 function npm_proxy_on (){
-    echo -e "npm"
+    echo -e "npm 代理已开启"
     npm config set proxy=$MY_PROXY
     npm config set https-proxy=$MY_PROXY
     npm config list | grep proxy
 }
 function npm_proxy_off (){
-    echo -e "npm"
+    echo -e "npm 代理已关闭"
     npm config delete   proxy  
     npm config delete   https-proxy
     npm config list | grep proxy
 }
 function yarn_proxy_on (){
-    echo -e "yarn"
+    echo -e "yarn 代理已开启"
     yarn config set proxy $MY_PROXY
     yarn config set https-proxy $MY_PROXY
 }
 function yarn_proxy_off (){
-    echo -e "yarn"
+    echo -e "yarn 代理已关闭"
     yarn config delete   proxy  
     yarn config delete   https-proxy
 }
 function all_proxy_on () { 
-    proxy_on
-    git_proxy_on
-    npm_proxy_on
-    yarn_proxy_on
+    echo -e "所有代理已开启"
+    export http_proxy=$MY_PROXY
+    export https_proxy=$MY_PROXY
+    export ftp_proxy=$MY_PROXY
+    export no_proxy="127.0.0.1,localhost"
+    git config --global http.proxy $MY_PROXY
+    git config --global https.proxy $MY_PROXY
+    npm config set proxy=$MY_PROXY
+    npm config set https-proxy=$MY_PROXY
+    # yarn config set proxy $MY_PROXY
+    # yarn config set https-proxy $MY_PROXY
+     
 }
 
 function all_proxy_off (){
-    proxy_off
-    git_proxy_off
-    npm_proxy_off
-    yarn_proxy_off
+    echo -e "所有代理已关闭"
+    export http_proxy=""
+    export https_proxy=""
+    export ftp_proxy=""
+    export no_proxy="127.0.0.1,localhost"
+    git config --global --unset http.proxy
+    git config --global --unset https.proxy
+    npm config delete   proxy  
+    npm config delete   https-proxy
+    # yarn config delete   proxy  
+    # yarn config delete   https-proxy
+   
 }
 
 
@@ -78,11 +94,7 @@ function wifi_on (){
     nmcli c down "Wired connection 1"
     nmcli c show
 
-    proxy_off
-    git_proxy_off
-    yarn_proxy_off
-    npm_proxy_off
-
+    all_proxy_on
 }
 
 function wifi_off (){
@@ -93,10 +105,7 @@ function wifi_off (){
     nmcli c modify "Wired connection 1" ipv4.dns 10.155.160.55
     nmcli c show
 
-    proxy_on
-    git_proxy_on
-    yarn_proxy_on
-    npm_proxy_on
+    all_proxy_off
 }
 
 

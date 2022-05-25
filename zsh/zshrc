@@ -27,7 +27,7 @@ source ~/dev/dotfiles/zsh/completion.zsh
 #turn on proxy
 if [[ $MY_PROXY == http* ]]; then
   if [[ $OSTYPE == darwin* ]]; then
-      git_proxy_on
+      all_proxy_on
   fi
   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
       all_proxy_on
