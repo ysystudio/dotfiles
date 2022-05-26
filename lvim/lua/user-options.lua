@@ -1,4 +1,3 @@
-
 -- 禁用多光标警告
 vim.g.VM_show_warnings = 0
 
@@ -7,6 +6,9 @@ vim.g.asynctasks_term_pos = 'tab'
 vim.g.asynctasks_term_rows = 15
 vim.g.asynctasks_term_reuse = 1
 vim.g.asynctasks_term_focus = 1
+
+-- vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- vim-table-mode更改为markdown语法
 vim.g.table_mode_corner = '|'

@@ -8,3 +8,6 @@
 unlink ~/.config/lvim
 ln -s ~/dev/dotfiles/lvim ~/.config/lvim
 
+# add the link for Asynctasks
+ln -s ~/dev/dotfiles/Os/tasks.ini ~/.vim/tasks.ini
+
