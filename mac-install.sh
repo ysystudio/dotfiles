@@ -11,13 +11,10 @@ xcode-select --install
 
 # brew install
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
-# https://mirror.tuna.tsinghua.edu.cn/help/homebrew/, to change the sources
 
 ########### support tools install  ####################
-brew install wget curl autojump fzf git lua fd lazygit ranger zsh zinit node tmux cmake cmake-docs 
-sudo port rmtrash
-# To install useful key bindings and fuzzy completion:
-# $(brew --prefix)/opt/fzf/install
+brew install wget curl autojump fzf git fd lazygit ranger zsh zinit  
+# sudo port rmtrash
 
 ############## link zshrc ###########################
 ln -s ~/dev/dotfiles/zsh/zshrc ~/.zshrc
@@ -32,9 +29,8 @@ ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
 source ~/.config/lazygit
 
 ############# install neovim config#####################
-curl https://sh.rustup.rs -sSf | sh
-brew install neovim yarn npm 
-
+curl https://sh.rustup.rs -sSf | sh # install rust and cargo
+brew install neovim make npm node lua xmake
 
 # install lunarvim
 # Add the following lines to /etc/hosts to accelerate your installation.
@@ -46,7 +42,7 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 
 #################### fonts ###################################
 # If you are using powerlevel10k, p10k configure can install the recommended font for you. 
-# or you can install the nerd font 
+# or you can install the nerd font by brew 
 brew tap homebrew/cask-fonts
 brew install font-FiraCode-nerd-font
 
@@ -54,14 +50,3 @@ brew install font-FiraCode-nerd-font
 brew install alacritty
 # link the config
 ln -s ~/dev/dotfiles/alacritty ~/.config/alacritty
-
-#xmake Installation
-# via curl
-zsh <(curl -fsSL https://xmake.io/shget.text)
-# by brew
-brew install xmake
-
-
-
-
-

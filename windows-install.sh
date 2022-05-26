@@ -10,7 +10,7 @@ choco -v
 choco upgrade chocolatey
 
 ############# install usefull tool ############################
-choco install wget curl fzf lua lazygit microsoft-windows-terminal FiraCode 
+choco install wget curl fzf lazygit microsoft-windows-terminal FiraCode 
 choco install wsl-ubuntu-2004
 
 ############## link lazygit###########################
