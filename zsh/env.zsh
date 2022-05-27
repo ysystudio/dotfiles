@@ -1,12 +1,4 @@
-# export PATH=$HOME/.local/bin:$PATH
-# export PATH=$PATH:$HOME/.config/bin
-# export PATH=$PATH:/usr/local/bin
-# export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
-# export PATH=$PATH:/home/linuxbrew/.linuxbrew/sbin
-# export PATH=$PATH:$HOME/.linuxbrew/bin
-# export PATH=$PATH:$HOME/.linuxbrew/sbin
-# export PATH=$PATH:$HOME/.cargo/bin
-# export PATH=$PATH:$HOME/opt/anaconda3/envs/cling/bin
+export PATH=$HOME/.local/bin:$PATH
 export PATH=$PATH:$HOME/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin
 
   

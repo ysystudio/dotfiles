@@ -16,6 +16,20 @@ vim.g.table_mode_corner = '|'
 -- 自动切换输入法配置
 vim.o.ttimeoutlen = 0
 
+--set yank avalible in wsl
+if vim.fn.has "wsl" == 1 then
+  vim.g.clipboard = {
+    copy = {
+      ["+"] = "win32yank.exe -i --crlf",
+      ["*"] = "win32yank.exe -i --crlf",
+    },
+    paste = {
+      ["+"] = "win32yank.exe -o --lf",
+      ["*"] = "win32yank.exe -o --lf",
+    },
+  }
+end
+
 -- lvim is the global options object
 -- general
 lvim.log.level = "warn"

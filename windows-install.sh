@@ -9,10 +9,16 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 choco -v
 choco upgrade chocolatey
 
+#choco only source is slow in china, scoop is better
+#powershell to install
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
+irm get.scoop.sh | iex
+
 ############# install usefull tool ############################
 choco install wget curl fzf lazygit microsoft-windows-terminal FiraCode 
 choco install wsl-ubuntu-2004
-
+#windows terminal setup starting directory to wsl home for speed.
+ 
 ############## link lazygit###########################
 ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
 source ~/.config/lazygit
@@ -24,3 +30,5 @@ rm %Home%
 ln -s ~/dev/dotfiles/alacritty ~/.config/alacritty
 
 
+# avoid open buffer take too long time at start up
+ln -s ~/dev/dotfiles/OS/wsl.conf /etc/wsl.conf
