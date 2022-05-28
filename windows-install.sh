@@ -17,8 +17,19 @@ irm get.scoop.sh | iex
 ############# install usefull tool ############################
 choco install wget curl fzf lazygit microsoft-windows-terminal FiraCode 
 choco install wsl-ubuntu-2004
-#windows terminal setup starting directory to wsl home for speed.
- 
+
+############# fix wsl  network issue without vpn####################
+#######edit /etc/wsl.conf to look like this:
+[network]
+generateResolvConf = false
+########edit /etc/resolv.conf to use Public DNS
+nameserver 129.29.29.29.29
+
+######### set vpn jump point priority lower, to be validated
+ Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "Check Point"} | Set-NetIPInterface -InterfaceMetric 6000
+ Set-NetIPInterface -InterfaceIndex <ifNum> -InterfaceMetric 6000
+ Set-NetIPInterface -InterfaceIndex <ifNum> -AutomaticMetric enabled # reset
+
 ############## link lazygit###########################
 ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
 source ~/.config/lazygit
@@ -30,5 +41,3 @@ rm %Home%
 ln -s ~/dev/dotfiles/alacritty ~/.config/alacritty
 
 
-# avoid open buffer take too long time at start up
-ln -s ~/dev/dotfiles/OS/wsl.conf /etc/wsl.conf

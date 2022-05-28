@@ -16,7 +16,8 @@ vim.g.table_mode_corner = '|'
 -- 自动切换输入法配置
 vim.o.ttimeoutlen = 0
 
---set yank avalible in wsl
+-- set yank avalible in wsl
+-- add win32yank to window path, which default shared with wsl
 if vim.fn.has "wsl" == 1 then
   vim.g.clipboard = {
     copy = {
