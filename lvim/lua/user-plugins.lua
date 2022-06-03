@@ -59,8 +59,8 @@ lvim.plugins = {
     end,
   },
 
-  {
-    "tmhedberg/SimpylFold",
-  }
+  -- {
+  --   "tmhedberg/SimpylFold",
+  -- }
 
 }
