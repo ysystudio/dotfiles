@@ -26,10 +26,8 @@ generateResolvConf = false
 nameserver 129.29.29.29.29
 
 ######### set vpn jump point priority lower, to be validated
- Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "Check Point"} | Set-NetIPInterface -InterfaceMetric 6000
- Set-NetIPInterface -InterfaceIndex <ifNum> -InterfaceMetric 6000
- Set-NetIPInterface -InterfaceIndex <ifNum> -AutomaticMetric enabled # reset
-
+Set-NetIPInterface -InterfaceAlias 'vEthernet (WSL)' -InterfaceMetric 6000    # set jump point priority
+Set-NetIPInterface -InterfaceAlias 'vEthernet (WSL)' -AutomaticMetric enabled # reset
 ############## link lazygit###########################
 ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
 source ~/.config/lazygit

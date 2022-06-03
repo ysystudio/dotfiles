@@ -53,8 +53,8 @@ fi
 ###########################################################
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-
-  export MY_PROXY=http://10.160.84.32:8080
+  export MY_PROXY=http://192.168.127.241:9000
+  # export MY_PROXY=http://10.160.84.32:8080
   export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
   export ZI_HOME=/home/linuxbrew/.linuxbrew/opt/zinit
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
