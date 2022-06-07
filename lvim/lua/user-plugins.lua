@@ -59,6 +59,10 @@ lvim.plugins = {
     end,
   },
 
+  {
+    "simrat39/symbols-outline.nvim",
+    cmd = "SymbolsOutline",
+  },
   -- {
   --   "tmhedberg/SimpylFold",
   -- }
