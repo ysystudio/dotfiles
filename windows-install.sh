@@ -39,3 +39,13 @@ rm %Home%
 ln -s ~/dev/dotfiles/alacritty ~/.config/alacritty
 
 
+# cuda toolkit installation for WSL
+# get the download link from https://developer.nvidia.com/cuda-toolkit-archive, 
+# if you want install other veriso
+# winver reports that OS Of course CUDA in WSL2 will not work in Windows 10 without 21H2.
+wget https://developer.download.nvidia.com/compute/cuda/11.3.1/local_installers/cuda_11.3.1_465.19.01_linux.run
+sudo sh cuda_11.3.1_465.19.01_linux.run
+#update env 
+export CUDA_HOME=/usr/local/cuda-11.3
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
