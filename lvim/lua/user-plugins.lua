@@ -65,12 +65,13 @@ lvim.plugins = {
   },
 
   {
-    'kkoomen/vim-doge',
-    run = ":call doge#install()",
-    config = function()
-      require("config.doge").setup()
-    end,
-    cmd = { "DogeGenerate", "DogeCreateDocStandard" },
-    disable = false,
-  }
+      "danymat/neogen",
+      config = function()
+          require('neogen').setup {}
+      end,
+      requires = "nvim-treesitter/nvim-treesitter",
+      -- Uncomment next line if you want to follow only stable versions
+      -- tag = "*"
+  },
+
 }
