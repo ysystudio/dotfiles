@@ -16,6 +16,18 @@ vim.g.table_mode_corner = '|'
 -- 自动切换输入法配置
 vim.o.ttimeoutlen = 0
 
+-- set doc generate
+vim.g.doge_enable_mappings = 1
+vim.g.doge_doc_standard_lua = "ldoc"
+vim.g.doge_doc_standard_python = "google"
+vim.g.doge_doc_standard_javascript = "jsdoc"
+vim.g.doge_doc_standard_typescript = "jsdoc"
+vim.g.doge_doc_standard_rs = "rustdoc"
+vim.g.doge_mapping_comment_jump_forward = "<C-j>"
+vim.g.doge_mapping_comment_jump_backward = "<C-k>"
+vim.g.doge_buffer_mappings = 1
+vim.g.doge_comment_jump_modes = { "n", "i", "s" }
+vim.g.doge_mapping = ""
 -- set yank avalible in wsl
 -- add win32yank to window path, which default shared with wsl
 if vim.fn.has "wsl" == 1 then

@@ -63,8 +63,14 @@ lvim.plugins = {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",
   },
-  -- {
-  --   "tmhedberg/SimpylFold",
-  -- }
 
+  {
+    'kkoomen/vim-doge',
+    run = ":call doge#install()",
+    config = function()
+      require("config.doge").setup()
+    end,
+    cmd = { "DogeGenerate", "DogeCreateDocStandard" },
+    disable = false,
+  }
 }
