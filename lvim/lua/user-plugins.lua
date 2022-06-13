@@ -65,13 +65,23 @@ lvim.plugins = {
   },
 
   {
-      "danymat/neogen",
-      config = function()
-          require('neogen').setup {}
-      end,
-      requires = "nvim-treesitter/nvim-treesitter",
-      -- Uncomment next line if you want to follow only stable versions
-      -- tag = "*"
+    "danymat/neogen",
+    config = function()
+      require('neogen').setup {}
+    end,
+    requires = "nvim-treesitter/nvim-treesitter",
+    -- Uncomment next line if you want to follow only stable versions
+    -- tag = "*"
   },
 
+  {
+    "phaazon/hop.nvim",
+    branch = 'v1', -- optional but strongly recommended
+    event = "BufRead",
+    config = function()
+      require("hop").setup()
+      vim.api.nvim_set_keymap("n", "t", ":HopChar1<cr>", { silent = true })
+      vim.api.nvim_set_keymap("n", "T", ":HopWord<cr>", { silent = true })
+    end,
+  },
 }
