@@ -28,5 +28,5 @@ nnoremap J mzJ`z
 " nnoremap j jzz
 " nnoremap k kzz
 
-" map esc to jk in insert mode
-inoremap jk <ESC>
+" map esc to jj in insert mode
+inoremap jj <ESC>
