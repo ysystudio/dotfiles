@@ -30,6 +30,12 @@ function git_init_email (){
     git config --global user.name 'ysystudio'
     git config -l
 }
+function git_init_email_thales (){
+    echo -e "git 初始化邮箱"
+    git config --global user.name "Yu Shark"
+    git config --global user.email "shark.yu@thalesgroup.com"
+    git config -l
+}
 function git_proxy_off (){
     echo -e "git 代理已关闭"
     git config --global --unset http.proxy
