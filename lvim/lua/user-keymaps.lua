@@ -4,7 +4,10 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
-
+lvim.keys.normal_mode["E"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["R"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["H"] = ":$<CR>"
+lvim.keys.normal_mode["L"] = ":0<CR>"
 -- 快速分屏
 lvim.keys.normal_mode['sl'] = ':set splitright<CR>:vsplit<CR>'
 lvim.keys.normal_mode['sh'] = ':set nosplitright<CR>:vsplit<CR>'
@@ -20,7 +23,7 @@ lvim.keys.normal_mode['<F7>'] = ':w<CR> | :AsyncTask file-build<CR>'
 lvim.keys.normal_mode['<F9>'] = ':w<CR> | :AsyncTask file-build<CR> | :AsyncTask file-run<CR>'
 lvim.keys.normal_mode['<f4>'] = ':w<CR> | :AsyncTask project-create<CR>'
 lvim.keys.normal_mode['<f6>'] = ':w<CR> | :AsyncTask project-build<CR>'
-lvim.keys.normal_mode['<f8>'] = ':w<CR> | :AsyncTask project-run<CR>'
+lvim.keys.normal_mode['<f8>'] = ':w<CR> | :AsyncTask project-build<CR> | :AsyncTask project-run<CR>'
 
 -- -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = false
@@ -47,6 +50,7 @@ lvim.builtin.telescope.defaults.mappings = {
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["D"] = { ":lua require('neogen').generate()<CR>", "Generate Doc" }
 lvim.builtin.which_key.mappings["O"] = { ":SymbolsOutline<CR>", "SymbolsOutline" }
+lvim.builtin.which_key.mappings["\\"] = { "ggVG" }
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
