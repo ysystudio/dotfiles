@@ -2,7 +2,7 @@
 let mapleader=";"
 
 " 暂时取消搜索高亮快捷键
-nnoremap <silent> <Leader>l :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <Leader>h :<C-u>nohlsearch<CR><C-l>
 
 " 定义快捷键到行首和行尾
 map H ^

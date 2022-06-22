@@ -6,8 +6,11 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
 lvim.keys.normal_mode["E"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["R"] = ":BufferLineCycleNext<CR>"
-lvim.keys.normal_mode["H"] = ":$<CR>"
-lvim.keys.normal_mode["L"] = ":0<CR>"
+lvim.keys.insert_mode["<A-h>"] = "<Left>"
+lvim.keys.insert_mode["<A-l>"] = "<Right>"
+vim.cmd [[ map L $]]
+vim.cmd [[ map H 0]]
+vim.cmd [[ map <Space>\ ggVG]]
 -- 快速分屏
 lvim.keys.normal_mode['sl'] = ':set splitright<CR>:vsplit<CR>'
 lvim.keys.normal_mode['sh'] = ':set nosplitright<CR>:vsplit<CR>'
@@ -50,7 +53,6 @@ lvim.builtin.telescope.defaults.mappings = {
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["D"] = { ":lua require('neogen').generate()<CR>", "Generate Doc" }
 lvim.builtin.which_key.mappings["O"] = { ":SymbolsOutline<CR>", "SymbolsOutline" }
-lvim.builtin.which_key.mappings["\\"] = { "ggVG" }
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
