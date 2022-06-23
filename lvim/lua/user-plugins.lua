@@ -35,13 +35,18 @@ lvim.plugins = {
   },
 
   -- ai auto complementary
+  -- {
+  --   "github/copilot.vim",
+  --   config = function()
+  --     vim.g.copilot_assume_mapped = true
+  --   end,
+  -- },
   {
-    "github/copilot.vim",
-    config = function()
-      vim.g.copilot_assume_mapped = true
-    end,
+    "tzachar/cmp-tabnine",
+    run = "./install.sh",
+    requires = "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
   },
-
   -- indentation guides for every line
   {
     "lukas-reineke/indent-blankline.nvim",
