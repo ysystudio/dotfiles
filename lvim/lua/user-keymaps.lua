@@ -11,10 +11,10 @@ lvim.keys.insert_mode["<A-l>"] = "<Right>"
 vim.cmd [[ map L $]]
 vim.cmd [[ map H 0]]
 vim.cmd [[ map <Space>\ ggVG]]
--- vim.com [[ nnoremap n nzzzv]]
--- vim.com [[ nnoremap N Nzzzv]]
--- vim.com [[ nnoremap j jzz]]
--- vim.com [[ nnoremap k kzz]]
+vim.cmd [[ nnoremap n nzzzv]]
+vim.cmd [[ nnoremap N Nzzzv]]
+vim.cmd [[ nnoremap j jzz]]
+vim.cmd [[ nnoremap k kzz]]
 -- 快速分屏
 lvim.keys.normal_mode['sl'] = ':set splitright<CR>:vsplit<CR>'
 lvim.keys.normal_mode['sh'] = ':set nosplitright<CR>:vsplit<CR>'
