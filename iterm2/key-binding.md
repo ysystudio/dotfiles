@@ -1,3 +1,16 @@
+#default Function	Shortcut
+ ⌘ + T                   New Tab	
+ ⌘ + W                   Close Tab or Window	
+ ⌘ + Number Key          Go to Tab	
+ ⌘ + Option + Arrow Key  Go to Split Pane by Direction	
+ ⌘ + D                   Split Window Vertically (same profile)	
+ ⌘ + Shift + D           Split Window Horizontally (same profile)	
+ ⌘+ Enter                Fullscreen
+ ⌘ + Shift + Enter       Maximize a pane	
+ ctrl + ⌘ + Arrow        Resize Pane	
+ ⌘ + ] , ⌘ + [           Go to Split Pane by Order of Use	
+
+########################################################################
 # Key bindings
 
 To jump between words and start/end of lines in iTerm2 follow these steps:
