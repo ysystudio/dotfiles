@@ -86,7 +86,8 @@ lvim.plugins = {
     config = function()
       require("hop").setup()
       vim.api.nvim_set_keymap("n", "t", ":HopChar1<cr>", { silent = true })
-      vim.api.nvim_set_keymap("n", "T", ":HopWord<cr>", { silent = true })
+      -- vim.api.nvim_set_keymap("n", "T", ":HopWord<cr>", { silent = true })
+      vim.api.nvim_set_keymap("n", "T", ":HHopChar2<cr>", { silent = true })
     end,
   },
 }
