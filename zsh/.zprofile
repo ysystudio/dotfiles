@@ -2,14 +2,6 @@ if [[ $OSTYPE == darwin21* ]]; then
   export MY_PROXY=http://127.0.0.1:56136
   eval "$(/opt/homebrew/bin/brew shellenv)"
   
-  # MacPorts Installer addition on 2021-12-22_at_21:38:56: adding an appropriate PATH variable for use with MacPorts.
-  export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-  # Finished adapting your PATH environment variable for use with MacPorts.
-  
-  # MacPorts Installer addition on 2021-12-22_at_21:38:56: adding an appropriate MANPATH variable for use with MacPorts.
-  export MANPATH="/opt/local/share/man:$MANPATH"
-  # Finished adapting your MANPATH environment variable for use with MacPorts.
-  
   export BYOBU_PREFIX=/opt/homebrew
   export ZI_HOME=/opt/homebrew/opt/zinit
   export PATH="/Users/shark/miniforge3/bin:$PATH"
