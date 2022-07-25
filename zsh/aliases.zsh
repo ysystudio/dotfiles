@@ -1,8 +1,8 @@
 alias c='clear'
 alias cdiff='colordiff'
 alias cs='calcurse'
-alias gc='git config credential.helper store'
-alias gg='git clone'
+alias gcs='git config credential.helper store'
+alias gc='git clone'
 alias py="python"
 alias ipy='ipython'
 alias l='ls -la'
