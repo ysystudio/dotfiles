@@ -4,9 +4,13 @@ let mapleader=";"
 " 暂时取消搜索高亮快捷键
 nnoremap <silent> <Leader>h :<C-u>nohlsearch<CR><C-l>
 
+" norm换行
+nmap <CR> o<Esc>
+
 " 定义快捷键到行首和行尾
 map H ^
 map L $
+
 " 定义快速跳转
 nmap <Leader>t <C-]>
 " 定义快速跳转回退
