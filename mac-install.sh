@@ -13,7 +13,8 @@ xcode-select --install
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
 
 ########### support tools install  ####################
-brew install wget curl autojump fzf git fd lazygit ranger zsh zinit  
+brew install wget curl autojump fzf git fd lazygit ranger zsh zinit tree diff-so-fancy 
+brew install lazydocker htop glances ripgrep z ncdu 
 # sudo port rmtrash
 
 ############## link zshrc ###########################
