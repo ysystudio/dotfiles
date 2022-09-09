@@ -1,5 +1,5 @@
 # WARNING: PLEASE DO NOT USE THIS SCRIPT, JUST MANUALLY FOLLOW THE STEPS
-################# tools install#################
+################# package management tools install#################
 #install choco
 #cmd with admin
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
@@ -15,6 +15,14 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a 
 irm get.scoop.sh | iex
 
 ############# install usefull tool ############################
+
+#Clink for Cmd
+choco install clink-maintained Starship
+#Starship
+#Add the following to a file starship.lua and place this file in Clink scripts directory:
+# -- starship.lua
+# load(io.popen('starship init cmd'):read("*a"))()
+
 choco install wget curl fzf lazygit microsoft-windows-terminal FiraCode 
 choco install wsl-ubuntu-2004
 
@@ -49,3 +57,11 @@ sudo sh cuda_11.3.1_465.19.01_linux.run
 export CUDA_HOME=/usr/local/cuda-11.3
 export PATH=$CUDA_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+
+#tensorflow 2 setup
+pip install tensorflow
+#必须将 CUDA®、CUPTI 和 cuDNN 安装目录添加到 %PATH% 环境变量中。
+SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\bin;%PATH%
+SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\extras\CUPTI\lib64;%PATH%
+SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%PATH%
+SET PATH=C:\tools\cuDnn11.3\bin;%PATH%
