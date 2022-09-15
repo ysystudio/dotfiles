@@ -14,8 +14,14 @@ xcode-select --install
 
 ########### support tools install  ####################
 brew install wget curl autojump fzf git fd lazygit ranger zsh zinit tree diff-so-fancy 
-brew install lazydocker htop glances ripgrep z ncdu 
+brew install lazydocker htop glances ripgrep z 
 # sudo port rmtrash
+icdiff #分屏diff
+ncdu #disk analysi
+tldr #simple manual
+cloc #code statics
+wtf #short words explaining
+cppman #cross platform cpp maneul
 
 ############## link zshrc ###########################
 ln -s ~/dev/dotfiles/zsh/zshrc ~/.zshrc
