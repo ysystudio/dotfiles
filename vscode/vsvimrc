@@ -26,11 +26,11 @@ nmap <Leader>q :q<CR>
 nmap <Leader>w :w<CR>
 
 " Focus center or current cursor position after \"J\"
-nnoremap n nzzzv
-nnoremap N Nzzzv
-nnoremap J mzJ`z
-nnoremap j jzz
-nnoremap k kzz
+; nnoremap n nzzzv
+; nnoremap N Nzzzv
+; nnoremap J mzJ`z
+; nnoremap j jzz
+; nnoremap k kzz
 
 " map esc to jj in insert mode
 inoremap jj <ESC>
