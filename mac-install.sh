@@ -14,7 +14,7 @@ xcode-select --install
 
 ########### support tools install  ####################
 brew install wget curl autojump fzf git fd lazygit ranger zsh zinit tree diff-so-fancy 
-brew install lazydocker htop glances ripgrep z 
+brew install lazydocker htop glances ripgrep z starship
 # sudo port rmtrash
 icdiff #分屏diff
 ncdu #disk analysi

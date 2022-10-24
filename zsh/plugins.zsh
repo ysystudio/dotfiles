@@ -1,8 +1,8 @@
 # check the real path , for example by brew infor zinit,set the ZI_HOME 
 source $ZI_HOME/zinit.zsh
 
-zinit depth=1 lucid nocd for \
-    romkatv/powerlevel10k
+# zinit depth=1 lucid nocd for \
+#     romkatv/powerlevel10k
 
 # if can not load , try to zinit delete OMZP::name and re do source .zshrc
 

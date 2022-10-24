@@ -6,7 +6,7 @@ vim.g.asynctasks_term_pos = 'tab'
 vim.g.asynctasks_term_rows = 15
 vim.g.asynctasks_term_reuse = 1
 vim.g.asynctasks_term_focus = 1
-
+vim.g.asyncrun_open = 6
 -- vim.wo.number = true
 vim.wo.relativenumber = true
 
@@ -40,10 +40,10 @@ lvim.colorscheme = "onedarker"
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
+-- lvim.builtin.notify.active = true 
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
+-- lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.nvimtree.setup.view.relativenumber = false
 lvim.builtin.dap.active = true
 lvim.builtin.treesitter.ignore_install = { "haskell" }
