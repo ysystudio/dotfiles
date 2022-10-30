@@ -1,4 +1,9 @@
 #set the MY_PROXY to your landeng's port in .zprofile
+#
+function gi() {
+  curl -L -s https://www.gitignore.io/api/\$@ ;
+}
+
 function proxy_on () {
     export http_proxy=$MY_PROXY
     export https_proxy=$MY_PROXY
