@@ -4,7 +4,6 @@ if [[ $OSTYPE == darwin21* ]]; then
   
   export BYOBU_PREFIX=/opt/homebrew
   export ZI_HOME=/opt/homebrew/opt/zinit
-  export PATH="/Users/shark/miniforge3/bin:$PATH"
 fi
 
 ###########################################################
@@ -45,7 +44,6 @@ fi
 ###########################################################
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  # export MY_PROXY=http://192.168.127.241:9000
   export MY_PROXY=http://10.160.84.32:8080
   export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
   export ZI_HOME=/home/linuxbrew/.linuxbrew/opt/zinit
@@ -67,3 +65,4 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # <<< conda initialize <<<
   
 fi
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/bottles

@@ -7,7 +7,14 @@ sudo cp -f ./sources.list /etc/apt/sources.list
 #install homebrew from https://brew.idayer.com/
 /bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install.sh)"
 
-brew install wget curl autojump fzf git lua fd lazygit ranger zinit 
+brew install wget curl autojump fzf git lua lazygit ranger zinit 
+
+fd:
+# If you run Ubuntu 19.04 (Disco Dingo) or newer, you can install the officially maintained package:
+# sudo apt install fd-find
+# Note that the binary is called fdfind as the binary name fd is already used by another package. 
+# executing command ln -s $(which fdfind) ~/.local/bin/fd, in order to use fd in the same way as in this documentation. 
+# Make sure that $HOME/.local/bin is in your $PATH.
 
 #change default shell to zsh 
 which zsh
