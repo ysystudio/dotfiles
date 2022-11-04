@@ -12,6 +12,11 @@
 #   args:
 #     - --login
 
+shell:
+  program: "C:\WINDOWS\system32\wsl.exe"
+  args:
+    -d Ubuntu
+
 # 自动刷新
 live_config_reload: true
 # Tab 缩进

@@ -15,7 +15,7 @@
 	sslVerify = false
 	proxy = http://10.160.84.32:8080
 [core] 
-	editor = sublime
+	editor = lvim
 	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [user]
