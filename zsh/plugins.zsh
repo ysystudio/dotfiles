@@ -2,6 +2,8 @@
 source $ZI_HOME/zinit.zsh
 
 # if can not load , try to zinit delete OMZP::name and re do source .zshrc
+zinit depth=1 lucid nocd for \
+    romkatv/powerlevel10k
 
 zinit light paulirish/git-open
 zinit light zsh-users/zsh-autosuggestions
