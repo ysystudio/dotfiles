@@ -32,10 +32,6 @@ mkdir .config
 ln -s ~/dev/dotfiles/ranger ~/.config/ranger
 source ~/.config/ranger
 
-############## link lazygit###########################
-ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
-source ~/.config/lazygit
-
 ############# install neovim ############################
 curl https://sh.rustup.rs -sSf | sh
 # curl -sSf https://static.rust-lang.org/rustup.sh | sh  #install rust stable version

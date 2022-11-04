@@ -36,9 +36,6 @@ nameserver 129.29.29.29.29
 ######### set vpn jump point priority lower, to be validated
 Set-NetIPInterface -InterfaceAlias 'vEthernet (WSL)' -InterfaceMetric 6000    # set jump point priority
 Set-NetIPInterface -InterfaceAlias 'vEthernet (WSL)' -AutomaticMetric enabled # reset
-############## link lazygit###########################
-ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
-source ~/.config/lazygit
 
 #################### alaritty - fastest terminal####################
 choco install alacritty
