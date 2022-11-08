@@ -17,6 +17,7 @@ vim.cmd [[ nnoremap N Nzzzv]]
 vim.cmd [[ nnoremap j jzz]]
 vim.cmd [[ nnoremap k kzz]]
 
+vim.cmd [[ inoremap jj <ESC>]]
 -- 快速分屏
 lvim.keys.normal_mode['sl'] = ':set splitright<CR>:vsplit<CR>'
 lvim.keys.normal_mode['sh'] = ':set nosplitright<CR>:vsplit<CR>'
