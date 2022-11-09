@@ -5,20 +5,19 @@
 :: Linux commands
 doskey alias   = doskey $*
 doskey cat     = type $*
-doskey clear   = cls
+doskey c       = cls
 doskey cp      = copy $*
-doskey cpr     = xcopy $*
+doskey xcp     = xcopy $*
 doskey grep    = find $*
 doskey history = doskey /history
 doskey kill    = taskkill /PID $*
-doskey ls      = dir $*
 doskey l       = dir $*
 doskey man     = help $*
 doskey mv      = move $*
 doskey ps      = tasklist $*
 doskey pwd     = cd
 doskey rm      = del $*
-doskey rmr     = deltree $*
+doskey rmt     = deltree $*
 doskey sudo    = runas /user:administrator $*
 doskey ipy     = ipython
 doskey v       = nvim
@@ -35,5 +34,4 @@ doskey ..... = cd ..\..\..\..\$*
 :: Bind your own applications, uncomment to use
 :: doskey macroname="PATH" $*
 
-doskey s="D:\software\Pythonxy\tools\Sublime Text Build 3211 x64\sublime_text.exe" $*
-
+doskey s     = sublime_text $*

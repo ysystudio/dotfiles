@@ -19,9 +19,9 @@ irm get.scoop.sh | iex
 #Clink for Cmd
 choco install clink-maintained Starship
 #Starship
-#Add the following to a file starship.lua and place this file in Clink scripts directory:
+#Add the following to a file starship.lua and place this file in Clink scripts directory:%LocalAppData%\clink\starship.lua
 # -- starship.lua
-# load(io.popen('starship init cmd'):read("*a"))()
+load(io.popen('starship init cmd'):read("*a"))()
 
 choco install wget curl fzf lazygit microsoft-windows-terminal FiraCode 
 choco install wsl-ubuntu-2004
