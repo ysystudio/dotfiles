@@ -15,7 +15,7 @@ source ~/dev/dotfiles/zsh/completion.zsh
 
 #turn on proxy
 if [[ $MY_PROXY == http* ]]; then
-      all_proxy_on
+      proxy_on
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh

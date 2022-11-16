@@ -59,6 +59,28 @@ function npm_proxy_off (){
     npm config delete   https-proxy
     npm config list | grep proxy
 }
+
+function codna_proxy_on (){
+    echo -e "conda 代理已开启"
+    conda config --set proxy_servers.http $MY_PROXY
+    conda config --set proxy_servers.https $MY_PROXY
+} 
+
+function conda_proxy_off (){
+    echo -e "conda 代理已关闭"
+    conda config --remove-key proxy_servers.http
+    conda config --remove-key proxy_servers.https
+}
+
+function pip_proxy_on (){
+    echo -e "pip 代理已开启"
+    pip config set global.proxy $MY_PROXY
+} 
+
+function conda_proxy_off (){
+    echo -e "pip 代理已关闭"
+    pip config unset global.proxy
+}
 function yarn_proxy_on (){
     echo -e "yarn 代理已开启"
     yarn config set proxy $MY_PROXY
@@ -79,8 +101,11 @@ function all_proxy_on () {
     git config --global https.proxy $MY_PROXY
     npm config set proxy=$MY_PROXY
     npm config set https-proxy=$MY_PROXY
-    # yarn config set proxy $MY_PROXY
-    # yarn config set https-proxy $MY_PROXY
+    pip config set global.proxy $MY_PROXY
+    conda config --set proxy_servers.http $MY_PROXY
+    conda config --set proxy_servers.https $MY_PROXY
+    yarn config set proxy $MY_PROXY
+    yarn config set https-proxy $MY_PROXY
      
 }
 
@@ -94,10 +119,42 @@ function all_proxy_off (){
     git config --global --unset https.proxy
     npm config delete   proxy  
     npm config delete   https-proxy
-    # yarn config delete   proxy  
-    # yarn config delete   https-proxy
+    pip config unset global.proxy
+    conda config --remove-key proxy_servers.http
+    conda config --remove-key proxy_servers.https
+    yarn config delete   proxy 
+    yarn config delete   https-proxy
    
 }
+
+function all_app_proxy_on () { 
+    echo -e "所有app代理已开启"
+    git config --global http.proxy $MY_PROXY
+    git config --global https.proxy $MY_PROXY
+    npm config set proxy=$MY_PROXY
+    npm config set https-proxy=$MY_PROXY
+    pip config set global.proxy $MY_PROXY
+    conda config --set proxy_servers.http $MY_PROXY
+    conda config --set proxy_servers.https $MY_PROXY
+    yarn config set proxy $MY_PROXY
+    yarn config set https-proxy $MY_PROXY
+     
+}
+
+function all_app_proxy_off (){
+    echo -e "所有app代理已关闭"
+    git config --global --unset http.proxy
+    git config --global --unset https.proxy
+    npm config delete   proxy  
+    npm config delete   https-proxy
+    pip config unset global.proxy
+    conda config --remove-key proxy_servers.http
+    conda config --remove-key proxy_servers.https
+    yarn config delete   proxy 
+    yarn config delete   https-proxy
+   
+}
+
 
 
 function wifi_on (){
@@ -118,7 +175,6 @@ function wifi_off (){
 
     all_proxy_off
 }
-
 
 
 # function brew_disable() {

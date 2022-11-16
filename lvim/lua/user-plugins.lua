@@ -1,11 +1,11 @@
 -- Additional Plugins
 lvim.plugins = {
   -- 多光标
-  {
-    "mg979/vim-visual-multi",
-    keys = "<C-n>",
-  },
-  -- 编辑只读文件
+  -- {
+  --   "mg979/vim-visual-multi",
+  --   keys = "<C-n>",
+  -- },
+  -- -- 编辑只读文件
   {
     "lambdalisue/suda.vim",
     cmd = "SudaWrite",
@@ -69,25 +69,25 @@ lvim.plugins = {
     cmd = "SymbolsOutline",
   },
 
-  {
-    "danymat/neogen",
-    config = function()
-      require('neogen').setup {}
-    end,
-    requires = "nvim-treesitter/nvim-treesitter",
-    -- Uncomment next line if you want to follow only stable versions
-    -- tag = "*"
-  },
+  --   {
+  --     "danymat/neogen",
+  --     config = function()
+  --       require('neogen').setup {}
+  --     end,
+  --     requires = "nvim-treesitter/nvim-treesitter",
+  --     -- Uncomment next line if you want to follow only stable versions
+  --     -- tag = "*"
+  --   },
 
-  {
-    "phaazon/hop.nvim",
-    branch = 'v1', -- optional but strongly recommended
-    event = "BufRead",
-    config = function()
-      require("hop").setup()
-      vim.api.nvim_set_keymap("n", "t", ":HopChar1<cr>", { silent = true })
-      -- vim.api.nvim_set_keymap("n", "T", ":HopWord<cr>", { silent = true })
-      vim.api.nvim_set_keymap("n", "T", ":HHopChar2<cr>", { silent = true })
-    end,
-  },
+  --   {
+  --     "phaazon/hop.nvim",
+  --     branch = 'v1', -- optional but strongly recommended
+  --     event = "BufRead",
+  --     config = function()
+  --       require("hop").setup()
+  --       vim.api.nvim_set_keymap("n", "t", ":HopChar1<cr>", { silent = true })
+  --       -- vim.api.nvim_set_keymap("n", "T", ":HopWord<cr>", { silent = true })
+  --       vim.api.nvim_set_keymap("n", "T", ":HHopChar2<cr>", { silent = true })
+  --     end,
+  --   },
 }
