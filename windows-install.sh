@@ -26,16 +26,6 @@ load(io.popen('starship init cmd'):read("*a"))()
 choco install wget curl fzf lazygit microsoft-windows-terminal FiraCode 
 choco install wsl-ubuntu-2004
 
-############# fix wsl  network issue without vpn####################
-#######edit /etc/wsl.conf to look like this:
-[network]
-generateResolvConf = false
-########edit /etc/resolv.conf to use Public DNS
-nameserver 129.29.29.29.29
-
-######### set vpn jump point priority lower, to be validated
-Set-NetIPInterface -InterfaceAlias 'vEthernet (WSL)' -InterfaceMetric 6000    # set jump point priority
-Set-NetIPInterface -InterfaceAlias 'vEthernet (WSL)' -AutomaticMetric enabled # reset
 
 #################### alaritty - fastest terminal####################
 choco install alacritty

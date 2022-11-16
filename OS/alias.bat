@@ -3,19 +3,13 @@
 @echo off
 
 :: Linux commands
-doskey alias   = doskey $*
-doskey cat     = type $*
 doskey c       = cls
 doskey cp      = copy $*
 doskey xcp     = xcopy $*
 doskey grep    = find $*
-doskey history = doskey /history
-doskey kill    = taskkill /PID $*
 doskey l       = dir $*
 doskey man     = help $*
 doskey mv      = move $*
-doskey ps      = tasklist $*
-doskey pwd     = cd
 doskey rm      = del $*
 doskey rmt     = deltree $*
 doskey sudo    = runas /user:administrator $*
@@ -24,12 +18,6 @@ doskey v       = nvim
 doskey lg      = lazygit
 doskey which   = where
 doskey r       = ranger
-
-:: Simplified Navigation
-doskey ..    = cd ..\$*
-doskey ...   = cd ..\..\$*
-doskey ....  = cd ..\..\..\$*
-doskey ..... = cd ..\..\..\..\$*
 
 :: Bind your own applications, uncomment to use
 :: doskey macroname="PATH" $*
