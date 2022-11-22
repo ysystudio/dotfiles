@@ -1,9 +1,25 @@
 if [[ $OSTYPE == darwin21* ]]; then
   export MY_PROXY=http://127.0.0.1:56136
-  eval "$(/opt/homebrew/bin/brew shellenv)"
   
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   export BYOBU_PREFIX=/opt/homebrew
   export ZI_HOME=/opt/homebrew/opt/zinit
+
+  # >>> conda initialize >>>
+  # !! Contents within this block are managed by 'conda init' !!
+  __conda_setup="$('/Users/shark/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+  if [ $? -eq 0 ]; then
+      eval "$__conda_setup"
+  else
+      if [ -f "/Users/shark/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+          . "/Users/shark/opt/anaconda3/etc/profile.d/conda.sh"
+      else
+          export PATH="/Users/shark/opt/anaconda3/bin:$PATH"
+      fi
+  fi
+  unset __conda_setup
+  # <<< conda initialize <<<
+
 fi
 
 ###########################################################
