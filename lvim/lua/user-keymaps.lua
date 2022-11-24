@@ -33,7 +33,7 @@ lvim.keys.normal_mode['<f4>'] = ':AsyncTask project-create<CR>'
 lvim.keys.normal_mode['<f6>'] = ':AsyncTask project-build<CR>'
 lvim.keys.normal_mode['<f7>'] = ':AsyncTask project-build-config<CR>'
 lvim.keys.normal_mode['<f8>'] = ':AsyncTask project-run<CR>'
-lvim.keys.normal_mode['<f9>'] = ':AsyncTask project-build<CR> | :AsyncTask project-run<CR>'
+lvim.keys.normal_mode['<f9>'] = ':AsyncTask project-build<CR>:AsyncTask project-run<CR>'
 
 -- -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = false
