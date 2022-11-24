@@ -47,6 +47,10 @@ brew install neovim make npm node lua xmake
 rm -rf ~/.local/share/lunarvim
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 
+# fix : Error during download, please verify your internet connection
+:lua require("nvim-treesitter.install").prefer_git = true
+
+:TSUpdate
 #################### fonts ###################################
 # If you are using powerlevel10k, p10k configure can install the recommended font for you. 
 # or you can install the nerd font by brew 
