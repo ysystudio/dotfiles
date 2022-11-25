@@ -7,6 +7,7 @@ vim.g.asynctasks_term_rows = 15
 vim.g.asynctasks_term_reuse = 1
 vim.g.asynctasks_term_focus = 1
 vim.g.asyncrun_open = 6
+
 -- vim.wo.number = true
 vim.wo.relativenumber = true
 
@@ -34,13 +35,13 @@ end
 -- lvim is the global options object
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = true
+lvim.format_on_save = false
 lvim.colorscheme = "onedarker"
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
--- lvim.builtin.notify.active = true 
+-- lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 -- lvim.builtin.nvimtree.show_icons.git = 0

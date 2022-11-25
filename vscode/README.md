@@ -122,3 +122,5 @@
 
 - [neovim IDE配置](https://github.com/ravenxrz/dotfiles/tree/master/nvim)
 
+## 6. xmake and clangd
+-  xmake project -k compile_commands

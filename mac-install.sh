@@ -49,8 +49,8 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 
 # fix : Error during download, please verify your internet connection
 :lua require("nvim-treesitter.install").prefer_git = true
-
 :TSUpdate
+
 #################### fonts ###################################
 # If you are using powerlevel10k, p10k configure can install the recommended font for you. 
 # or you can install the nerd font by brew 
@@ -61,7 +61,9 @@ brew install font-FiraCode-nerd-font
 brew install alacritty
 # link the config
 ln -s ~/dev/dotfiles/alacritty ~/.config/alacritty
-# dev sidecar install 
+
+
+#################### dev sidecar install ###################################
 https://github.com/docmirror/dev-sidecar/releases
 # turn on the power mode
 # change the seeting.json5 under ~/.dev-sidecar
