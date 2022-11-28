@@ -1,5 +1,4 @@
 if [[ $OSTYPE == darwin21* ]]; then
-  export MY_PROXY=http://127.0.0.1:56136
   
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export BYOBU_PREFIX=/opt/homebrew
@@ -20,6 +19,7 @@ if [[ $OSTYPE == darwin21* ]]; then
   unset __conda_setup
   # <<< conda initialize <<<
 
+  export MY_PROXY=http://127.0.0.1:56136
 fi
 
 ###########################################################

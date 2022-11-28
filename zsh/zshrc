@@ -5,7 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 source ~/dev/dotfiles/zsh/env.zsh
-source ~/.zprofile
 source ~/dev/dotfiles/zsh/functions.zsh
 source ~/dev/dotfiles/zsh/mappings.zsh
 source ~/dev/dotfiles/zsh/plugins.zsh
@@ -25,3 +24,19 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # >>> xmake >>>
 [[ -s "$HOME/.xmake/profile" ]] && source "$HOME/.xmake/profile" # load xmake profile
 # <<< xmake <<<
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/shark/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/shark/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/shark/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/shark/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

@@ -1,4 +1,6 @@
 # check the real path , for example by brew infor zinit,set the ZI_HOME 
+
+export ZI_HOME=/opt/homebrew/opt/zinit
 source $ZI_HOME/zinit.zsh
 
 # if can not load , try to zinit delete OMZP::name and re do source .zshrc
