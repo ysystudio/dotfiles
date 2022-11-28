@@ -1,11 +1,11 @@
-# eval "$(starship init zsh)"
+# /etc/profile -> /etc/paths -> /etc/paths.d/文件夹所有内容 -> ~/.bash_profile -> ~/.bash_login -> ~/.profile -> ~/.bashrc -> ~/.zprofile -> ~/.zshrc
+
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 source ~/dev/dotfiles/zsh/env.zsh
-source ~/.zprofile
 source ~/dev/dotfiles/zsh/functions.zsh
 source ~/dev/dotfiles/zsh/mappings.zsh
 source ~/dev/dotfiles/zsh/plugins.zsh
@@ -25,3 +25,4 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # >>> xmake >>>
 [[ -s "$HOME/.xmake/profile" ]] && source "$HOME/.xmake/profile" # load xmake profile
 # <<< xmake <<<
+
