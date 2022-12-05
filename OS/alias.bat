@@ -1,5 +1,6 @@
-:: From a Unix lover to another ..
+:: From a Unix lover to another .. 
 :: See https://github.com/jonasaberg91/DoskeyCmd for commands
+
 @echo off
 
 :: Linux commands
@@ -14,6 +15,7 @@ doskey rm      = del $*
 doskey rmt     = deltree $*
 doskey sudo    = runas /user:administrator $*
 doskey ipy     = ipython
+doskey py      = python
 doskey v       = nvim
 doskey lg      = lazygit
 doskey which   = where
