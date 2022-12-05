@@ -1,9 +1,13 @@
 if [[ $OSTYPE == darwin21* ]]; then
-  export MY_PROXY=http://127.0.0.1:56136
   
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export BYOBU_PREFIX=/opt/homebrew
+  export PATH=/opt/homebrew/opt/openjdk/bin:$PATH
+  # check the real path , for example by brew infor zinit,set the ZI_HOME 
   export ZI_HOME=/opt/homebrew/opt/zinit
+  source $ZI_HOME/zinit.zsh
+
+
 
   # >>> conda initialize >>>
   # !! Contents within this block are managed by 'conda init' !!
@@ -20,6 +24,7 @@ if [[ $OSTYPE == darwin21* ]]; then
   unset __conda_setup
   # <<< conda initialize <<<
 
+  export MY_PROXY=http://127.0.0.1:56136
 fi
 
 ###########################################################
@@ -39,6 +44,7 @@ if [[ $OSTYPE == darwin1* ]]; then
   # Finished adapting your MANPATH environment variable for use with MacPorts.
   
   export ZI_HOME="/usr/local/opt/zinit"
+  source $ZI_HOME/zinit.zsh
   
   # >>> conda initialize >>>
   # !! Contents within this block are managed by 'conda init' !!
@@ -62,8 +68,9 @@ fi
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   export MY_PROXY=http://10.160.84.32:8080
   export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
-  export ZI_HOME=/home/linuxbrew/.linuxbrew/opt/zinit
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  export ZI_HOME=/home/linuxbrew/.linuxbrew/opt/zinit
+  source $ZI_HOME/zinit.zsh
   
   # >>> conda initialize >>>
   # !! Contents within this block are managed by 'conda init' !!
