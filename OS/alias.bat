@@ -18,7 +18,7 @@ doskey ipy     = ipython
 doskey py      = python
 doskey v       = nvim
 doskey lg      = lazygit
-doskey which   = where
+doskey which   = where $*
 doskey r       = ranger
 
 :: Bind your own applications, uncomment to use

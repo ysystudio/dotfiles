@@ -5,8 +5,7 @@
 wsl --import wsl-vpnkit $env:USERPROFILE\wsl-vpnkit wsl-vpnkit.tar.gz --version 2
 wsl.exe -d wsl-vpnkit service wsl-vpnkit start
 
-
-####################################################################
+#---------following only for knowlege information ---------------
 ### other start for wsl ip related
 wsl -d Ubuntu-20.04 -u root ip addr del $(ip addr show eth0 | grep 'inet\b' | awk '{print $2}')  dev eth0
 wsl -d Ubuntu-20.04 -u root ip addr add 10.162.39.105/24 broadcast 192.168.50.255 dev eth0
