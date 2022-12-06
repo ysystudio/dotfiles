@@ -35,22 +35,6 @@ source ~/.config/ranger
 ln -s ~/dev/dotfiles/lazygit ~/.config/lazygit
 source ~/.config/lazygit
 
-############# install neovim config#####################
-curl https://sh.rustup.rs -sSf | sh # install rust and cargo
-brew install neovim make npm node lua xmake
-
-# install lunarvim
-# Add the following lines to /etc/hosts to accelerate your installation.
-# mirror.ghproxy.com github.com
-# mirror.ghproxy.com raw.githubusercontent.com
-# https://www.lunarvim.org/01-installing.html#prerequisites
-rm -rf ~/.local/share/lunarvim
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-
-# fix : Error during download, please verify your internet connection
-:lua require("nvim-treesitter.install").prefer_git = true
-:TSUpdate
-
 #################### fonts ###################################
 # If you are using powerlevel10k, p10k configure can install the recommended font for you. 
 # or you can install the nerd font by brew 

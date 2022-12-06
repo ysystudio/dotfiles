@@ -32,19 +32,6 @@ mkdir .config
 ln -s ~/dev/dotfiles/ranger ~/.config/ranger
 source ~/.config/ranger
 
-############# install neovim ############################
-curl https://sh.rustup.rs -sSf | sh
-# curl -sSf https://static.rust-lang.org/rustup.sh | sh  #install rust stable version
-brew install neovim make npm node xmake
-
-# install lunarvim
-# Add the following lines to /etc/hosts to accelerate your installation.
-# mirror.ghproxy.com github.com
-# mirror.ghproxy.com raw.githubusercontent.com
-# https://www.lunarvim.org/01-installing.html#prerequisites
-rm -rf ~/.local/share/lunarvim
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-
 #################### fonts###########################################
 # If you are using powerlevel10k, p10k configure can install the recommended font for you. 
 # or you can download the nerd font from:https://www.nerdfonts.com/font-downloads
