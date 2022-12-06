@@ -88,4 +88,3 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # <<< conda initialize <<<
   
 fi
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/bottles

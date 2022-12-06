@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+source ~/dev/dotfiles/zsh/.zprofile
 source ~/dev/dotfiles/zsh/env.zsh
 source ~/dev/dotfiles/zsh/functions.zsh
 source ~/dev/dotfiles/zsh/mappings.zsh

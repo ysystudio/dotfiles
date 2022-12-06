@@ -33,6 +33,7 @@ rm %Home%
 ln -s ~/dev/dotfiles/alacritty ~/.config/alacritty
 
 
+
 #################### xmake and compiler##############################
 #vc++ compiler installer, you can change the verison by the last four number, for example: 2017
 https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2022
