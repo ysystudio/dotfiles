@@ -24,10 +24,10 @@ choco install neovim git make npm node rust
 unlink ~/.config/lvim
 ln -s ~/dev/dotfiles/lvim ~/.config/lvim
 #windows 
-mklink /j  "C:/Users/10051851/.config/lvim" "C:/Users/10051851/dev/dotfiles/lvim"
+mklink /j  "%USERPROFILE%/.config/lvim" "%USERPROFILE%/dev/dotfiles/lvim"
 
 unlink ~/.vim/tasks.ini
 ln -s ~/dev/dotfiles/lvim/tasks.ini ~/.vim/tasks.ini
 #windows
-lunlink /j  "C:/Users/10051851/.vim/tasks.ini" "C:/Users/10051851/dev/dotfiles/lvim/tasks.ini"
+mklink /j  "%USERPROFILE%/.vim/tasks.ini" "%USERPROFILE%/dev/dotfiles/lvim/tasks.ini"
 
