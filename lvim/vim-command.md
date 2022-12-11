@@ -6,4 +6,4 @@ y^ - Yank (copy) everything from the cursor to the start of the line.
 yw - Yank (copy) to the start of the next word.
 yiw – Yank (copy) the current word.
 y% - Yank (copy)  copy text between matching brackets.. By default supported pairs are (), {}, and [].
-yyG - Yank (copy) the whole file. move to the beginning of the file with gg first
+yG - Yank (copy) the whole file. first gg move to the beginning of the file
