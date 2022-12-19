@@ -14,6 +14,19 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 :lua require("nvim-treesitter.install").prefer_git = true
 :TSUpdate
 
+#------------------unintall-----------------------------------------------
+
+#Updating LunarVim
+Inside LunarVim :LvimUpdate
+From the command-line lvim +LvimUpdate +q
+#Update the plugins
+Inside LunarVim :LvimSyncCorePlugins
+#Uninstall
+#Linux/MacOs
+bash ~/.local/share/lunarvim/lvim/utils/installer/uninstall.sh
+# or
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/uninstall.sh)
+
 
 
 #---------------- install lvim  on windows---------------------------------
