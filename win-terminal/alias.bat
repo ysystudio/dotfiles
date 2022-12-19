@@ -1,6 +1,6 @@
 :: From a Unix lover to another .. 
 :: See https://github.com/jonasaberg91/DoskeyCmd for commands
-
+:: how to make it work: cmd.exe  /K "C:\Users\10051851\dev\dotfiles\win-terminal\alias.bat C:\ "
 @echo off
 
 :: Linux commands
