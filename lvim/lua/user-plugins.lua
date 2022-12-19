@@ -1,7 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
 
-  -- -- 编辑只读文件
+  -- 编辑只读文件
   {
     "lambdalisue/suda.vim",
     cmd = "SudaWrite",
@@ -12,16 +12,6 @@ lvim.plugins = {
     keys = { 'i', 'a', 'I', 'A', 'c', 'o', 'O' },
   },
 
-  -- -- markdown 预览
-  -- {
-  --   "iamcco/markdown-preview.nvim",
-  --   run = "cd app && npm install",
-  --   ft = "markdown",
-  --   config = function()
-  --     vim.g.mkdp_auto_start = 1
-  --   end,
-  -- },
-
   -- 现代任务系统
   {
     "skywind3000/asynctasks.vim",
@@ -29,21 +19,14 @@ lvim.plugins = {
     cmd = { "AsyncTask", "AsyncTaskEdit" },
     opt = true,
   },
-
-  -- ai auto complementary
-  -- {
-  --   "github/copilot.vim",
-  --   config = function()
-  --     vim.g.copilot_assume_mapped = true
-  --   end,
-  -- },
+  --ai completion
   {
     "tzachar/cmp-tabnine",
     run = "./install.sh",
     requires = "hrsh7th/nvim-cmp",
     event = "InsertEnter",
   },
-
+  -- outline
   {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",
@@ -52,5 +35,12 @@ lvim.plugins = {
     end
 
   },
-
+  -- You must install glow globally
+  -- https://github.com/charmbracelet/glow
+  -- brew install glow
+  {
+    "npxbr/glow.nvim",
+    ft = {"markdown"}
+    -- run = "yay -S glow"
+  },
 }
