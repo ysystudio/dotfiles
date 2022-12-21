@@ -21,10 +21,10 @@ vim.cmd [[ nnoremap j jzz]]
 vim.cmd [[ nnoremap k kzz]]
 
 -- 快速分屏
-lvim.keys.normal_mode['sl'] = ':set splitright<CR>:vsplit<CR>'
-lvim.keys.normal_mode['sh'] = ':set nosplitright<CR>:vsplit<CR>'
-lvim.keys.normal_mode['sj'] = ':set splitright<CR>:split<CR>'
-lvim.keys.normal_mode['sk'] = ':set nosplitright<CR>:split<CR>'
+-- lvim.keys.normal_mode['sl'] = ':set splitright<CR>:vsplit<CR>'
+-- lvim.keys.normal_mode['sh'] = ':set nosplitright<CR>:vsplit<CR>'
+-- lvim.keys.normal_mode['sj'] = ':set splitright<CR>:split<CR>'
+-- lvim.keys.normal_mode['sk'] = ':set nosplitright<CR>:split<CR>'
 
 -- 保存时用suda写入
 lvim.keys.normal_mode['<A-s>'] = ':SudaWrite<CR>'
@@ -62,6 +62,7 @@ lvim.builtin.telescope.defaults.mappings = {
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["D"] = { ":lua require('neogen').generate()<CR>", "Generate Doc" }
 lvim.builtin.which_key.mappings["O"] = { ":SymbolsOutline<CR>", "SymbolsOutline" }
+
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
