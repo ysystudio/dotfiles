@@ -51,6 +51,11 @@ brew install font-FiraCode-nerd-font
 >     setuped: true,
 >   },
 }
+### outlook and teams logon on mac m1
+> when the certification window for Thales popup, input your TID and password, next show smartc card authetificaiton ,
+> just click then fail because no card. Then secret is , right click the logon window and select back, continue till
+> the window close, exit and reopen , the logon status will be saved.
+
 
 # macOS
 
