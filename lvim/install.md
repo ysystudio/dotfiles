@@ -31,7 +31,7 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 
 #---------------- install lvim  on windows---------------------------------
 choco install neovim git make npm node rust
-# use powershell (>7.1) run install-lvim.ps1
+git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/AppData/Local/nvim
 
 #---------------- config lvim ---------------------------------------------
 unlink ~/.config/lvim
@@ -43,4 +43,5 @@ unlink ~/.vim/tasks.ini
 ln -s ~/dev/dotfiles/lvim/tasks.ini ~/.vim/tasks.ini
 #windows
 mklink /j  "%USERPROFILE%/.vim/tasks.ini" "%USERPROFILE%/dev/dotfiles/lvim/tasks.ini"
+
 
