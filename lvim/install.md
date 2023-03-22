@@ -31,7 +31,10 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 
 #---------------- install lvim  on windows---------------------------------
 choco install neovim git make npm node rust
-git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/AppData/Local/nvim
+git clone https://github.com/LunarVim/Neovim-from-scratch.git "%USERPROFILE%/AppData/Local/nvim
+
+unlink "%USERPROFILE%/AppData/Local/nvim
+mklink /j  "%USERPROFILE%/AppData/Local/nvim" "%USERPROFILE%/dev/dotfiles/nvim"
 
 #---------------- config lvim ---------------------------------------------
 unlink ~/.config/lvim
