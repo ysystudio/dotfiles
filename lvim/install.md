@@ -39,12 +39,10 @@ mklink /j  "%USERPROFILE%/AppData/Local/nvim" "%USERPROFILE%/dev/dotfiles/nvim"
 #---------------- config lvim ---------------------------------------------
 unlink ~/.config/lvim
 ln -s ~/dev/dotfiles/lvim ~/.config/lvim
-#windows 
-mklink /j  "%USERPROFILE%/.config/lvim" "%USERPROFILE%/dev/dotfiles/lvim"
 
 unlink ~/.vim/tasks.ini
 ln -s ~/dev/dotfiles/lvim/tasks.ini ~/.vim/tasks.ini
 #windows
-mklink /j  "%USERPROFILE%/.vim/tasks.ini" "%USERPROFILE%/dev/dotfiles/lvim/tasks.ini"
+mklink /h  "%USERPROFILE%/.vim/tasks.ini" "%USERPROFILE%/dev/dotfiles/lvim/tasks.ini"
 
 

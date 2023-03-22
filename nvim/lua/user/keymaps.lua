@@ -83,3 +83,15 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- 保存时用suda写入
+keymap("n", "<A-s>", ":SudaWrite<CR>", opts)
+-- 一键编译/运行/编译运行
+keymap("n",'<F5>', ':w<CR> | :AsyncTask file-run<CR>', opts)
+keymap("n",'<f4>', ':AsyncTask project-create<CR>', opts)
+keymap("n",'<f6>', ':AsyncTask project-build-config<CR>', opts)
+keymap("n",'<f7>', ':AsyncTask project-build<CR>', opts)
+keymap("n",'<f8>', ':AsyncTask project-debug-run<CR>', opts)
+keymap("n",'<f9>', ':AsyncTask project-build-run<CR>', opts)
+
+
+

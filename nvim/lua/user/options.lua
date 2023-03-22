@@ -48,3 +48,11 @@ vim.opt.iskeyword:append "-"                           -- hyphenated words recog
 vim.opt.formatoptions:remove({ "c", "r", "o" })        -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
 vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")  -- separate vim plugins from neovim in case vim still in use
 
+-- 设置asynctasks窗口排版
+vim.g.asynctasks_term_pos = 'tab'
+vim.g.asynctasks_term_rows = 15
+vim.g.asynctasks_term_reuse = 1
+vim.g.asynctasks_term_focus = 1
+vim.g.asyncrun_open = 6
+
+

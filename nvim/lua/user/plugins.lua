@@ -92,6 +92,27 @@ return packer.startup(function(use)
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
 
+  -- 编辑只读文件
+ 	use { "lambdalisue/suda.vim", cmd = "SudaWrite" }
+
+  -- 自动切换输入法
+  use { "lilydjwg/fcitx.vim", keys = { 'i', 'a', 'I', 'A', 'c', 'o', 'O' } }
+
+  -- 现代任务系统
+  use { "skywind3000/asyncrun.vim"}
+  use { "skywind3000/asynctasks.vim",cmd = { "AsyncTask", "AsyncTaskEdit" }}
+
+  --ai completion
+  use { "tzachar/cmp-tabnine", build = "./install.sh", dependencies = "hrsh7th/nvim-cmp", event = "InsertEnter" }
+  -- outline
+  use {
+    "simrat39/symbols-outline.nvim",
+    cmd = "SymbolsOutline",
+    config = function()
+      require('symbols-outline').setup()
+    end
+
+  }
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
