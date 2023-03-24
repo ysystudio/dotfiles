@@ -79,7 +79,7 @@
         "list": 
         [
             {
-                 "commandline": "%SystemRoot%\System32\cmd.exe"  /K "C:\Users\10051851\dev\dotfiles\win-terminal\alias.bat C:\ "  /K "C:\ProgramData\Anaconda3\Scripts\activate.bat C:\ProgramData\Anaconda3,
+                 "commandline": "%SystemRoot%\System32\cmd.exe"  /K C:\ProgramData\anaconda3\Scripts\activate.bat C:\ProgramData\anaconda3 &  C:\Users\10051851\dev\dotfiles\win-terminal\alias.bat C:\ ,
                 "elevate": false,
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,

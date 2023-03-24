@@ -15,15 +15,15 @@ lvim.plugins = {
   -- 现代任务系统
   {
     "skywind3000/asynctasks.vim",
-    requires = "skywind3000/asyncrun.vim",
+    dependencies = "skywind3000/asyncrun.vim",
     cmd = { "AsyncTask", "AsyncTaskEdit" },
-    opt = true,
+    lazy = true,
   },
   --ai completion
   {
     "tzachar/cmp-tabnine",
-    run = "./install.sh",
-    requires = "hrsh7th/nvim-cmp",
+    build = "./install.sh",
+    dependencies = "hrsh7th/nvim-cmp",
     event = "InsertEnter",
   },
   -- outline
