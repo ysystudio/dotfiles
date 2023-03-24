@@ -103,7 +103,7 @@ return packer.startup(function(use)
   use { "skywind3000/asynctasks.vim",cmd = { "AsyncTask", "AsyncTaskEdit" }}
 
   --ai completion
-  use { "tzachar/cmp-tabnine", build = "./install.sh", dependencies = "hrsh7th/nvim-cmp", event = "InsertEnter" }
+  -- use { "tzachar/cmp-tabnine", build = "./install.sh", dependencies = "hrsh7th/nvim-cmp", event = "InsertEnter" }
   -- outline
   use {
     "simrat39/symbols-outline.nvim",

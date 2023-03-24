@@ -17,6 +17,7 @@ doskey sudo    = runas /user:administrator $*
 doskey ipy     = ipython
 doskey py      = python
 doskey v       = nvim $*
+doskey nq       = nvim-qt --maximized $*
 doskey lg      = lazygit
 doskey which   = where $*
 doskey r       = ranger
