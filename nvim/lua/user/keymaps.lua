@@ -21,8 +21,8 @@ vim.g.maplocalleader = " "
 -- add your own keymapping
 keymap("n", "<C-s>", ":w<cr>", opts)
 keymap("n", "<C-q>", ":q<cr>", opts)
-keymap("n", "<A-h>" ,"0", opts)
-keymap("n", "<A-l>" , "$", opts)
+keymap("n", "<S-h>" ,"0", opts)
+keymap("n", "<S-l>" , "$", opts)
 
 keymap("i", "<A-l>" , "<Right>", opts)
 keymap("i", "<A-h>" , "<Left>", opts)
@@ -50,8 +50,8 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<A-l>", ":bnext<CR>", opts)
+keymap("n", "<A-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==", opts)
