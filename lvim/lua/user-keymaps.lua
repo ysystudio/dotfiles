@@ -4,8 +4,8 @@ vim.cmd [[ inoremap jj <ESC>]]
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
-lvim.keys.normal_mode["E"] = ":BufferLineCyclePrev<CR>"
-lvim.keys.normal_mode["R"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<A-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<A-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.insert_mode["<A-l>"] = "<Right>"
 lvim.keys.insert_mode["<A-h>"] = "<Left>"
 lvim.keys.insert_mode["<A-j>"] = "<Down>"
@@ -61,7 +61,7 @@ lvim.builtin.telescope.defaults.mappings = {
 
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["D"] = { ":lua require('neogen').generate()<CR>", "Generate Doc" }
-lvim.builtin.which_key.mappings["O"] = { ":SymbolsOutline<CR>", "SymbolsOutline" }
+lvim.builtin.which_key.mappings["o"] = { ":SymbolsOutline<CR>", "SymbolsOutline" }
 
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
