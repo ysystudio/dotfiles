@@ -29,6 +29,14 @@ keymap("i", "<A-h>" , "<Left>", opts)
 keymap("i", "<A-j>" , "<Down>", opts)
 keymap("i", "<A-k>" , "<Up>", opts)
 
+vim.cmd [[ nmap <C-"> Bxi"<Esc>Exi"<Esc>]]
+vim.cmd [[ nmap <C-'> Bxi'<Esc>Exi'<Esc>]]
+vim.cmd [[ nmap <tab> V><Esc>]]
+vim.cmd [[ nmap <s-tab> V<<Esc>]]
+vim.cmd [[ vmap <tab> >gv]]
+vim.cmd [[ vmap <s-tab> <gv]]
+
+
 vim.cmd [[ nmap <Space>/ gcc]]
 vim.cmd [[ vmap <Space>/ gc]]
 
