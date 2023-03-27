@@ -5,10 +5,14 @@ vim.cmd [[ inoremap jj <ESC>]]
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
 
-lvim.keys.insert_mode["<A-l>"] = "<Right>"
-lvim.keys.insert_mode["<A-h>"] = "<Left>"
-lvim.keys.insert_mode["<A-j>"] = "<Down>"
-lvim.keys.insert_mode["<A-k>"] = "<Up>"
+lvim.keys.insert_mode["<C-j>"] = "<Esc>:m .+1<CR>==i"
+lvim.keys.insert_mode["<C-k>"] = "<Esc>:m .-2<CR>==i"
+
+
+-- lvim.keys.insert_mode["<A-l>"] = "<Right>"
+-- lvim.keys.insert_mode["<A-h>"] = "<Left>"
+-- lvim.keys.insert_mode["<A-j>"] = "<Down>"
+-- lvim.keys.insert_mode["<A-k>"] = "<Up>"
 
 vim.cmd [[ nmap <C-"> Bxi"<Esc>Exi"<Esc>]]
 vim.cmd [[ nmap <C-'> Bxi'<Esc>Exi'<Esc>]]
