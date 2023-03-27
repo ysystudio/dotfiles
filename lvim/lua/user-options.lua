@@ -1,8 +1,8 @@
--- 禁用多光标警告
-vim.g.VM_show_warnings = 0
-
 -- 解决treesitter 无法下载问题
 require("nvim-treesitter.install").prefer_git = true
+
+-- 禁用多光标警告
+vim.g.VM_show_warnings = 0
 
 -- 设置asynctasks窗口排版
 vim.g.asynctasks_term_pos = 'tab'

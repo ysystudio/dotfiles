@@ -14,7 +14,7 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 # fix : Error during download, please verify your internet connection
 :lua require("nvim-treesitter.install").prefer_git = true
 :TSUpdate
-
+:TSInstall all and TSUpdate to fix the lua running error
 #------------------unintall-----------------------------------------------
 
 bash ~/.local/share/lunarvim/lvim/utils/installer/uninstall.sh
