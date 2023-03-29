@@ -13,8 +13,13 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 
 # fix : Error during download, please verify your internet connection
 :lua require("nvim-treesitter.install").prefer_git = true
-:TSUpdate
-:TSInstall all and TSUpdate to fix the lua running error
+
+# fix error: treesitter/query.lua:219: query: invalid node type
+:echo nvim_get_runtime_file('parser', v:true)
+['/home/holger/.local/share/lunarvim/site/pack/packer/start/nvim-treesitter/parser', '/usr/lib/nvim/parser']
+"If you get more than one path, remove the ones that are outside this plugin (nvim-treesitter directory),
+so the correct version of the parser is used.".
+
 #------------------unintall-----------------------------------------------
 
 bash ~/.local/share/lunarvim/lvim/utils/installer/uninstall.sh

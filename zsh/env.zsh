@@ -2,7 +2,7 @@ export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$PATH:$HOME/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin
+export PATH=$PATH:/opt/homebrew/Cellar/lua-language-server/3.6.18/bin
 export PATH=$HOME/flutter/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 
