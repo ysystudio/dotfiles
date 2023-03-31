@@ -15,8 +15,8 @@ source ~/dev/dotfiles/zsh/functions.zsh
 source ~/dev/dotfiles/zsh/.zprofile
 source ~/dev/dotfiles/zsh/env.zsh
 source ~/dev/dotfiles/zsh/mappings.zsh
-source ~/dev/dotfiles/zsh/aliases.zsh
 source ~/dev/dotfiles/zsh/plugins.zsh
+source ~/dev/dotfiles/zsh/aliases.zsh
 source ~/dev/dotfiles/zsh/fzf.zsh
 source ~/dev/dotfiles/zsh/completion.zsh
 
