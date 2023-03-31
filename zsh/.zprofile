@@ -1,4 +1,4 @@
-if [[ $OSTYPE == darwin21* ]]; then
+if [[ $OSTYPE == darwin2* ]]; then
   
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export BYOBU_PREFIX=/opt/homebrew
@@ -65,7 +65,7 @@ fi
 ###########################################################
 ###########################################################
 
-if [[ "$OSTYPE" == "linux"* ]]; then
+if [[ $OSTYPE == linux* ]]; then
   export MY_PROXY=http://10.160.84.32:8080
   export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

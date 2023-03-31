@@ -15,7 +15,7 @@ cs     [alias]              calcurse
 dv     [alias]              deactivate
 gc     [alias]              git config credential.helper store
 ipy    [alias]              ipython
-l      [alias]              ls -la
+ll      [alias]              ls -la
 lg     [alias]              lazygit
 ms     [alias]              mailsync
 mt     [alias]              neomutt
