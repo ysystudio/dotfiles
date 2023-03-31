@@ -8,8 +8,8 @@
 ### macport install
 > go to official https://www.macports.org/install.php download your macos related dmg
 ### python install
-> intel cup : https://mirror.tuna.tsinghua.edu.cn/help/anaconda/
-> arm cpu : https://github.com/conda-forge/miniforge
+> https://mirror.tuna.tsinghua.edu.cn/help/anaconda/
+
 ### brew install
 ```/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
 ```
@@ -51,16 +51,12 @@ brew install font-FiraCode-nerd-font
 >     setuped: true,
 >   },
 }
+
 ### outlook and teams logon on mac m1
 > when the certification window for Thales popup, input your TID and password, next show smartc card authetificaiton ,
 > just click then fail because no card. Then secret is , right click the logon window and select back, continue till
 > the window close, exit and reopen , the logon status will be saved.
 
-
-# macOS
-
-- For dotfiles, simplely run [mac-install.sh](../mac-install.sh) to install all dotfiles, it will setup zsh+tmux+vim environment for Python/JS/C/C++;
-- For system settings, perform all the following checklist item.
 
 ### System Preference
 
@@ -69,35 +65,11 @@ brew install font-FiraCode-nerd-font
 - **Dock** Size Small/Disable Magnification/Left Position/Genie effect/Double-click title bar to minimize
 - **Finder** enable TabBar+StatusBar+PathBar (View -> Show [TabBar|StatusBar|PathBar])
 - **.ssh_config**
-- **Global Keyboard Shortcuts**
-  - control + space: Spotlight
-  - option + space: Eudict
-  - shift + space: Dehelper
-  - command + space: Input Method
-  - ABC - Extended
-    - option+s: ß
-    - option+u, with a/u/o: ä/ü/ö
 - **Trackpad Gestures**
   - Tap click
   - Secondary click
   - Three fingers drag
   - Three fingers tap
-- **Additional System Fonts**
-  - Powerline Font: https://github.com/changkun/fonts
-- Font rendering: `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO` This is for VSCode
-
-### General
-
-- Dropbox: https://www.dropbox.com/install
-- Chrome: https://www.google.com/chrome/index.html
-- **Eudict**: http://www.eudic.net/eudic/mac_dictionary.aspx
-- **Dehelper**: http://www.francochinois.com/Dehelper/mac.aspx
-- **Grammarly**: https://www.grammarly.com/native/mac
-- **IINA**: https://github.com/lhc70000/iina
-- **1Password**: AppStore
-- **WeChat**: AppStore
-- **Telegram**: AppStore
-- **Photoshop** (**Affinity Photo**): AppStore
 
 ### Development
 
@@ -118,62 +90,6 @@ brew install font-FiraCode-nerd-font
 - Xcode: AppStore
 - Docker for Mac: https://docs.docker.com/docker-for-mac/
 
-### Environment
-
-- **Bash**: 
-- oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
-  - brew: https://brew.sh 
-- VIM:
-  - [.vimrc](../.vimrc)
-- TMUX:
-  - [tmux.conf](../tmux.conf)
-  - [tmux.conf.local](../tmux.conf.local)
-- VSCode: code --list-extensions | xargs -L 1 echo code --install-extension
-  ```
-  code --install-extension bungcip.better-toml
-  code --install-extension circledev.glsl-canvas
-  code --install-extension dbaeumer.vscode-eslint
-  code --install-extension donjayamanne.jupyter
-  code --install-extension eamodio.gitlens
-  code --install-extension Equinusocio.vsc-community-material-theme
-  code --install-extension Equinusocio.vsc-material-theme
-  code --install-extension equinusocio.vsc-material-theme-icons
-  code --install-extension eriklynd.json-tools
-  code --install-extension felipe-mendes.slack-theme
-  code --install-extension felixfbecker.php-intellisense
-  code --install-extension formulahendry.vscode-mysql
-  code --install-extension golang.go
-  code --install-extension James-Yu.latex-workshop
-  code --install-extension janisdd.vscode-edit-csv
-  code --install-extension johnstoncode.svn-scm
-  code --install-extension maelvalais.autoconf
-  code --install-extension mechatroner.rainbow-csv
-  code --install-extension mrjjot.vscode-glsl-linter
-  code --install-extension ms-azuretools.vscode-docker
-  code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
-  code --install-extension ms-python.python
-  code --install-extension ms-toolsai.jupyter
-  code --install-extension ms-vscode-remote.remote-ssh
-  code --install-extension ms-vscode-remote.remote-ssh-edit
-  code --install-extension ms-vscode.cpptools
-  code --install-extension njpwerner.autodocstring
-  code --install-extension octref.vetur
-  code --install-extension PKief.material-icon-theme
-  code --install-extension PsykoSoldi3r.itunes-vscode
-  code --install-extension quillaja.goasm
-  code --install-extension redhat.vscode-yaml
-  code --install-extension rust-lang.rust
-  code --install-extension slevesque.shader
-  code --install-extension tomoki1207.pdf
-  code --install-extension vscode-icons-team.vscode-icons
-  code --install-extension vscodevim.vim
-  code --install-extension WakaTime.vscode-wakatime
-  code --install-extension wayou.vscode-todo-highlight
-  code --install-extension yzhang.markdown-all-in-one
-  code --install-extension zhouronghui.propertylist
-  code --install-extension znck.grammarly
-  code --install-extension zxh404.vscode-proto3
-  ```
 
 ### Writing
 
