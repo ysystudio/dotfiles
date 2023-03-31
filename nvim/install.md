@@ -10,8 +10,5 @@ unlink ~/.vim/tasks.ini
 mklink /h  "%USERPROFILE%/.vim/tasks.ini" "%USERPROFILE%/dev/dotfiles/lvim/tasks.ini"
 
 
-#---------------- config neovim  on linux---------------------------------
-unlink ~/.config/nvim
-ln -s ~/dev/dotfiles/nvim ~/.config/nvim
 
 

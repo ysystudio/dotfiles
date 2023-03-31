@@ -65,7 +65,7 @@ fi
 ###########################################################
 ###########################################################
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+if [[ "$OSTYPE" == "linux"* ]]; then
   export MY_PROXY=http://10.160.84.32:8080
   export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

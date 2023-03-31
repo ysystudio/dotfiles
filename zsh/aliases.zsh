@@ -22,7 +22,6 @@ fi
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 alias ni='nmcli'
-alias fd='fdfind'
 alias l='lsd -la'
 fi
 
