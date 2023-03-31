@@ -3,10 +3,10 @@
 function gi() {
   curl -L -s https://www.gitignore.io/api/\$@ ;
 }
+
 function cdw() {
   cd /mnt/c/Users/10051851;
 }
-
 
 function proxy_on () {
     export http_proxy=$MY_PROXY

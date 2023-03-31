@@ -3,30 +3,7 @@
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "right"
-            }
-        },
-        {
+       {
             "command": 
             {
                 "action": "splitPane",
@@ -34,18 +11,6 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+d"
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+shift+plus"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+w"
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+f4"
         },
         {
             "command": "closePane",
@@ -56,8 +21,8 @@
             "keys": "alt+q"
         }
     ],
-    "copyFormatting": "none",
     "copyOnSelect": true,
+    "copyFormatting": "none",
     "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
     "focusFollowMouse": true,
     "profiles": 

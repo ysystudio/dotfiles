@@ -5,6 +5,7 @@
 
 :: Linux commands
 doskey c       = cls
+doskey cdh     = cd %USERPROFILE%
 doskey cp      = copy $*
 doskey xcp     = xcopy $*
 doskey grep    = find $*
@@ -12,6 +13,7 @@ doskey l       = dir $*
 doskey man     = help $*
 doskey mv      = move $*
 doskey rm      = del $*
+doskey rmd     = rmdir /s $*
 doskey rmt     = deltree $*
 doskey sudo    = runas /user:administrator $*
 doskey ipy     = ipython
