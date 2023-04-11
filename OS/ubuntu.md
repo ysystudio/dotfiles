@@ -44,7 +44,7 @@ sudo apt update
 install homebrew from https://brew.idayer.com/
 /bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install.sh)"
 
-brew install wget curl autojump fzf git lua lazygit ranger zinit fd lsd
+brew install wget curl autojump fzf git lua lazygit ranger zinit fd lsd make ripgrep
 ```
 - Make sure that $HOME/.local/bin is in your $PATH.
 
