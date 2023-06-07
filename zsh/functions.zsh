@@ -4,6 +4,10 @@ function gi() {
   curl -L -s https://www.gitignore.io/api/\$@ ;
 }
 
+function get_public_ip() {
+  curl ipinfo.io/json;
+}
+
 function cdw() {
   cd /mnt/c/Users/10051851;
 }
