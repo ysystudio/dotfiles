@@ -58,39 +58,24 @@ choco install microsoft-windows-terminal wsl-ubuntu-2004
 
 ### deep learning
 >
-> cuda toolkit installation for WSL
-> get the download link from <https://developer.nvidia.com/cuda-toolkit-archive>,
-> if you want install other veriso
 > winver reports that OS Of course CUDA in WSL2 will not work in Windows 10 without 21H2.
 
-```
-wget https://developer.download.nvidia.com/compute/cuda/11.3.1/local_installers/cuda_11.3.1_465.19.01_linux.run
-sudo sh cuda_11.3.1_465.19.01_linux.run
+> if the nvidia graphics driver install on window, then wsl been install also, so do not 
+> nee to istall graphics driver in wsl
 
+> install cuda
 ```
-
-### update env
-
-```
-export CUDA_HOME=/usr/local/cuda-11.3
-export PATH=$CUDA_HOME/bin:$PATH
-export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+wget https://developer.download.nvidia.com/compute/cuda/11.7.1/local_installers/cuda_11.7.1_515.65.01_linux.run
+sudo sh cuda_11.7.1_515.65.01_linux.run
 
 ```
 
-### tensorflow 2 setup
-
-` pip install tensorflow `
-
-> 必须将 CUDA®、CUPTI 和 cuDNN 安装目录添加到 %PATH% 环境变量中。
+> directly install pytorch using pip 
 
 ```
-SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\bin;%PATH%
-SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\extras\CUPTI\lib64;%PATH%
-SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%PATH%
-SET PATH=C:\tools\cuDnn11.3\bin;%PATH%
-
+pip install pytorch torchvision torchtext
 ```
+
 
 # Required Dev Softwares
 
