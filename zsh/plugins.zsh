@@ -13,9 +13,9 @@ zinit light agkozak/zsh-z
 
 
 # 加载 OMZ 框架及部分插
-zinit snippet OMZ::lib/git.zsh
-zinit snippet OMZ::lib/history.zsh
 zinit snippet OMZ::lib/key-bindings.zsh
+# zinit snippet OMZ::lib/history.zsh
+# zinit snippet OMZ::lib/git.zsh
 zinit snippet OMZ::lib/clipboard.zsh
 # zinit snippet OMZ::lib/completion.zsh
 zinit snippet OMZP::cp

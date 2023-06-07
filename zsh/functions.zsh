@@ -37,6 +37,12 @@ function git_proxy_on (){
     git config --global https.proxy $MY_PROXY
     git config -l | grep proxy
 }
+function git_proxy_off (){
+    echo -e "git 代理已关闭"
+    git config --global --unset http.proxy
+    git config --global --unset https.proxy
+    git config -l | grep proxy
+}
 function git_init_email (){
     echo -e "git 初始化邮箱"
     git config --global user.email "ysystudio@gmail.com"
@@ -48,12 +54,6 @@ function git_init_email_thales (){
     git config --global user.name "Yu Shark"
     git config --global user.email "shark.yu@thalesgroup.com"
     git config -l
-}
-function git_proxy_off (){
-    echo -e "git 代理已关闭"
-    git config --global --unset http.proxy
-    git config --global --unset https.proxy
-    git config -l | grep proxy
 }
 function npm_proxy_on (){
     echo -e "npm 代理已开启"
