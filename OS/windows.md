@@ -103,7 +103,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 wsl --set-default-version 2
 
-7、下载发行版，可以参考 下载发行版，小亮这里下载的是 Ubuntu 20.04
+7、下载发行版，可以参考 下载发行版，这里下载的是 Ubuntu 20.04
 choco install  wsl-ubuntu-2004 20.4.0.20220127
 
 8、将下载的文件复制到想要安装的位置,修改文件后缀名: Ubuntu_2004.2020.424.0_x64.appx -> Ubuntu_2004.2020.424.0_x64.zip
