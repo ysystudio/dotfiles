@@ -1,47 +1,7 @@
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-# [user]
-# 	name = Yu Shark
-# 	email = shark.yu@thalesgroup.com
-[http]
-	sslVerify = false
-	postBuffer = 1048576000
-	version = HTTP/1.1
-	proxy = http://10.160.84.32:8080
-[https]
-	sslVerify = false
-	proxy = http://10.160.84.32:8080
-[core] 
-	editor = vim
-	excludesfile = ~/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
-[user]
-	name = ysystudio
-	email = ysystudio@gmail.com
-[commit]
-	template = ~/.stCommitMsg
+##github.com/ 
+[includeIf "gitdir:C:/Users/10051851/dev/"]
+    path = ~/.gitconfig-github
 
-[credential]
-	helper = store
-[pull]
-	rebase = false
-[interactive]
-	diffFilter = diff-so-fancy --patch
-[color]
-	ui = true
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[color "diff"]
-	meta = 11
-	frag = magenta bold
-	func = 146 bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+## 工作项目
+[includeIf "gitdir:D:/work/"]
+    path = ~/.gitconfig-bitbk
