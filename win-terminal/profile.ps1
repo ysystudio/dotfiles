@@ -1,12 +1,12 @@
-
 # add link under windows:
-# mklink   "%USERPROFILE%/Documents/PowerShell/profile.ps1" "%USERPROFILE%/dev/dotfiles/win-terminal/profile.ps1"
+# mklink   $profile "%USERPROFILE%/dev/dotfiles/win-terminal/profile.ps1"
+#
 # Linux commands
 Set-Alias -Name c       -Value cls 
-# Set-Alias -Name cp      -Value copy 
+Set-Alias -Name cp      -Value copy 
 Set-Alias -Name xcp     -Value xcopy 
 Set-Alias -Name grep    -Value find 
-Set-Alias -Name l       -Value dir 
+Set-Alias -Name l       -Value ls
 Set-Alias -Name man     -Value help 
 Set-Alias -Name mv      -Value move 
 Set-Alias -Name rm      -Value del 
