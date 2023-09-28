@@ -1,4 +1,5 @@
 # ------------------ install neovim -----------------------
+
 curl https://sh.rustup.rs -sSf | sh # install rust and cargo
 brew install neovim make npm node lua 
 choco install neovim
@@ -30,10 +31,10 @@ unlink ~/.vim/tasks.ini
 ln -s ~/dev/dotfiles/lvim/tasks.ini ~/.vim/tasks.ini
 
 > on windows
-unlink "%USERPROFILE%/AppData/Local/lvim"
+rmdir /s "%USERPROFILE%/AppData/Local/lvim"
 mklink /j  "%USERPROFILE%/AppData/Local/lvim" "%USERPROFILE%/dev/dotfiles/lvim"
 
-unlink ~/.vim/tasks.ini
+mkdir  "%USERPROFILE%/.vim
 mklink /h  "%USERPROFILE%/.vim/tasks.ini" "%USERPROFILE%/dev/dotfiles/lvim/tasks.ini"
 
 
