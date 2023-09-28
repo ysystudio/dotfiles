@@ -1,6 +1,13 @@
 # add link under windows:
 # mklink   $profile "%USERPROFILE%/dev/dotfiles/win-terminal/profile.ps1"
 #
+oh-my-posh init pwsh --config %USERPROFILE%/AppData/Local/Programs/oh-my-posh/themes/material.omp.json | Invoke-Expression
+Set-Alias v 'C:\Users\ysyst\.local\bin\lvim.ps1'
+Set-Alias -Name lg -Value lazygit 
+Set-Alias -Name ipy -Value ipython 
+Set-Alias -Name l -Value ls
+Set-Alias -Name c -Value cls
+
 # Linux commands
 Set-Alias -Name c       -Value cls 
 Set-Alias -Name cp      -Value copy 
