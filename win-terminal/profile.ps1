@@ -1,33 +1,27 @@
 # add link under windows:
-# mklink   $profile "%USERPROFILE%/dev/dotfiles/win-terminal/profile.ps1"
+# New-Item -ItemType SymbolicLink -Path $profile -Target "%USERPROFILE%/dev/dotfiles/win-terminal/profile.ps1"
 #
-oh-my-posh init pwsh --config $Env:USERPROFILE/AppData/Local/Programs/oh-my-posh/themes/material.omp.json | Invoke-Expression
+oh-my-posh init pwsh --config $Env:POSH_THEMES_PATH/material.omp.json | Invoke-Expression
+Set-Alias -Name v  -Value $Env:USERPROFILE/.local/bin/lvim.ps1
 Set-Alias -Name lg -Value lazygit 
 Set-Alias -Name ipy -Value ipython 
 Set-Alias -Name l -Value ls
 Set-Alias -Name c -Value cls
-Set-Alias -Name v  -Value $Env:USERPROFILE/.local/bin/lvim.ps1
 
 # Linux commands
-Set-Alias -Name c       -Value cls 
-Set-Alias -Name cp      -Value copy 
+# Set-Alias -Name cp      -Value copy 
 Set-Alias -Name xcp     -Value xcopy 
 Set-Alias -Name grep    -Value find 
-Set-Alias -Name l       -Value ls
 Set-Alias -Name man     -Value help 
 Set-Alias -Name mv      -Value move 
 Set-Alias -Name rm      -Value del 
 Set-Alias -Name rmt     -Value deltree 
-Set-Alias -Name ipy     -Value ipython
 Set-Alias -Name py      -Value python
-Set-Alias -Name v       -Value nvim
-Set-Alias -Name lg      -Value lazygit
 Set-Alias -Name which   -Value where
 Set-Alias -Name r       -Value ranger
 
 
 Set-Alias -Name s       -Value sublime_text 
-Set-Alias -Name v       -Value lvim
 Set-Alias -Name o       -Value explorer
 Function CD             { Set-Location -Path %USERPROFILE% }
 
