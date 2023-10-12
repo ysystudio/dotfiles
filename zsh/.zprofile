@@ -1,8 +1,10 @@
 if [[ $OSTYPE == darwin2* ]]; then
   
   eval "$(/opt/homebrew/bin/brew shellenv)"
+  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
   export BYOBU_PREFIX=/opt/homebrew
   export PATH=/opt/homebrew/opt/openjdk/bin:$PATH
+
   # check the real path , for example by brew infor zinit,set the ZI_HOME 
   export ZI_HOME=/opt/homebrew/opt/zinit
   source $ZI_HOME/zinit.zsh

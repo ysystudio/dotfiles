@@ -15,6 +15,8 @@ https://www.lunarvim.org/docs/installation
 ['/home/holger/.local/share/lunarvim/site/pack/packer/start/nvim-treesitter/parser', '/usr/lib/nvim/parser']
 "If you get more than one path, remove the ones that are outside this plugin (nvim-treesitter directory),
 so the correct version of the parser is used.".
+# if there any error :treesitter/query.lua:219: query: invalid node type 
+> :TSUpdate
 
 # ------------------unintall-----------------------------------------------
 bash ~/.local/share/lunarvim/lvim/utils/installer/uninstall.sh
