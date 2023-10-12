@@ -41,7 +41,7 @@ irm get.scoop.sh | iex
 ### install usefull tool
 
 ```
-choco install wget curl fzf lazygit neovim  FiraCode 
+choco install wget curl fzf lazygit neovim  FiraCode oh-my-posh 
 choco install microsoft-windows-terminal wsl-ubuntu-2004
 
 ```
@@ -60,22 +60,22 @@ choco install microsoft-windows-terminal wsl-ubuntu-2004
 >
 > winver reports that OS Of course CUDA in WSL2 will not work in Windows 10 without 21H2.
 
-> if the nvidia graphics driver install on window, then wsl been install also, so do not 
+> if the nvidia graphics driver install on window, then wsl been install also, so do not
 > nee to istall graphics driver in wsl
 
 > install cuda
+
 ```
 wget https://developer.download.nvidia.com/compute/cuda/11.7.1/local_installers/cuda_11.7.1_515.65.01_linux.run
 sudo sh cuda_11.7.1_515.65.01_linux.run
 
 ```
 
-> directly install pytorch using pip 
+> directly install pytorch using pip
 
 ```
 pip install pytorch torchvision torchtext
 ```
-
 
 # Required Dev Softwares
 
