@@ -11,6 +11,8 @@ alias vim='lvim'
 alias v='lvim'
 alias jo='joshuto'
 alias tnew='tmux new -s '
+alias tls='tmux ls'
+alias tatt='tmux attach -t '
 # alias lo='lsof -p $(fps) +w'
 
 if [[ $OSTYPE == darwin* ]]; then

@@ -9,9 +9,11 @@ $ git clone https://github.com/gpakosz/.tmux.git
 $ ln -s -f .tmux/.tmux.conf
 $ cp .tmux/.tmux.conf.local .
 
-> change the prifix to C-x
-
-set -g prefix2 C-x                       # GNU-Screen compatible prefix
+# change .tmux.conf
+##### my changes #########
+bind-key x kill-pane
+set -g prefix2 C-x
 bind C-x send-prefix -2
+##### my changes #########
 
 
