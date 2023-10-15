@@ -20,7 +20,7 @@ zinit snippet OMZ::lib/clipboard.zsh
 # zinit snippet OMZ::lib/completion.zsh
 zinit snippet OMZP::cp
 zinit snippet OMZP::brew
-zinit snippet OMZP::vi-mode
+# zinit snippet OMZP::vi-mode
 zinit snippet OMZP::sublime
 zinit snippet OMZP::gitignore
 zinit snippet OMZP::colored-man-pages

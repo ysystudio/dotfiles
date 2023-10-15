@@ -54,4 +54,7 @@ lvim.plugins = {
   --      vim.o.timeoutlen = 500
   --   end
   -- },
+  {
+    'nvim-tree/nvim-web-devicons'
+  },
 }
