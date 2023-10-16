@@ -1,5 +1,5 @@
 ##github.com/ 
-[includeIf "gitdir:C:/Users/10051851/dev/"]
+[includeIf "gitdir:C:/"]
     path = ~/.gitconfig-github
 
 ## 工作项目

@@ -20,13 +20,13 @@ yG - Yank (copy) the whole file. first gg move to the beginning of the file
 
 |目的           | 操作                     |重复|回退|
 |---------------|--------------------------|--- |----|
-|做出一个修改   | {edit}                   | .  | u|
-|执行一系列修改 | qx{changes}q             | @x | u|
-|执行替换       | :s/target/replacement    | &  | u|
-|在行内查找下一指定字符 | f{char}/t{char}  | ;  | ,|
-|在行内查找上一指定字符 | F{char}/T{char}  | ;  | ,|
-|在文档中查找下一处匹配项 | /pattern       | n  | N|
-|在文档中查找上一处匹配项 | ?pattern       | n  | N|
+|做出一个修改   | {edit}                   | .  | u  |
+|执行一系列修改 | qx{changes}q             | @x | u  |
+|执行替换       | :s/target/replacement    | &  | u  |
+|在行内查找下一指定字符 | f{char}/t{char}  | ;  | ,  |
+|在行内查找上一指定字符 | F{char}/T{char}  | ;  | ,  |
+|在文档中查找下一处匹配项 | /pattern       | n  | N  |
+|在文档中查找上一处匹配项 | ?pattern       | n  | N  |
 
 > @@ re do last mecro
 
@@ -40,7 +40,6 @@ yG - Yank (copy) the whole file. first gg move to the beginning of the file
 #### insert digraph
 > :h digraph-table
 > <C-k>12
-####  >> << shift line 
 
 ### command mode run normal command
 > :normal 命令则让我们可以把具有强大表现力的 Vim 普通

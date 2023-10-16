@@ -61,7 +61,7 @@ choco install microsoft-windows-terminal wsl-ubuntu-2004
 > winver reports that OS Of course CUDA in WSL2 will not work in Windows 10 without 21H2.
 
 > if the nvidia graphics driver install on window, then wsl been install also, so do not
-> nee to istall graphics driver in wsl
+> need to istall graphics driver in wsl
 
 > install cuda
 
