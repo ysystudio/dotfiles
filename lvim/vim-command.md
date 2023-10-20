@@ -10,6 +10,16 @@ y% - Yank (copy)  copy text between matching brackets.. By default supported pai
 yG - Yank (copy) the whole file. first gg move to the beginning of the file
 
 ```
+### fold
+1.keep defaul no fold when open file,  set the option in usr-options.lua:
+vim.opt.foldmethod = 'indent'
+vim.opt.foldnestmax = 1
+vim.cmd([[ set nofoldenable ]])
+2.usuful command:
+zc: fold all
+za:fold/unfold one
+zn:open all
+
 ### . 命令范式
 1. 在技巧2中，我们想在一系列行的结尾添加分号。我们先用 A; <Esc> 修改了第一行，做完这步准备后，就可以使用 . 命令对后续行重
 复此修改。我们使用了 j 命令在行间移动，要完成剩余的修改，只需简 单地按足够多次 j. 就可以了。

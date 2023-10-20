@@ -1,6 +1,10 @@
 -- 解决treesitter 无法下载问题
 require("nvim-treesitter.install").prefer_git = true
 
+--fold option
+vim.opt.foldmethod = 'indent'
+vim.opt.foldnestmax = 1
+vim.cmd([[ set nofoldenable ]])
 -- 禁用多光标警告
 vim.g.VM_show_warnings = 0
 
