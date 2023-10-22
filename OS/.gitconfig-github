@@ -3,14 +3,14 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[user] #access github and turn on the proxy
+[user] 
 	name = ysystudio
 	email = ysystudio@gmail.com
 [http]
 	sslVerify = false
 	postBuffer = 1048576000
 	version = HTTP/1.1
-        sslCAInfo = c:/users/10051851/ca-gemalto-and-public.pem
+  sslCAInfo = c:/users/10051851/ca-gemalto-and-public.pem
 	proxy = http://10.160.84.32:8080
 [https]
 	sslVerify = false
