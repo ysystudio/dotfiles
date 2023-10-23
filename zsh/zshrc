@@ -2,17 +2,8 @@
 #  ~/.bash_profile -> ~/.bash_login -> ~/.profile -> ~/.bashrc -> ~/.zprofile -> ~/.zshrc
 
 
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-
-source ~/dev/dotfiles/zsh/functions.zsh
 source ~/dev/dotfiles/zsh/.zprofile
+source ~/dev/dotfiles/zsh/functions.zsh
 source ~/dev/dotfiles/zsh/env.zsh
 source ~/dev/dotfiles/zsh/mappings.zsh
 source ~/dev/dotfiles/zsh/plugins.zsh
@@ -24,8 +15,3 @@ source ~/dev/dotfiles/zsh/completion.zsh
 if [[ $MY_PROXY == http* ]] && [[ $MY_PROXY != $http_proxy ]]; then
       proxy_on
 fi
-
-# >>> xmake >>>
-[[ -s "$HOME/.xmake/profile" ]] && source "$HOME/.xmake/profile" # load xmake profile
-# <<< xmake <<<
-

@@ -18,7 +18,5 @@
 	excludesfile = ~/.gitignore_global
 [commit]
 	template = ~/.stCommitMsg
-
-
 [credential]
 	helper = store

@@ -5,6 +5,7 @@ require("nvim-treesitter.install").prefer_git = true
 vim.opt.foldmethod = 'indent'
 vim.opt.foldnestmax = 1
 vim.cmd([[ set nofoldenable ]])
+
 -- 禁用多光标警告
 vim.g.VM_show_warnings = 0
 
@@ -23,7 +24,6 @@ vim.g.table_mode_corner = '|'
 
 -- 自动切换输入法配置
 vim.o.ttimeoutlen = 0
-
 
 -- lvim is the global options object
 -- general
