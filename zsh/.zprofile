@@ -4,8 +4,14 @@
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # check the real path , for example by brew infor zinit,set the ZI_HOME 
-export ZI_HOME=/opt/homebrew/opt/zinit
+if [[ $OSTYPE == linux* ]]; then
+  export ZI_HOME=/home/linuxbrew/.linuxbrew/opt/zinit
+fi
+if [[ $OSTYPE == darwin2* ]]; then
+  export ZI_HOME=/opt/homebrew/opt/zinit
+fi
 source $ZI_HOME/zinit.zsh
+
 
 (( SOURCED_PROFILE )) && return
 export SOURCED_PROFILE=1
@@ -59,16 +65,7 @@ fi
 ###########################################################
 
 if [[ $OSTYPE == linux* ]]; then
-
-  export SOURCED_PROFILE=1
-  echo $OSTYPE
   export MY_PROXY=http://10.160.84.32:8080
-
-
-  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
-  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-  # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-  POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
   export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
