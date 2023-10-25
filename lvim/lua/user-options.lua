@@ -38,6 +38,7 @@ lvim.builtin.alpha.mode = "dashboard"
 -- lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 
+lvim.builtin.nvimtree.setup.git.enable = false
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.view.relativenumber = false
 
