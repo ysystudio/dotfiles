@@ -1,4 +1,4 @@
-export TERM=xterm-256color
+# export TERM=xterm-256color
 export TERM_ITALICS=true
 export RANGER_LOAD_DEFAULT_RC="false"
 export EDITOR=lvim
