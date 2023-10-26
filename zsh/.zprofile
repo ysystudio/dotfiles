@@ -54,6 +54,7 @@ if [[ $OSTYPE == darwin2* ]]; then
   
   export PATH=/opt/homebrew/opt/openjdk/bin:$PATH
   export PATH=/opt/homebrew/opt/curl/bin:$PATH
+  export PATH=/Users/shark/.cargo/bin:$PATH 
   export PATH=$HOME/.local/bin:$PATH
   export PATH=$PATH:/opt/homebrew/Cellar/lua-language-server/3.6.18/bin
   export PATH=$HOME/flutter/bin:$PATH
@@ -83,6 +84,7 @@ if [[ $OSTYPE == linux* ]]; then
   
   export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
   export PATH=$CUDA_HOME/bin:$PATH
+  export PATH=$HOME/.local/bin:$PATH
   
 fi
 
