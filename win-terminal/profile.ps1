@@ -18,13 +18,12 @@ Set-Alias -Name rm      -Value del
 Set-Alias -Name rmt     -Value deltree 
 Set-Alias -Name py      -Value python
 Set-Alias -Name which   -Value "C:\Windows\System32\where.exe"
-Set-Alias -Name where   -Value "C:\Windows\System32\where.exe"
-Set-Alias -Name r       -Value ranger
-
 
 Set-Alias -Name s       -Value sublime_text 
 Set-Alias -Name o       -Value explorer
-Function cdh             { Set-Location -Path %USERPROFILE% }
+
+Function CODEHERE           { Start-Process -FilePath "code" -ArgumentList "."}
+Set-Alias -Name coder       -Value CODEHERE
 
 # # Adv
 # Set-Alias -Name v           -Value CODEHERE
