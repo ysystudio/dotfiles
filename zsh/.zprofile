@@ -26,10 +26,6 @@ export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
 export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/bottles" 
 
-  # >>> xmake >>>
-  [[ -s "$HOME/.xmake/profile" ]] && source "$HOME/.xmake/profile" # load xmake profile
-  # <<< xmake <<<
-  #
   
 (( SOURCED_PROFILE )) && return
 export SOURCED_PROFILE=1
@@ -59,6 +55,10 @@ if [[ $OSTYPE == darwin2* ]]; then
   export PATH=$PATH:/opt/homebrew/Cellar/lua-language-server/3.6.18/bin
   export PATH=$HOME/flutter/bin:$PATH
 
+  # >>> xmake >>>
+  [[ -s "$HOME/.xmake/profile" ]] && source "$HOME/.xmake/profile" # load xmake profile
+  # <<< xmake <<<
+  #
 fi
 
 ###########################################################
@@ -86,6 +86,10 @@ if [[ $OSTYPE == linux* ]]; then
   export PATH=$CUDA_HOME/bin:$PATH
   export PATH=$HOME/.local/bin:$PATH
   
+  # >>> xmake >>>
+  [[ -s "$HOME/.xmake/profile" ]] && source "$HOME/.xmake/profile" # load xmake profile
+  # <<< xmake <<<
+  #
 fi
 
 
