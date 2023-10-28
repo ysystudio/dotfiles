@@ -14,6 +14,9 @@ alias tnew='tmux new -s '
 alias tls='tmux ls'
 alias tatt='tmux attach -t '
 # alias lo='lsof -p $(fps) +w'
+alias kdf="kitten diff"
+alias nf='neofetch'
+
 
 if [[ $OSTYPE == darwin* ]]; then
   alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
