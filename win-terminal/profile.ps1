@@ -1,12 +1,16 @@
+# choco install  oh-my-posh  microsoft-windows-terminal 
+#
 # add link under windows:
 # New-Item -ItemType SymbolicLink -Path $profile -Target "%USERPROFILE%/dev/dotfiles/win-terminal/profile.ps1"
 #
 oh-my-posh init pwsh --config $Env:POSH_THEMES_PATH/material.omp.json | Invoke-Expression
+# oh-my-posh init pwsh | Invoke-Expression
 Set-Alias -Name v  -Value $Env:USERPROFILE/.local/bin/lvim.ps1
 Set-Alias -Name lg -Value lazygit 
 Set-Alias -Name ipy -Value ipython 
 Set-Alias -Name l -Value ls
 Set-Alias -Name c -Value cls
+Set-Alias -Name which   -Value "C:\Windows\System32\where.exe"
 
 # Linux commands
 # Set-Alias -Name cp      -Value copy 
@@ -17,13 +21,11 @@ Set-Alias -Name mv      -Value move
 Set-Alias -Name rm      -Value del 
 Set-Alias -Name rmt     -Value deltree 
 Set-Alias -Name py      -Value python
-Set-Alias -Name which   -Value "C:\Windows\System32\where.exe"
 
 Set-Alias -Name s       -Value sublime_text 
 Set-Alias -Name o       -Value explorer
 
-Function CODEHERE           { Start-Process -FilePath "code" -ArgumentList "."}
-Set-Alias -Name coder       -Value CODEHERE
+
 
 # # Adv
 # Set-Alias -Name v           -Value CODEHERE

@@ -64,3 +64,33 @@ From the command-line lvim +LvimUpdate +q
 # Update the plugins
 
 Inside LunarVim :LvimSyncCorePlugins
+
+# popular commands
+## nvim-tree
+
+   '<C-]>', api.tree.change_root_to_node,          
+   '-',     api.tree.change_root_to_parent,        
+   'a',     api.fs.create,                         
+   'c',     api.fs.copy.node,                      
+   'p',     api.fs.paste,                          
+   'd',     api.fs.remove,                         
+   'D',     api.fs.trash,                          
+   'F',     api.live_filter.clear,                 
+   'f',     api.live_filter.start,                 
+   'g?',    api.tree.toggle_help,                  
+   'H',     api.tree.toggle_hidden_filter,         
+   'I',     api.tree.toggle_gitignore_filter,      
+   'J',     api.node.navigate.sibling.last,        
+   'K',     api.node.navigate.sibling.first,       
+   'm',     api.marks.toggle,                      
+   'e',     api.fs.rename_basename,                
+   'r',     api.fs.rename,                         
+   's',     api.node.run.system,                   
+   'S',     api.tree.search_node,                  
+   'U',     api.tree.toggle_custom_filter,         
+   'E',     api.tree.expand_all,                   
+   'W',     api.tree.collapse_all,                 
+   'x',     api.fs.cut,                            
+   'gy',    api.fs.copy.absolute_path,             
+   'y',     api.fs.copy.filename,                  
+   'Y',     api.fs.copy.relative_path,             

@@ -46,15 +46,6 @@ choco install microsoft-windows-terminal wsl-ubuntu-2004
 
 ```
 
-### Clink for Cmd
-
-` choco install clink-maintained Starship `
-
-### Starship
->
-> Add the following to a file starship.lua and place this file in Clink scripts directory:%LocalAppData%\clink\starship.lua
-> -- starship.lua
-> load(io.popen('starship init cmd'):read("*a"))()
 
 ### deep learning
 >
@@ -69,12 +60,6 @@ choco install microsoft-windows-terminal wsl-ubuntu-2004
 wget https://developer.download.nvidia.com/compute/cuda/11.7.1/local_installers/cuda_11.7.1_515.65.01_linux.run
 sudo sh cuda_11.7.1_515.65.01_linux.run
 
-```
-
-> directly install pytorch using pip
-
-```
-pip install pytorch torchvision torchtext
 ```
 
 # Required Dev Softwares
