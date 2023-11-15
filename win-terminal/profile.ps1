@@ -24,6 +24,7 @@ Set-Alias -Name py      -Value python
 
 Set-Alias -Name s       -Value sublime_text 
 Set-Alias -Name o       -Value explorer
+Set-Alias -Name e       -Value explorer
 
 
 
