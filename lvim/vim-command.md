@@ -100,7 +100,78 @@ tag		char	      note action in Normal mode
 ### visual mode
 > o 切换高亮选区的活动端
 
-### gloable commands , v is g!
+### gloable commands
+使用:g命令，可以针对所有匹配模式的行执行操作。其命令格式为：
+:[range]g/{pattern}/[command]
+命令:g!及其同义词:v，则可以针对所有不匹配模式的行执行操作。其命令格式为：
+:[range]g!/{pattern}/[command]
+如果没有指定[range]，则针对文件中的所有行执行命令。也可以使用行地址，把全局搜索限定在指定的行或行范围内。
+如果没有指定[command]，则执行:print命令来显示行内容。
+使用以下命令，可以查看全局命令的帮助信息：
+:h :g
+
+#### 全局查找
+查找并显示文件中所有包含模式pattern的行，并移动到最后一个匹配处：
+:g/pattern
+查找并显示文件中所有包含模式pattern的行：
+:g/pattern/p
+查找并显示文件中所有精确匹配单词pattern的行：
+:g/\<pattern\>/p
+查找并显示第20到40行之间所有包含模式pattern的行：
+:20,40g/pattern/p
+查找并显示文件中所有不包行模式pattern的行，并显示这些行号：
+:g!/pattern/nu
+
+#### 全局删除
+删除包含模式patternn的行：
+:g/pattern/d
+删除不包含模式pattern的行：
+:g!/pattern/d
+删除所有空行：
+:g/^$/d
+删除所有空行以及仅包含空格和Tab制表符的行：
+:g/^[ tab]*$/d
+删除指定范围内的文本，例如以下文本中的“DESCRIPTION”部分：
+:g/DESCRIPTION/,/PARAMETERS/-1d
+
+#### 全局替换
+利用全局命令，可以仅针对符合查询条件的行进行替换操作。例如将包含“microsoft antitrust”的行中的“judgment”替换为“ripoff”：
+:g/microsoft antitrust/s/judgment/ripoff/
+可以在命令中指定查找的范围。比如以下命令，将在包含“microsoft antitrust”的前两行及后两行中进行替换：
+:g/microsoft antitrust/-2,/microsoft antitrust/+2s/judgment/ripoff/c
+以上命令末尾的c参数，用于提示用户对每一个替换操作进行确认。
+
+假设希望在以“end”结尾的行中，将第1部分文字替换为“The greatest of times;”：
+the best of times; the worst of times: end    
+由于会尽可能多（as much text as possible）的匹配，以下命令将替换至第2个“of”处：
+:g/end$/s/.*of/The greatest of/
+The greatest of times: end                    
+为了只替换第1部分，则需要更精确的匹配条件：
+:g/end$/s/.*of times;/The greatest of times;/
+The greatest of times; the worst of times: end
+
+#### 全局移动
+将所有的行按相反的顺序排列。其中，查找模式.*将匹配所有行，m0命令将每一行移动到0行之后：
+:g/.*/m0
+将指定标记（Mark）之间的行按相反的顺序排列：
+:'a,'bg/^/m'b
+将以下文本中的“DESCRIPTION”部分，上移到“SYNTAX”之前：
+:g /SYNTAX/.,/DESCRIPTION/-1 move /PARAMETERS/-1
+首先匹配从包含“SYNTAX”的行到包含“DESCRIPTION”的上一行；然后将这些行移动到包含“PARAMETERS”的上一行。
+g_cmd_range_move
+以下两条命令均可以将所有不是以数字开头的行，移动到文件末尾：
+:g!/^[[:digit:]]/m$
+:g/^[^[:digit:]]/m$
+
+#### 全局复制
+使用以下命令，可以重复每一行。其中:t或:copy为复制命令：
+:g/^/t.
+将包含模式pattern的行，复制到文件末尾：
+:g/pattern/t$
+重复每一行，并以“print ''”包围：
+:g/./yank|put|-1s/'/"/g|s/.*/Print '&'/
+
+
 > :g/const/t               - This effectively duplicates all lines containing const
 > :g/^/m 0                 - reversing the entire file
 > :g/const/pu ='hello vim' - paste the "hello vim" to all the lines including const
@@ -130,6 +201,7 @@ tag		char	      note action in Normal mode
 | gf                            | 跳转到光标下的文件名|
 | gi                            | 跳转到上一个插入位置|
 | g;  g,                        | 跳到前后个光标位置|
+| <C-o> , <C-i>                 | 跳到前后个光标位置|
 
 
 ### use named rigistors 
