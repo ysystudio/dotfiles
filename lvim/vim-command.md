@@ -15,10 +15,50 @@ yG - Yank (copy) the whole file. first gg move to the beginning of the file
 vim.opt.foldmethod = 'indent'
 vim.opt.foldnestmax = 1
 vim.cmd([[ set nofoldenable ]])
+
 2.usuful command:
-zc: fold all
+zc:fold all
 za:fold/unfold one
 zn:open all
+
+### g command
+tag	    	char	      note action in Normal mode	 
+------------------------------------------------------------------------------  
+|g,|		g,		1  go to N newer position in change list
+|g;|		g;		1  go to N older position in change list
+|g8|		g8		   print hex value of bytes used in UTF-8 character under the cursor
+|ga|		ga		   print ascii value of character under the cursor
+|gd|		gd		1  go to definition of word under the cursor in current function
+|gD|		gD		1  go to definition of word under the cursor in current file
+|gn|		gn	    1,2  find the next match with the last used search pattern and Visually select it
+|gN|		gN	    1,2  find the previous match with the last used search pattern and Visually select it
+|gf|		gf		   start editing the file whose name is under the cursor
+|gF|		gF		   start editing the file whose name is under the cursor and jump to the line number following the filename.
+|gg|		gg		1  cursor to line N, default first line
+|gi|		gi		2  like "i", but first move to the |'^| mark
+|gm|		gm		1  go to character at middle of the screenline
+|gM|		gM		1  go to character at middle of the text line
+|gr|		gr{char}	2  virtual replace N chars with {char}
+|gv|		gv		   reselect the previous Visual area
+|netrw-gx|	gx		   execute application for file name under the cursor (only with |netrw| plugin)
+
+==============================================================================
+### Commands starting with 'z'						*z*
+
+tag		char	      note action in Normal mode	 
+------------------------------------------------------------------------------  
+|z=|		z=		   give spelling suggestions
+|zA|		zA		   open a closed fold or close an open fold recursively
+|zC|		zC		   close folds recursively
+|zD|		zD		   delete folds recursively
+|zE|		zE		   eliminate all folds
+|zM|		zM		   set 'foldlevel' to zero
+|zN|		zN		   set 'foldenable'
+|zO|		zO		   open folds recursively
+|zo|		zo		   open fold
+|za|		za		   open a closed fold, close an open fold
+|zc|		zc		   close a fold
+|zn|		zn		   reset 'foldenable'
 
 ### . 命令范式
 1. 在技巧2中，我们想在一系列行的结尾添加分号。我们先用 A; <Esc> 修改了第一行，做完这步准备后，就可以使用 . 命令对后续行重
@@ -41,8 +81,8 @@ zn:open all
 > @@ re do last mecro
 
 ### 插入模式
-> <C-w> 删除前一个单词
 > <C-u> 删至行首
+> <C-w> 删除前一个单词
 
 #### 使用计算寄存器
 > <C-r> = 6 * 2 <CR>  6 chairs, each costing $2, totals $12
@@ -84,16 +124,16 @@ zn:open all
 | (/)                           | 跳转到上一句/下一句的开头|
 | {/}                           | 跳转到上一段/下一段的开头|
 | H/M/L                         | 跳到屏幕最上方/正中间/最下方|
-| gf                            | 跳转到光标下的文件名|
-| <C-]>                         | 跳转到光标下关键字的定义之处|
 | ’{mark}/`{mark} :`            | 跳转到一个位置标记|
-| gi                            | 跳转到上一个插入位置|
 | <C-o> , <C-i>                 | 跳到前后个光标位置|
+| <C-]> , gd                    | 跳转到光标下关键字的定义之处|
+| gf                            | 跳转到光标下的文件名|
+| gi                            | 跳转到上一个插入位置|
 | g;  g,                        | 跳到前后个光标位置|
 
 
 ### use named rigistors 
-
+ 
 > 让我们看一些引用寄存器的例子，如果想把当前单词复制到寄存器
 > a中，可执行 "ayiw，或者，可以用"bdd，把当前整行文本剪切至寄存
 > 器 b中。在此之后，既可以输入 "ap 粘贴来自寄存器a的单词，也可使
