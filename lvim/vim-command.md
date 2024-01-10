@@ -1,5 +1,4 @@
 ### copy 
-```
 yy - Yank (copy) the current line, including the newline character.
 3yy - Yank (copy) three lines, starting from the line where the cursor is positioned.
 y$ - Yank (copy) everything from the cursor to the end of the line.
@@ -9,7 +8,6 @@ yiw – Yank (copy) the current word.
 y% - Yank (copy)  copy text between matching brackets.. By default supported pairs are (), {}, and [].
 yG - Yank (copy) the whole file. first gg move to the beginning of the file
 
-```
 ### fold
 1.keep defaul no fold when open file,  set the option in usr-options.lua:
 vim.opt.foldmethod = 'indent'
@@ -84,17 +82,16 @@ tag		char	      note action in Normal mode
 > <C-u> 删至行首
 > <C-w> 删除前一个单词
 
-#### 使用计算寄存器
+### 使用计算寄存器
 > <C-r> = 6 * 2 <CR>  6 chairs, each costing $2, totals $12
 
-#### insert digraph
+### insert digraph
 > :h digraph-table
 > <C-k>12
 
 ### command mode run normal command
 > :normal 命令则让我们可以把具有强大表现力的 Vim 普通
-> 模式命令与具有大范围影响力的 Ex 命令结合在一起，这种结合真的是
-> 珠联璧合
+> 模式命令与具有大范围影响力的 Ex 命令结合在一起，这种结合真的是珠联璧合
 > :%normal A;  -- add ; to every line
 
 ### visual mode
@@ -135,7 +132,7 @@ tag		char	      note action in Normal mode
 :g/DESCRIPTION/,/PARAMETERS/-1d
 
 #### 全局替换
-利用全局命令，可以仅针对符合查询条件的行进行替换操作。例如将包含“microsoft antitrust”的行中的“judgment”替换为“ripoff”：
+将包含“microsoft antitrust”的行中的“judgment”替换为“ripoff”：
 :g/microsoft antitrust/s/judgment/ripoff/
 可以在命令中指定查找的范围。比如以下命令，将在包含“microsoft antitrust”的前两行及后两行中进行替换：
 :g/microsoft antitrust/-2,/microsoft antitrust/+2s/judgment/ripoff/c
@@ -156,9 +153,8 @@ The greatest of times; the worst of times: end
 将指定标记（Mark）之间的行按相反的顺序排列：
 :'a,'bg/^/m'b
 将以下文本中的“DESCRIPTION”部分，上移到“SYNTAX”之前：
-:g /SYNTAX/.,/DESCRIPTION/-1 move /PARAMETERS/-1
 首先匹配从包含“SYNTAX”的行到包含“DESCRIPTION”的上一行；然后将这些行移动到包含“PARAMETERS”的上一行。
-g_cmd_range_move
+:g /SYNTAX/.,/DESCRIPTION/-1 move /PARAMETERS/-1
 以下两条命令均可以将所有不是以数字开头的行，移动到文件末尾：
 :g!/^[[:digit:]]/m$
 :g/^[^[:digit:]]/m$
