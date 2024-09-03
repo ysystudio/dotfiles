@@ -1,3 +1,11 @@
+配置文件的位置在：～/.config/kitty/kitty.conf，如果没有则新建配置文件。
+
+## link kitty.conf
+
+```
+ln -s ~/dev/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
+source ~/.config/kitty/kitty.conf
+```
 ##标签
 
 行动    	快捷键
