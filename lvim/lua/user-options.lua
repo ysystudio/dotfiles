@@ -111,6 +111,19 @@ lvim.builtin.treesitter.highlight.enabled = true
 --   },
 -- }
 
+require("codecompanion").setup({
+  strategies = {
+    chat = {
+      adapter = "ollama",
+    },
+    inline = {
+      adapter = "ollama",
+    },
+    agent = {
+      adapter = "ollama",
+    },
+  },
+})
 -- -- set additional linters
 -- local linters = require "lvim.lsp.null-ls.linters"
 -- linters.setup {

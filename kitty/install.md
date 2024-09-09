@@ -1,3 +1,12 @@
+
+
+## install and config
+brew install kitty
+
+>on linux or macos
+unlink ~/.config/kitty.conf
+ln -s ~/dev/kitty/kitty.conf ~/.config/kitty.conf
+
 ##标签
 
 行动    	快捷键

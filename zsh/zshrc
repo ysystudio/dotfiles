@@ -15,3 +15,5 @@ source ~/dev/dotfiles/zsh/completion.zsh
 if [[ $MY_PROXY == http* ]] && [[ $MY_PROXY != $http_proxy ]]; then
       proxy_on
 fi
+
+

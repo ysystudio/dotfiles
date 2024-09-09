@@ -19,22 +19,37 @@ lvim.plugins = {
     cmd = { "AsyncTask", "AsyncTaskEdit" },
     lazy = true,
   },
-  --ai completion
+  -- --ai completion
+  -- {
+  --   "tzachar/cmp-tabnine",
+  --   build = "./install.sh",
+  --   dependencies = "hrsh7th/nvim-cmp",
+  --   event = "InsertEnter",
+  -- },
   {
-    "tzachar/cmp-tabnine",
-    build = "./install.sh",
-    dependencies = "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
+    "olimorris/codecompanion.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "hrsh7th/nvim-cmp", -- Optional: For using slash commands and variables in the chat buffer
+      {
+        "stevearc/dressing.nvim", -- Optional: Improves the default Neovim UI
+        opts = {},
+      },
+      "nvim-telescope/telescope.nvim", -- Optional: For using slash commands
+    },
+    config = true
   },
   -- outline
-  {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline",
-    config = function()
-      require('symbols-outline').setup()
-    end
+  -- {
+  --   "simrat39/symbols-outline.nvim",
+  --   cmd = "SymbolsOutline",
+  --   config = function()
+  --     require('symbols-outline').setup()
+  --   end
 
-  },
+  -- },
+
   -- You must install glow globally
   -- https://github.com/charmbracelet/glow
   -- brew install glow
@@ -46,4 +61,8 @@ lvim.plugins = {
   {
     "mg979/vim-visual-multi",
   },
+  -- {
+  --   'nvim-tree/nvim-tree.lua',  -- 文档树
+  --    dependencies =  'nvim-tree/nvim-web-devicons', -- 文档树图标
+  -- },
 }
