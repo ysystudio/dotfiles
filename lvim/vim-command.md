@@ -68,9 +68,9 @@ tag		char	      note action in Normal mode
 
 |目的           | 操作                     |重复|回退|
 |---------------|--------------------------|--- |----|
-|做出一个修改   | {edit}                   | .  | u  |
-|执行一系列修改 | qx{changes}q             | @x | u  |
-|执行替换       | :s/target/replacement    | &  | u  |
+|做出一个修改     | {edit}                   | .  | u  |
+|执行一系列修改   | qx{changes}q             | @x | u  |
+|执行替换        | :s/target/replacement    | &  | u  |
 |在行内查找下一指定字符 | f{char}/t{char}  | ;  | ,  |
 |在行内查找上一指定字符 | F{char}/T{char}  | ;  | ,  |
 |在文档中查找下一处匹配项 | /pattern       | n  | N  |

@@ -343,7 +343,7 @@
             "command": "unbound",
             "keys": "ctrl+shift+home"
         }
-    ]
+    ],
     "copyOnSelect": true,
     "copyFormatting": "none",
     "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
@@ -367,50 +367,24 @@
         "list": 
         [
             {
-                 "commandline": "%SystemRoot%\System32\cmd.exe"  /K C:\ProgramData\anaconda3\Scripts\activate.bat C:\ProgramData\anaconda3 &  %USERPROFILE%\dev\dotfiles\win-terminal\alias.bat C:\ ,
-                "elevate": false,
+                "commandline": "%SystemRoot%\\System32\\cmd.exe /K C:/ProgramData/anaconda3/Scripts/activate.bat C:/ProgramData/anaconda3 &  %USERPROFILE%/dev/dotfiles/win-terminal/alias.bat C:/ ",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
             },
             {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"   -ExecutionPolicy ByPass -NoExit -Command "& 'C:\ProgramData\anaconda3\shell\condabin\conda-hook.ps1' ; conda activate 'C:\ProgramData\anaconda3' ",
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
-                "name": "Windows PowerShell"
-            },
-            
-            {
+                "commandline": "%USERPROFILE%/AppData/Local/Microsoft/WindowsApps/pwsh.exe -ExecutionPolicy ByPass -NoExit -Command & 'C:/ProgramData/anaconda3/shell/condabin/conda-hook.ps1' ; conda activate 'C:/ProgramData/anaconda3' ",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy ByPass -NoExit -Command & 'C:/ProgramData/anaconda3/shell/condabin/conda-hook.ps1' ; conda activate 'C:/ProgramData/anaconda3' ",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "Ubuntu",
-                "snapOnInput": false,
-                "source": "Windows.Terminal.Wsl"
+                "name": "Windows PowerShell"
             },
-            {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{8ef2f2d3-4675-58e2-b31b-ee37277a5990}",
-                "hidden": false,
-                "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{487c424e-a51d-59c8-89b8-e8ab4706683a}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            }
         ]
     },
     "schemes": 

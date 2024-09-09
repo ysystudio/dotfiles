@@ -48,67 +48,32 @@ choco install microsoft-windows-terminal wsl-ubuntu-2004
 
 
 ### deep learning
->
-> winver reports that OS Of course CUDA in WSL2 will not work in Windows 10 without 21H2.
+如果windows主系统中已安装了nvidia驱动，ubuntu中不要再额外安装了
 
-> if the nvidia graphics driver install on window, then wsl been install also, so do not
-> need to istall graphics driver in wsl
 
-> install cuda
+## wsl2 安装
 
-```
-wget https://developer.download.nvidia.com/compute/cuda/11.7.1/local_installers/cuda_11.7.1_515.65.01_linux.run
-sudo sh cuda_11.7.1_515.65.01_linux.run
+安装 wsl2 子系统的步骤如下：
 
-```
+1. 为 windows 启用 linux 子系统，命令行输入 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+2. 启用虚拟机功能，命令行输入 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+3. 重启。必须重启使启用的功能被应用。
+4. 下载 linux 内核更新包并安装: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+5. 设置默认版本wsl --set-default-version 2. 在 Microsoft Store 中搜索 ubuntu20.04 并安装。
 
-# Required Dev Softwares
+6. 打包系统。在命令行输入 wsl --export Ubuntu-20.04 D:/Ubuntu-20.04.tar
+7. 注销系统。在命令行输入 wsl --unregister Ubuntu-20.04 
+8. 导入系统。在命令行输入 wsl --import Ubuntu-20.04 D:\Ubuntu-20.04-wsl2 D:\ubuntu-20.04.tar。
+   --import 的第一个参数为系统名，第二个参数为你希望子系统导入的路径，第三个参数为打包好系统的路径
+9. vscode 联动，在 vscode 中打开 wsl2 文件夹：先打开 wsl2，输入目标路径，然后输入 code .。过程中会自动提示安装 vscode 的 wsl 扩展，安装即可。
 
-## Details
+10. 设置默认登录用户： 用 wsl.conf 进行配置，进入 wsl ，编辑 wsl.conf 配置文件：
+sudo v /etc/wsl.conf
+添加如下内容：
+[user]
+default = shark
+11. 重启wsl, wsl --shutdown
 
-1、检查windows版本
-
-    若要更新到 WSL 2，需要运行 Windows 10。
-        对于 x64 系统：版本 1903 或更高版本，采用 内部版本 18362 或更高版本。
-        对于 ARM64 系统：版本 2004 或更高版本，采用 内部版本 19041 或更高版本。
-
-原文地址: <https://www.cnblogs.com/xiaoliangyuu/p/15506352.html>
-
-2、需要先启用“适用于 Linux 的 Windows 子系统”可选功能，然后才能在 Windows 上安装 Linux 分发。以管理员身份打开 PowerShell 并运行：
-
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-3、安装 WSL 2 之前，必须启用“虚拟机平台”可选功能。 计算机需要虚拟化功能才能使用此功能。 以管理员身份打开 PowerShell 并运行：
-
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-4、重启计算机
-
-5、安装wsl_update_x64.msi。下载地址: <https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi>
-
-6、将 WSL 2 设置为默认版本
-
-wsl --set-default-version 2
-
-7、下载发行版，可以参考 下载发行版，这里下载的是 Ubuntu 20.04
-choco install  wsl-ubuntu-2004 20.4.0.20220127
-
-8、将下载的文件复制到想要安装的位置,修改文件后缀名: Ubuntu_2004.2020.424.0_x64.appx -> Ubuntu_2004.2020.424.0_x64.zip
-
-9、解压文件，并双击 ubuntu2004.exe 安装。安装成功后设置用户名密码,安装成功。可以看到在安装目录下，有一个 *.vhdx 文件，即是linux的磁盘镜像文件。
-
-10、其他
-
-10.1 验证wsl是否是 wsl2 的命令: wsl -l -v
-
-10.2 启动方法。
-
-    方法一:命令行:cmd进入命令行。输入 wsl 进入。  
-
-    方法二:双击 ubuntu2004.exe 启动  
-
-    方法三:开始菜单启动: 安装到开始菜单:随便找一个开始菜单应用 右键-打开所在文件夹 在start menu文件夹下添加ubuntu2004.exe的快捷方式
-
-10.3 卸载 1、wsl --unregister <要卸载的发行版>   2、删除安装目录
-Window Subsystem for Linux:
 
 ## NVIDIA driver & SDKs
 
