@@ -110,20 +110,36 @@ lvim.builtin.treesitter.highlight.enabled = true
 --     filetypes = { "typescript", "typescriptreact" },
 --   },
 -- }
+--
 
-require("codecompanion").setup({
-  strategies = {
-    chat = {
-      adapter = "ollama",
-    },
-    inline = {
-      adapter = "ollama",
-    },
-    agent = {
-      adapter = "ollama",
-    },
-  },
-})
+--  local codecompanion = require "codecompanion"
+--  codecompanion.setup{
+--   -- adapters = {
+--   --   llama3 = function()
+--   --     return require("codecompanion.adapters").extend("ollama", {
+--   --       name = "llama3", -- Give this adapter a different name to differentiate it from the default ollama adapter
+--   --       schema = {
+--   --         model = {
+--   --           default = "llama3:latest",
+--   --         },
+--   --         num_ctx = {
+--   --           default = 16384,
+--   --         },
+--   --         num_predict = {
+--   --           default = -1,
+--   --         },
+--   --       },
+--   --     })
+--   --   end,
+--   -- },
+
+--   strategies = {
+--     chat = { adapter = "ollama", },
+--     -- inline = { adapter = "ollama", },
+--     -- agent = { adapter = "ollama", },
+--   },
+-- }
+
 -- -- set additional linters
 -- local linters = require "lvim.lsp.null-ls.linters"
 -- linters.setup {

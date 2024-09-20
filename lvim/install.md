@@ -1,19 +1,17 @@
 # ------------------ install neovim -----------------------
 > .curlrc to add proxy as :proxy = http://10.160.84.32:8080 , it sits in ~.
 curl <https://sh.rustup.rs> -sSf | sh # install rust and cargo
+
 brew install neovim make npm node lua
 choco install neovim
 
 # install lunarvim
-
 <https://www.lunarvim.org/docs/installation>
 
 # fix : Error during download, please verify your internet connection
-
 :lua require("nvim-treesitter.install").prefer_git = true
 
 # fix error: treesitter/query.lua:219: query: invalid node type
-
 :echo nvim_get_runtime_file('parser', v:true)
 ['/home/holger/.local/share/lunarvim/site/pack/packer/start/nvim-treesitter/parser', '/usr/lib/nvim/parser']
 "If you get more than one path, remove the ones that are outside this plugin (nvim-treesitter directory),
@@ -57,13 +55,23 @@ mkdir  "%USERPROFILE%/.vim
 mklink /h  "%USERPROFILE%/.vim/tasks.ini" "%USERPROFILE%/dev/dotfiles/lvim/tasks.ini"
 
 # Updating LunarVim
-
 Inside LunarVim :LvimUpdate
 From the command-line lvim +LvimUpdate +q
 
 # Update the plugins
-
 Inside LunarVim :LvimSyncCorePlugins
+
+
+# Config clangd. refer to https://clangd.llvm.org/config
+user configuration: a config.yaml file in an OS-specific directory:
+    Windows: %LocalAppData%\clangd\config.yaml
+    macOS: ~/Library/Preferences/clangd/config.yaml
+    Linux: ~/.config/clangd/config.yaml.
+
+put the following in the config.yaml
+CompileFlags:
+  Add:
+    - --target=x86_64-w64-windows-gnu
 
 # popular commands
 ## nvim-tree
