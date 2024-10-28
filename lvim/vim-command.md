@@ -97,6 +97,21 @@ tag		char	      note action in Normal mode
 ### visual mode
 > o 切换高亮选区的活动端
 
+### s替换
+#举例：
+:s/aa/bb				# 将光标所在行第一个 aa 替换为 bb
+:s/aa/bb/g				# 将光标所在行所有 aa 替换为 bb
+:%s/aa/bb/g				# 全文执行替换 aa 替换为 bb
+:3,10s/aa/bb/g			# 将第3行到第10行 aa 替换为 bb
+:%s/\\/\//g				# 全文\替换为/ （特殊字符：^、$、*、/、\和.都需要转义，前面加上\）
+:%s,\\,/,g				# 或用逗号分割（/可以不用转义）
+:%s,aa,bb,gic			# 全文 aa（忽略大小写） 替换为bb，每次替换提示是否替换
+常用标记，gic可自由组合使用：
+	% 所有行  
+	g 单行内所有匹配项(默认只匹配单行第一个) 
+	i 忽略大小写  
+	c 确认是否替换
+
 ### gloable commands
 使用:g命令，可以针对所有匹配模式的行执行操作。其命令格式为：
 :[range]g/{pattern}/[command]
