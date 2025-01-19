@@ -1,11 +1,13 @@
 # choco install  oh-my-posh  microsoft-windows-terminal 
-#
-# add link under windows:
-# New-Item -ItemType SymbolicLink -Path $profile -Target "%USERPROFILE%/dev/dotfiles/win-terminal/profile.ps1"
-#
+# add link in $profile:
 oh-my-posh init pwsh --config $Env:POSH_THEMES_PATH/material.omp.json | Invoke-Expression
-# oh-my-posh init pwsh | Invoke-Expression
+
+# following to activate conda when launch ps  
+# conda init powershell
+
+
 Set-Alias -Name v  -Value $Env:USERPROFILE/.local/bin/lvim.ps1
+Set-Alias -Name n  -Value nvim
 Set-Alias -Name lg -Value lazygit 
 Set-Alias -Name ipy -Value ipython 
 Set-Alias -Name l -Value ls

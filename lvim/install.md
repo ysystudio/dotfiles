@@ -30,6 +30,12 @@ local function is_folder_ignored(path)
   return false
 end
 
+# change version
+Go to ~/.local/share/lunarvim/lvim (if you're on UNIX system, idk about directory location in Windows) and change branch to release-1.4/neovim-0.9 (git checkout release-1.4/neovim-0.9).
+After this use these commands to update everything:
+• :Lazy sync
+• :TSUpdate all
+
 # ------------------unintall-----------------------------------------------
 
 bash ~/.local/share/lunarvim/lvim/utils/installer/uninstall.sh
