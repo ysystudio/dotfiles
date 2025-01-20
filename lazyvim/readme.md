@@ -5,11 +5,11 @@
   lazygit (optional)
   a C compiler for nvim-treesitter.
   curl for blink.cmp (completion engine)
-  for fzf-lua (optional)
   fzf: fzf (v0.25.1 or greater)
   live grep: ripgrep
   find files: fd
-## a terminal that support true color and undercurl:
+
+# a terminal that support true color and undercurl:
   kitty (Linux & Macos)
   wezterm (Linux, Macos & Windows)
   alacritty (Linux, Macos & Windows)
@@ -32,10 +32,7 @@
 <backspace>   = show upper root
 .             = set_root:    Changes the root directory to the currently selected folder.
 <cr>          = open:        Same as above.
-z         = close_all_nodes: Close all nodes in the tree.
-
-
-FILE ACTIONS                                            *neo-tree-file-actions*
+z             = close_all_nodes: Close all nodes in the tree.
 a    = add:                  Create a new file OR directory.
 A    = add_directory:        Create a new directory,
 d    = delete:               Delete the selected file or directory.
