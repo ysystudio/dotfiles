@@ -15,3 +15,10 @@ ln -s ~/dev/dotfiles/lvim/tasks.ini ~/.vim/tasks.ini
 > on windows
 mkdir  "%USERPROFILE%/.vim
 mklink /h  "%USERPROFILE%/.vim/tasks.ini" "%USERPROFILE%/dev/dotfiles/lvim/tasks.ini"
+
+> Enabling conda in Windows Powershell
+  First, in an administrator command prompt, enable unrestricted Powershell script execution (see About Execution Policies):
+    set-executionpolicy unrestricted
+
+  Setup conda for Powershell using the following command,powershell install version below 7.5:
+    conda init powershell

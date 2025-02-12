@@ -20,29 +20,30 @@ trusted-host =  pypi.douban.com/simple
                files.pythonhosted.org
 """
 
+## conda update 
+  conda update conda
+  conda update anaconda
+  conda update anaconda-navigator    //update最新版本的anaconda-navigator
+  conda update xxx   #更新xxx文件包
 
 ## conda config file
 ~/.condarc
 
-"""
+'''
+proxy_servers:
+#   http: socks5://127.0.0.1:6262
+#   https: socks5://127.0.0.1:6262
 channels:
-  - defaults
+ - nvidia
+ - pytorch
+ - conda-forge
+ - default
 show_channel_urls: true
 default_channels:
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
-#  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch
-#  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
-#  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
-#  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+ - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
 custom_channels:
-  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
+ conda-forge:  https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+ pytorch:  https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 """
 
 ### pytorch与numpy之间的对应版本
@@ -102,3 +103,6 @@ Anaconda3-2021.04 Python 3.8.8
 Anaconda3-2020.11 Python 3.8.5
 Anaconda3-2020.07 Python 3.8.3
 Anaconda3-2020.02 Python 3.7.6
+
+
+
