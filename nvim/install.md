@@ -26,7 +26,21 @@
 ## Remove the .git folder, so you can add it to your own repo later
   Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
 
-  Start Neovim!
+# ---------------- config nvim ---------------------------------------------
+>
+>on linux or macos
+unlink ~/.config/nvim
+ln -s ~/dev/dotfiles/nvim ~/.config/nvim
+
+unlink ~/.vim/tasks.ini
+ln -s ~/dev/dotfiles/nvim/tasks.ini ~/.vim/tasks.ini
+
+> on windows
+rmdir /s %LOCALAPPDATA%/nvim
+mklink /j  %LOCALAPPDATA%/nvim %USERPROFILE%/dev/dotfiles/nvim
+
+mkdir  "%USERPROFILE%/.vim
+mklink /h  "%USERPROFILE%/.vim/tasks.ini" "%USERPROFILE%/dev/dotfiles/nvim/tasks.ini"
 
 # neo tree 
 <backspace>   = show upper root
