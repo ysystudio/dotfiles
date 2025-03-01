@@ -1,4 +1,11 @@
-##标签
+## install and config
+brew install kitty
+
+>on linux or macos
+unlink ~/.config/kitty.conf
+ln -s ~/dev/kitty/kitty.conf ~/.config/kitty.conf
+
+## 标签
 
 行动    	快捷键
 新标签  	ctrl+shift+t（也在 macOS 上）⌘+t
@@ -7,7 +14,7 @@
 上一个标签	ctrl+shift+left（也在 macOS 上）⇧+⌘+[
 号码标签    Alt+num
 
-##窗口
+## 窗口
 
 行动    	快捷键
 新窗户  	ctrl+shift+enter, Alt+d, ⌘+↩
@@ -19,7 +26,7 @@
 切换布局	ctrl+shift+l
 窗口大小    Alt+left/right/up/down
 
-##鼠标功能
+## 鼠标功能
 
 您可以单击 URL 在浏览器中打开它。
 您可以双击选择一个单词，然后拖动以选择更多单词。

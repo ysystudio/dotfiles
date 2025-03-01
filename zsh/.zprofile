@@ -15,7 +15,7 @@ if [[ $OSTYPE == darwin2* ]]; then
   export PUB_HOSTED_URL=https://pub.flutter-io.cn
   export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
   export ZI_HOME=/opt/homebrew/opt/zinit
-  export MY_PROXY=http://127.0.0.1:56136
+  # export MY_PROXY=http://127.0.0.1:56136
 
 fi
 source $ZI_HOME/zinit.zsh
@@ -33,16 +33,17 @@ export SOURCED_PROFILE=1
 
 if [[ $OSTYPE == darwin2* ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
+
   # >>> conda initialize >>>
   # !! Contents within this block are managed by 'conda init' !!
-  __conda_setup="$('/Users/shark/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+  __conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
   if [ $? -eq 0 ]; then
       eval "$__conda_setup"
   else
-      if [ -f "/Users/shark/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-          . "/Users/shark/opt/anaconda3/etc/profile.d/conda.sh"
+      if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+          . "/opt/anaconda3/etc/profile.d/conda.sh"
       else
-          export PATH="/Users/shark/opt/anaconda3/bin:$PATH"
+          export PATH="/opt/anaconda3/bin:$PATH"
       fi
   fi
   unset __conda_setup

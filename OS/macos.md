@@ -38,6 +38,10 @@ source ~/.zshrc
 # 刷新源
 brew update
 
+# 要为brew设置代理
+在终端上输入环境变量：export ALL_PROXY=socks5://127.0.0.1:1080。
+如果需要永久生效，可以将环境变量设置在环境变量文件中，如~/.bash_profile或~/.zshrc。
+如果需要设置带账号密码的代理，可以在~/.curlrc文件中输入代理地址。
 
 ### support tools install
 
@@ -66,18 +70,6 @@ brew install font-FiraCode-nerd-font
 
 ```
 
-### dev sidecar install
->
-> <https://github.com/docmirror/dev-sidecar/releases>
-> turn on the power mode
-> change the seeting.json5 under ~/.dev-sidecar
-{
- overwall: true,
- installTime: 1663221978753,
- rootCa: {
- setuped: true,
- },
-}
 
 ### outlook and teams logon on mac m1
 >

@@ -9,7 +9,7 @@ zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-history-substring-search
 zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light zsh-users/zsh-completions
+# zinit light zsh-users/zsh-completions
 zinit light hlissner/zsh-autopair
 zinit light supercrabtree/k
 zinit light agkozak/zsh-z
@@ -17,8 +17,8 @@ zinit light agkozak/zsh-z
 
 # 加载 OMZ 框架及部分插
 zinit snippet OMZ::lib/key-bindings.zsh
-# zinit snippet OMZ::lib/history.zsh
-# zinit snippet OMZ::lib/git.zsh
+zinit snippet OMZ::lib/history.zsh
+zinit snippet OMZ::lib/git.zsh
 zinit snippet OMZ::lib/clipboard.zsh
 # zinit snippet OMZ::lib/completion.zsh
 zinit snippet OMZP::cp

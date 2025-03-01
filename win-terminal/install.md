@@ -44,20 +44,3 @@ choco install microsoft-windows-terminal wsl-ubuntu-2004
 安装依赖工具:scoop install gnuplot  grep coreutils
 运行:python [gitstats.py路径] [git库路径(git项目根目录)] [输出结果路径]
 
-## window terminal 快捷键
-### 标签
-行动    	快捷键
-新标签  	ctrl+shift+t（也在 macOS 上）⌘+t
-关闭标签	ctrl+shift+q（也在 macOS 上）⌘+w
-下一个标签	ctrl+shift+right（也在 macOS 上）⇧+⌘+]
-上一个标签	ctrl+shift+left（也在 macOS 上）⇧+⌘+[
-
-### 窗口
-行动    	快捷键
-新窗户  	ctrl+shift+enter, Alt+d, ⌘+↩
-关闭窗口	ctrl+shift+w , Alt+w, ⌘+w
-下一个窗口	ctrl+shift+] , Alt+]
-上一个窗口	ctrl+shift+[ , Alt+[
-向前移窗口	ctrl+shift+f
-向后移窗口	ctrl+shift+b
-切换布局	ctrl+shift+l

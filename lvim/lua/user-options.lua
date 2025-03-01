@@ -6,6 +6,7 @@ vim.opt.foldmethod = 'indent'
 vim.opt.foldnestmax = 1
 vim.cmd([[ set nofoldenable ]])
 
+
 -- 禁用多光标警告
 vim.g.VM_show_warnings = 0
 
@@ -15,6 +16,7 @@ vim.g.asynctasks_term_rows = 15
 vim.g.asynctasks_term_reuse = 1
 vim.g.asynctasks_term_focus = 1
 vim.g.asyncrun_open = 6
+-- vim.g.asyncrun_encs = 'gbk'
 
 -- vim.wo.number = true
 vim.wo.relativenumber = true
@@ -108,6 +110,35 @@ lvim.builtin.treesitter.highlight.enabled = true
 --     extra_args = { "--print-with", "100" },
 --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
 --     filetypes = { "typescript", "typescriptreact" },
+--   },
+-- }
+--
+
+--  local codecompanion = require "codecompanion"
+--  codecompanion.setup{
+--   -- adapters = {
+--   --   llama3 = function()
+--   --     return require("codecompanion.adapters").extend("ollama", {
+--   --       name = "llama3", -- Give this adapter a different name to differentiate it from the default ollama adapter
+--   --       schema = {
+--   --         model = {
+--   --           default = "llama3:latest",
+--   --         },
+--   --         num_ctx = {
+--   --           default = 16384,
+--   --         },
+--   --         num_predict = {
+--   --           default = -1,
+--   --         },
+--   --       },
+--   --     })
+--   --   end,
+--   -- },
+
+--   strategies = {
+--     chat = { adapter = "ollama", },
+--     -- inline = { adapter = "ollama", },
+--     -- agent = { adapter = "ollama", },
 --   },
 -- }
 
