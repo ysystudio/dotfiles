@@ -8,7 +8,7 @@ if [[ $OSTYPE == linux* ]]; then
   export CUDA_HOME=/usr/local/cuda-11.3
   export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
   export ZI_HOME=/home/linuxbrew/.linuxbrew/opt/zinit
-  export MY_PROXY=http://10.160.84.32:8080
+  # export MY_PROXY=http://10.160.84.32:8080
 fi
 if [[ $OSTYPE == darwin2* ]]; then
   export BYOBU_PREFIX=/opt/homebrew
