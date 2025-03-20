@@ -6,7 +6,15 @@
 -- * override the configuration of LazyVim plugins
 
 return {
-
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    -- opts will be merged with the parent spec
+    opts = {
+      filesystem = {
+        bind_to_cwd = true, -- true creates a 2-way binding between vim's cwd and neo-tree's root
+      },
+    },
+  },
   -- 编辑只读文件
   {
     "lambdalisue/suda.vim",

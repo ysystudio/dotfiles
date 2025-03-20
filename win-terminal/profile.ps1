@@ -6,8 +6,8 @@ oh-my-posh init pwsh --config $Env:POSH_THEMES_PATH/material.omp.json | Invoke-E
 # conda init powershell
 
 
-Set-Alias -Name v  -Value $Env:USERPROFILE/.local/bin/lvim.ps1
-Set-Alias -Name n  -Value nvim
+#Set-Alias -Name v  -Value $Env:USERPROFILE/.local/bin/lvim.ps1
+Set-Alias -Name v  -Value nvim
 Set-Alias -Name lg -Value lazygit 
 Set-Alias -Name ipy -Value ipython 
 Set-Alias -Name l -Value ls
