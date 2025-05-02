@@ -32,7 +32,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a 
 irm get.scoop.sh | iex
 
 ### install usefull tool
-choco install wget curl fzf lazygit neovim  FiraCode oh-my-posh 
+choco install wget curl fzf lazygit neovim  oh-my-posh riggrep fd
 choco install microsoft-windows-terminal wsl-ubuntu-2004
 
 ## install gitstas

@@ -15,7 +15,7 @@
   alacritty (Linux, Macos & Windows)
   iterm2 (Macos)
 
-# Install the LazyVim Starter with PowerShell
+# use the following config option instead of Install the LazyVim Starter with PowerShell
     ## Make a backup of your current Neovim files:
       > required
       Move-Item $env:LOCALAPPDATA\nvim $env:LOCALAPPDATA\nvim.bak
@@ -26,7 +26,7 @@
     ## Remove the .git folder, so you can add it to your own repo later
       Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
 
-# Install the LazyVim Starter with PowerShell
+# Install the LazyVim Starter (linux,mac)
     ###Make a backup of your current Neovim files:
     # required
     mv ~/.config/nvim{,.bak}
@@ -51,9 +51,10 @@ ln -s ~/dev/dotfiles/nvim ~/.config/nvim
 unlink ~/.vim/tasks.ini
 ln -s ~/dev/dotfiles/nvim/tasks.ini ~/.vim/tasks.ini
 
-> on windows
-rmdir /s %LOCALAPPDATA%/nvim
-mklink /j  %LOCALAPPDATA%/nvim %USERPROFILE%/dev/dotfiles/nvim
+> on windows in cmd
+
+rmdir /s %LOCALAPPDATA%\nvim
+mklink /j  %LOCALAPPDATA%\nvim %USERPROFILE%\dev\dotfiles\nvim
 
 mkdir  "%USERPROFILE%/.vim
 mklink /h  "%USERPROFILE%/.vim/tasks.ini" "%USERPROFILE%/dev/dotfiles/nvim/tasks.ini"
