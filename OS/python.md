@@ -1,3 +1,6 @@
+## import cv2 missing dll 
+pip install "opencv-contrib-python-headless<4.3"
+
 ## python解决ssl certificate problem unable to get local issuer certificate问题
 pip install pip-system-certs
 
