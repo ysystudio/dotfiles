@@ -36,11 +36,9 @@
     mv ~/.local/state/nvim{,.bak}
     mv ~/.cache/nvim{,.bak}
 
-    ##Clone the starter
+    ##Clone the starter, only for brand new user, we use following config session
     git clone https://github.com/LazyVim/starter ~/.config/nvim
-
-    ###  Remove the .git folder, so you can add it to your own repo later
-
+    ##Remove the .git folder, so you can add it to your own repo later
     rm -rf ~/.config/nvim/.git
 # ---------------- config nvim ---------------------------------------------
 >

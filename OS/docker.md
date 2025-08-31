@@ -37,17 +37,27 @@ Docker daemon 会自动启动。
 ### 使用 export 和 import
 1，查看本机的容器
 首先我们使用 docker ps -a 命令查看本机所有的容器。
-首先我们使用 docker images 命令查看本机所有的镜像。
 
 2，导出镜像
-使用 docker export 命令根据容器 ID 将镜像导出成一个文件。
+使用 docker export 命令根据容器ID将镜像导出成一个文件。
 docker export f299f501774c > hangger_server.tar
 
 3，导入镜像
 使用 docker import 命令则可将这个镜像文件导入进来。
 docker import - new_hangger_server < hangger_server.tar
 
+### 
 执行 docker images 命令可以看到镜像确实已经导入进来了。
+保存镜像
+（1）下面使用 docker save 命令根据Image ID 将镜像保存成一个文件。
+docker save 0fdf2b4c26d3 > hangge_server.tar
+
+（2）我们还可以同时将多个 image 打包成一个文件，比如下面将镜像库中的 postgres 和 mongo 打包：
+docker save -o images.tar postgres:9.6 mongo:3.4
+
+ (3)，载入镜像
+使用 docker load 命令则可将这个镜像文件载入进来。
+docker load < hangge_server.tar
 
 应用场景不同:save 整个linux系统
 docker export 的应用场景：主要用来制作基础镜像，比如我们从一个 ubuntu 镜像启动一个容器，然后安装一些软件和进行一些设置后，使用 docker export 保存为一个基础镜像。然后，把这个镜像分发给其他人使用，比如作为基础的开发环境。
@@ -61,3 +71,31 @@ docker save 的应用场景：如果我们的应用是使用 docker-compose.yml 
 python3 mo_onnx.py --input_model /home/docker/yourmodel.onnx  --output_dir /home/docker/onnx/
 - back to host to covert xml to h file
 xxd -i .xml .h
+
+
+# stop and delete
+docker container prune -f: 删除所有停止的容器
+docker image prune -f -a : 删除所有不使用的镜像
+
+
+1.关闭docker开机自启动
+# systemctl disable docker.socket
+# systemctl disable docker
+ 
+ 
+2.打开docker开机启动
+# systemctl enable docker.socket
+# systemctl enable docker
+ 
+ 
+查询docker当前状态
+# sudo systemctl list-unit-files | grep enable|grep docker
+ 
+ 
+3.打开/关闭docker服务
+# sudo service docker start
+# sudo service docker stop
+ 
+ 
+Or
+# systemctl stop docker

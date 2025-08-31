@@ -119,6 +119,7 @@
 > hint: outline配置在 settings.json文件中， 搜索**outline**即可
 
 ## 5. 其他
+匹配中文字符的正则表达式： [\u4e00-\u9fa5]
 
 - [neovim IDE配置](https://github.com/ravenxrz/dotfiles/tree/master/nvim)
 
