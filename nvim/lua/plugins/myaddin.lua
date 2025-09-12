@@ -6,6 +6,9 @@
 -- * override the configuration of LazyVim plugins
 
 return {
+
+  -- disable gitsigns
+  { "lewis6991/gitsigns.nvim", enabled = false },
   {
     "nvim-neo-tree/neo-tree.nvim",
     -- opts will be merged with the parent spec
