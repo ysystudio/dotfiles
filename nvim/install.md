@@ -8,7 +8,7 @@
   fzf: fzf (v0.25.1 or greater)
   live grep: ripgrep
   find files: fd
-
+  sudo apt install neovim wget curl fzf git lua lazygit ranger  fd lsd  ripgrep
 # a terminal that support true color and undercurl:
   kitty (Linux & Macos)
   wezterm (Linux, Macos & Windows)
