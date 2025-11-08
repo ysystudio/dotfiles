@@ -1,0 +1,34 @@
+theme = "gruvbox_dark_hard" # Sets the color theme
+
+[editor]
+scrolloff = 8 # Lines of context around the cursor when scrolling
+line-number = "relative" # Shows relative line numbers
+bufferline = "multiple" # Shows bufferline when more than one buffer is open
+auto-save = true # Automatically saves files
+
+[editor.cursor-shape]
+insert = "bar" # Cursor shape in insert mode
+normal = "block" # Cursor shape in normal mode
+select = "underline" # Cursor shape in select mode
+
+[editor.indent-guides]
+render = true # Renders indent guides
+character = "┊" # Character used for indent guides
+skip-levels = 1 # Skips rendering guides for the first indent level
+
+[editor.soft-wrap]
+enable = true # Enables soft wrapping of lines
+
+[keys.normal]
+# Custom keybindings for normal mode
+"X" = "extend_line_above" # Extends selection to line above
+"D" = "delete_char_backward" # Deletes character backward
+"ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
+
+[keys.insert]
+# Custom keybindings for insert mode
+j = { j = "normal_mode" } # Maps "jk" to exit insert mode
+# space mode
+[keys.normal.space]
+"x" = ":buffer-close"
+"q" = ":wqa!"

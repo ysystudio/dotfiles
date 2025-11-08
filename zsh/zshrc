@@ -16,4 +16,4 @@ if [[ $MY_PROXY == http* ]] && [[ $MY_PROXY != $http_proxy ]]; then
       proxy_on
 fi
 
-
+[ ! -f "$HOME/.x-cmd.root/X" ] || . "$HOME/.x-cmd.root/X" # boot up x-cmd.
