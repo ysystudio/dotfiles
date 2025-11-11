@@ -1,3 +1,6 @@
+# set up the config by create the file link
+# mklink /h  %LOCALAPPDATA%\Roaming/helix/config.toml %USERPROFILE%\dev\hx/config.toml
+
 theme = "gruvbox_dark_hard" # Sets the color theme
 
 [editor]
@@ -20,15 +23,30 @@ skip-levels = 1 # Skips rendering guides for the first indent level
 enable = true # Enables soft wrapping of lines
 
 [keys.normal]
+
 # Custom keybindings for normal mode
 "X" = "extend_line_above" # Extends selection to line above
-"D" = "delete_char_backward" # Deletes character backward
+# "D" = "delete_char_backward" # Deletes character backward
 "ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
+"C-s" = ":write"  
+"C-m" = "save_selection" # mark the jump place
+"C-r" = ":reload"
+"C-q" = ":quit"
+"\\" = ":reflow" # |
+"S-l"  = "goto_line_end"
+"S-h"  = "goto_line_start"
+"C-n"  = ":buffer-next"
+"C-p"  = ":buffer-previous"
+
+Y =  ["extend_line","yank"]
+D =  ["extend_line","delete_selection"]
+
 
 [keys.insert]
 # Custom keybindings for insert mode
-j = { j = "normal_mode" } # Maps "jk" to exit insert mode
+j = { j = "normal_mode" } 
+
 # space mode
 [keys.normal.space]
 "x" = ":buffer-close"
-"q" = ":wqa!"
+"q" = ":wqa"
