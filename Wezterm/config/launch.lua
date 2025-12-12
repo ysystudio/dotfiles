@@ -10,7 +10,7 @@ if platform.is_win then
    options.launch_menu = {
       { label = 'PowerShell Core', args = { 'pwsh', '-NoLogo' } },
       { label = 'PowerShell Desktop', args = { 'powershell' } },
-      { label = 'Command Prompt', args = { 'cmd' } },
+      { label = 'Command Prompt', args = { 'cmd' , '/K C:\\Users\\shark\\dev\\dotfiles\\win-terminal\\alias.bat C:\\ '} },
       { label = 'Nushell', args = { 'nu' } },
       { label = 'Msys2', args = { 'ucrt64.cmd' } },
       {
