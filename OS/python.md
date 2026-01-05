@@ -11,7 +11,7 @@ linux/mac: ~/.pip/pip.ini
 
 """
 [global]
-index-url = http://mirrors.aliyun.com/pypi/simple/
+#index-url = http://mirrors.aliyun.com/pypi/simple/
 index-url = https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/
 #proxy = http://10.160.84.32:8080
 [install]
