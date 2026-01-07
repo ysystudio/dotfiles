@@ -22,9 +22,19 @@ skip-levels = 1 # Skips rendering guides for the first indent level
 [editor.soft-wrap]
 enable = true # Enables soft wrapping of lines
 
-[keys.normal]
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
 
-# Custom keybindings for normal mode
+[keys.normal]
+# Custom keybindings for normal
 "X" = "extend_line_above" # Extends selection to line above
 # "D" = "delete_char_backward" # Deletes character backward
 "ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
