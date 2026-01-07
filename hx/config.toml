@@ -1,6 +1,7 @@
 # set up the config by create the file link
-# mklink /h  %LOCALAPPDATA%\Roaming/helix/config.toml %USERPROFILE%\dev\hx/config.toml
-
+# mklink /h  %AppData%\helix\config.toml %USERPROFILE%\dev\dotfiles\hx\config.toml
+# Linux and Mac: ~/.config/helix/config.toml
+# Windows: %AppData%\helix\config.toml
 theme = "gruvbox_dark_hard" # Sets the color theme
 
 [editor]
@@ -47,10 +48,11 @@ workspace-diagnostics = ["warning", "error"]
 "S-h"  = "goto_line_start"
 "C-n"  = ":buffer-next"
 "C-p"  = ":buffer-previous"
+"A-left" = "jump_backward"
+"A-right" = "jump_forward"
 
 Y =  ["extend_line","yank"]
 D =  ["extend_line","delete_selection"]
-
 
 [keys.insert]
 # Custom keybindings for insert mode
@@ -60,3 +62,7 @@ j = { j = "normal_mode" }
 [keys.normal.space]
 "x" = ":buffer-close"
 "q" = ":wqa"
+
+
+[editor]
+lsp.display-inlay-hints = true

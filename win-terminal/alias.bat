@@ -1,6 +1,8 @@
 :: From a Unix lover to another .. 
 :: See https://github.com/jonasaberg91/DoskeyCmd for commands
-:: how to make it work: cmd.exe  /K "C:\Users\10051851\dev\dotfiles\win-terminal\alias.bat C:\ "
+:: how to make it work: 
+:: for win-terminal cmd.exe  /K "%USERPROFILE%\dev\dotfiles\win-terminal\alias.bat C:\ "
+:: for wezterm : { label = 'Command Prompt', args = { 'cmd' , '/K C:\\Users\\shark\\dev\\dotfiles\\win-terminal\\alias.bat C:\\ '} },
 @echo off
 
 :: Linux commands
@@ -28,3 +30,12 @@ doskey r       = ranger
 :: doskey macroname="PATH" $*
 
 doskey s     = sublime_text $*
+
+@REM enhance cmd 
+@REM ## Clink for Cmd
+@REM ` choco install clink-maintained Starship `
+
+@REM ## Starship
+@REM Add the following to a file starship.lua and place this file in Clink scripts directory:%LocalAppData%\clink\starship.lua
+@REM -- starship.lua
+@REM load(io.popen('starship init cmd'):read("*a"))()

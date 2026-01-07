@@ -5,6 +5,11 @@ oh-my-posh init pwsh --config $Env:POSH_THEMES_PATH/material.omp.json | Invoke-E
 # following to activate conda when launch ps  
 # conda init powershell
 
+# past the whole contest to $profile, can use code $profile to open
+
+## posh is slow, maybe multi profile loaded, use following com to check
+#    $PROFILE | Get-Member -Type NoteProperty
+
 
 #Set-Alias -Name v  -Value $Env:USERPROFILE/.local/bin/lvim.ps1
 Set-Alias -Name v  -Value nvim

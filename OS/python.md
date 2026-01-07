@@ -12,8 +12,8 @@ centos:~/.config/pip/pip.conf
 
 """
 [global]
-index-url = http://mirrors.aliyun.com/pypi/simple/
-#index-url = https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/
+#index-url = http://mirrors.aliyun.com/pypi/simple/
+index-url = https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/
 #proxy = http://10.160.84.32:8080
 [install]
 trusted-host =  pypi.douban.com/simple
