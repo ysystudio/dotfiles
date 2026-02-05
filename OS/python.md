@@ -8,6 +8,7 @@ pip install pip-system-certs
 ## pip config file typical location , use pip -v config list for all the option locations
 windows: "%USERPROFILE%/pip/pip.ini
 linux/mac: ~/.pip/pip.ini
+centos:~/.config/pip/pip.conf
 
 """
 [global]
@@ -22,6 +23,7 @@ trusted-host =  pypi.douban.com/simple
                pypi.org
                files.pythonhosted.org
 """
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 ## conda update 
   conda update conda
