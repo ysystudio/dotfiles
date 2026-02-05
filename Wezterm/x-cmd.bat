@@ -2,7 +2,7 @@
 setlocal
 REM Copyright 2022-? Li Junhao (l@x-cmd.com). Licensed under the GNU AFFERO GENERAL PUBLIC LICENSE, Version 3.
 
-REM echo INFO: Check if Git-For-Windows is installed
+echo INFO: Check if Git-For-Windows is installed
 
 set gitbash=%USERPROFILE%\.x-cmd.root\data\git-for-windows\bin\bash.exe
 if EXIST "%gitbash%"        goto :start-git-bash
@@ -70,7 +70,7 @@ exit 1
 
 
 :start-git-bash
-REM echo INFO: start git-bash "%gitbash%"
+echo INFO: start git-bash "%gitbash%"
 
 if NOT EXIST "%USERPROFILE%\.x-cmd.root\X" (
     echo INFO: x-cmd init
