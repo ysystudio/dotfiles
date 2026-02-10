@@ -11,12 +11,12 @@ if platform.is_win then
       -- { label = 'Command Prompt', args = { 'cmd' } },
       { label = 'PowerShell Core', args = { 'pwsh', '-NoLogo' } },
       { label = 'PowerShell Desktop', args = { 'powershell' } },
-      { label = 'Command Prompt', args = { 'cmd' , '/K C:\\Users\\shark\\dev\\dotfiles\\win-terminal\\alias.bat C:\\ '} },
+      { label = 'Command Prompt', args = { 'cmd' , '/K C:\\Users\\ysyst\\dev\\dotfiles\\win-terminal\\alias.bat C:\\ '} },
     --   { label = 'Nushell', args = { 'nu' } },
     --   { label = 'Msys2', args = { 'ucrt64.cmd' } },
       {
          label = 'Git Bash-x-com',
-         args = { 'C:\\Users\\shark\\dev\\dotfiles\\Wezterm\\x-cmd.bat' },
+         args = { 'C:\\Users\\ysyst\\dev\\dotfiles\\Wezterm\\x-cmd.bat' },
       },
       {
          label = 'wsl-20.04',

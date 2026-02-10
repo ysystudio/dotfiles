@@ -71,7 +71,6 @@ exit 1
 
 :start-git-bash
 REM echo INFO: start git-bash "%gitbash%"
-
 if NOT EXIST "%USERPROFILE%\.x-cmd.root\X" (
     echo INFO: x-cmd init
     echo [ -f "$HOME/.x-cmd.root/X" ] ^|^| eval "$(curl https://get.x-cmd.com)" >%USERPROFILE%\.x-cmd.init.bash
