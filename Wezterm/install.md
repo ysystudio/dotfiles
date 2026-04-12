@@ -2,10 +2,8 @@
 WezTerm
 JetBrainsMono Nerd Font
 
-# 步骤：
-## 在 Windows 和 Unix 系统上
-git clone https://github.com/KevinSilvester/wezterm-config.git "%USERPROFILE%/.config/wezterm
-完成！！！🎉🎉
+choco install nerd-fonts-JetBrainsMono,wezterm
+
  
 # ---------------- config tasks ---------------------------------------------
 >on linux or macos
@@ -21,3 +19,7 @@ mklink /j  %LOCALAPPDATA%\wezterm %USERPROFILE%\dev\dotfiles\wezterm
 
   Setup conda for Powershell using the following command:
     conda init powershell
+
+# reference offical config：
+## 在 Windows 和 Unix 系统上
+git clone https://github.com/KevinSilvester/wezterm-config.git "%USERPROFILE%/.config/wezterm

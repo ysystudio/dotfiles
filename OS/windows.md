@@ -63,16 +63,20 @@ choco install microsoft-windows-terminal wsl-ubuntu-2004
 
 6. 打包系统。在命令行输入 wsl --export Ubuntu-20.04 D:/Ubuntu-20.04.tar
 7. 注销系统。在命令行输入 wsl --unregister Ubuntu-20.04 
-8. 导入系统。在命令行输入 wsl --import Ubuntu-20.04 D:\Ubuntu-20.04-wsl2 D:\ubuntu-20.04.tar。
-   --import 的第一个参数为系统名，第二个参数为你希望子系统导入的路径，第三个参数为打包好系统的路径
-9. vscode 联动，在 vscode 中打开 wsl2 文件夹：先打开 wsl2，输入目标路径，然后输入 code .。过程中会自动提示安装 vscode 的 wsl 扩展，安装即可。
+8. 导入系统。在命令行输入 
+9. wsl --import Ubuntu-20.04 D:\Ubuntu-20.04-wsl2 D:\ubuntu-20.04.tar   
+   wsl --import Ubuntu-24.04 C:\WSL\Ubuntu2404 --vhd C:\Ubuntu-24.04-wsl2\ext4.vhdx --version 2
+   此方式会将原 ext4.vhdx 复制到 <存储目录> 下，适合想保留原 VHD 备份、使用副本的场景
+   wsl --import-in-place Ubuntu-24.04 C:\Ubuntu-24.04-wsl2\ext4.vhdx
+   直接将指定的 ext4.vhdx 注册为 WSL 分发版，不会复制 VHD 文件，仅创建关联配置
+10.  vscode 联动，在 vscode 中打开 wsl2 文件夹：先打开 wsl2，输入目标路径，然后输入 code .。过程中会自动提示安装 vscode 的 wsl 扩展，安装即可。
 
-10. 设置默认登录用户： 用 wsl.conf 进行配置，进入 wsl ，编辑 wsl.conf 配置文件：
+11.  设置默认登录用户： 用 wsl.conf 进行配置，进入 wsl ，编辑 wsl.conf 配置文件：
 sudo v /etc/wsl.conf
 添加如下内容：
 [user]
 default = shark
-11. 重启wsl, wsl --shutdown
+12.  重启wsl, wsl --shutdown
 
 
 ## NVIDIA driver & SDKs
