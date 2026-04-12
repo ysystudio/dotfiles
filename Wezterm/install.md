@@ -9,12 +9,11 @@ git clone https://github.com/KevinSilvester/wezterm-config.git "%USERPROFILE%/.c
  
 # ---------------- config tasks ---------------------------------------------
 >on linux or macos
-unlink ~/.vim/tasks.ini
-ln -s ~/dev/dotfiles/lvim/tasks.ini ~/.vim/tasks.ini
-
+unlink ~/.config/wezterm
+ln -s ~/dev/dotfiles/wezterm ~/.config/wezterm
 > on windows
-mkdir  "%USERPROFILE%/.vim
-mklink /h  "%USERPROFILE%/.vim/tasks.ini" "%USERPROFILE%/dev/dotfiles/lvim/tasks.ini"
+rmdir /s %LOCALAPPDATA%\wezterm
+mklink /j  %LOCALAPPDATA%\wezterm %USERPROFILE%\dev\dotfiles\wezterm
 
 # Enabling conda in Windows Powershell
   First, in an administrator command prompt, enable unrestricted Powershell script execution (see About Execution Policies):

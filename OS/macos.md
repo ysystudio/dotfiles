@@ -167,3 +167,10 @@ brew install font-FiraCode-nerd-font
 - Minecraft: <https://minecraft.net>
 - Steam: <http://steampowered.com>
 - YYets: <http://app.rrys.tv/>
+
+### 安装系统时，你会遇到window11找不到网卡驱动的问题，
+shift+f10 然后在 cmd 输入
+OOBE\BYPASSNRO
+
+这个指令会跳过系统网络选择，接着你把系统安装好。
+然后，启动win11，安装 install vmware tools for vmxnet driver，就可以联网了。
