@@ -1,15 +1,17 @@
-local gpu_adapters = require('utils.gpu-adapter')
+-- local gpu_adapters = require('utils.gpu-adapter')
 local backdrops = require('utils.backdrops')
 local colors = require('colors.custom')
 
 return {
    max_fps = 120,
-   front_end = 'WebGpu',
-   webgpu_power_preference = 'HighPerformance',
-   webgpu_preferred_adapter = gpu_adapters:pick_best(),
-   -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Dx12', 'IntegratedGpu'),
-   -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Gl', 'Other'),
-   underline_thickness = '1.5pt',
+   front_end = 'OpenGL',
+  --  front_end = 'WebGpu',
+  --  webgpu_power_preference = 'HighPerformance',
+   -- webgpu_automatic_power_preference = true,
+  --  webgpu_preferred_adapter = gpu_adapters:pick_best(),
+  --  -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Dx12', 'IntegratedGpu'),
+  --  -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Gl', 'Other'),
+  --  underline_thickness = '1.5pt',
 
    -- cursor
    animation_fps = 120,

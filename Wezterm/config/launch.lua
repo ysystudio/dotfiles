@@ -19,12 +19,12 @@ if platform.is_win then
         },
         {
             label = 'wsl-20.04',
-            args = { 'wsl.exe', '-d', 'Ubuntu-20.04', '--cd', '~' ,'-u', 'shark' },
+            args = { 'wsl.exe', '-d', 'Ubuntu-20.04', '-u', 'shark' },
 
         },
         {
             label = 'wsl-24.04',
-            args = { 'wsl.exe', '-d', 'Ubuntu-24.04', '--cd', '~' ,'-u', 'shark' },
+            args = { 'wsl.exe', '-d', 'Ubuntu-24.04', '-u', 'shark' },
         },
    }
 elseif platform.is_mac then

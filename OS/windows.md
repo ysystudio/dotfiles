@@ -64,8 +64,8 @@ choco install microsoft-windows-terminal wsl-ubuntu-2004
 6. 打包系统。在命令行输入 wsl --export Ubuntu-20.04 D:/Ubuntu-20.04.tar
 7. 注销系统。在命令行输入 wsl --unregister Ubuntu-20.04 
 8. 导入系统。在命令行输入 
-9. wsl --import Ubuntu-20.04 D:\Ubuntu-20.04-wsl2 D:\ubuntu-20.04.tar   
-   wsl --import Ubuntu-24.04 C:\WSL\Ubuntu2404 --vhd C:\Ubuntu-24.04-wsl2\ext4.vhdx --version 2
+9. wsl --import ubuntu-20.04 d:\ubuntu-20.04-wsl2 d:\ubuntu-20.04.tar   
+   wsl --import ubuntu-24.04 c:\wsl\ubuntu2404 --vhd c:\ubuntu-24.04-wsl2\ext4.vhdx --version 2
    此方式会将原 ext4.vhdx 复制到 <存储目录> 下，适合想保留原 VHD 备份、使用副本的场景
    wsl --import-in-place Ubuntu-24.04 C:\Ubuntu-24.04-wsl2\ext4.vhdx
    直接将指定的 ext4.vhdx 注册为 WSL 分发版，不会复制 VHD 文件，仅创建关联配置

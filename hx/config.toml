@@ -1,7 +1,10 @@
 # set up the config by create the file link
+# Windows: %AppData%\helix\config.toml
 # mklink /h  %AppData%\helix\config.toml %USERPROFILE%\dev\dotfiles\hx\config.toml
 # Linux and Mac: ~/.config/helix/config.toml
-# Windows: %AppData%\helix\config.toml
+# unlink ~/.config/helix/config.toml
+# ln -s ~/dev/dotfiles/helix/config.toml ~/.config/helix/config.toml
+ 
 theme = "gruvbox_dark_hard" # Sets the color theme
 
 [editor]
@@ -10,7 +13,9 @@ line-number = "relative" # Shows relative line numbers
 bufferline = "multiple" # Shows bufferline when more than one buffer is open
 auto-save = true # Automatically saves files
 
-[editor.cursor-shape]
+
+
+editor.cursor-shape]
 insert = "bar" # Cursor shape in insert mode
 normal = "block" # Cursor shape in normal mode
 select = "underline" # Cursor shape in select mode
