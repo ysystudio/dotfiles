@@ -18,8 +18,8 @@ function proxy_on () {
     export ftp_proxy=$MY_PROXY
     export no_proxy="127.0.0.1,localhost"
 
-    echo -e "终端代理已开启。"
-    env | grep -i proxy
+    # echo -e "终端代理已开启。"
+    # env | grep -i proxy
 }
 
 function proxy_off (){
@@ -28,8 +28,8 @@ function proxy_off (){
     export ftp_proxy=""
     export no_proxy="127.0.0.1,localhost"
 
-    echo -e "终端代理已关闭。"
-    env | grep -i proxy
+    # echo -e "终端代理已关闭。"
+    # env | grep -i proxy
 }
 
 function all_proxy_on () { 

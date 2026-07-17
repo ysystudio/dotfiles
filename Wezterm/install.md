@@ -6,9 +6,12 @@ choco install nerd-fonts-JetBrainsMono,wezterm
 
  
 # ---------------- config tasks ---------------------------------------------
-
-rmdir /s %USERPROFILE%\.config\wezterm
-mklink /j  %USERPROFILE%\.config\wezterm %USERPROFILE%\dev\dotfiles\wezterm
+>on linux or macos
+unlink ~/.config/wezterm
+ln -s ~/dev/dotfiles/wezterm ~/.config/wezterm
+> on windows
+rmdir /s %LOCALAPPDATA%\wezterm
+mklink /j  %LOCALAPPDATA%\wezterm %USERPROFILE%\dev\dotfiles\wezterm
 
 # Enabling conda in Windows Powershell
   First, in an administrator command prompt, enable unrestricted Powershell script execution (see About Execution Policies):
@@ -20,4 +23,3 @@ mklink /j  %USERPROFILE%\.config\wezterm %USERPROFILE%\dev\dotfiles\wezterm
 # reference offical config：
 ## 在 Windows 和 Unix 系统上
 git clone https://github.com/KevinSilvester/wezterm-config.git "%USERPROFILE%/.config/wezterm
-完成！！！🎉🎉
