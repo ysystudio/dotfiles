@@ -10,6 +10,9 @@ oh-my-posh init pwsh --config $Env:POSH_THEMES_PATH/material.omp.json | Invoke-E
 ## posh is slow, maybe multi profile loaded, use following com to check
 #    $PROFILE | Get-Member -Type NoteProperty
 
+## conda old version do init can not support powershell 7, so use following to init conda
+# (& "C:\ProgramData\Miniconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | ?{$_} | . {}
+
 
 #Set-Alias -Name v  -Value $Env:USERPROFILE/.local/bin/lvim.ps1
 Set-Alias -Name v  -Value nvim
@@ -25,7 +28,6 @@ Set-Alias -Name xcp     -Value xcopy
 Set-Alias -Name grep    -Value find 
 Set-Alias -Name man     -Value help 
 Set-Alias -Name mv      -Value move 
-Set-Alias -Name rm      -Value del 
 Set-Alias -Name rmt     -Value deltree 
 Set-Alias -Name py      -Value python
 
@@ -70,5 +72,3 @@ Set-Alias -Name e       -Value explorer
 # Set-Alias -Name appdev      -Value CDAPPDEV
 # Set-Alias -Name download    -Value CDDOWNLOAD
 # Set-Alias -Name wechat      -Value CDWECHAT
-
-# Invoke-Expression (&starship init powershell)
