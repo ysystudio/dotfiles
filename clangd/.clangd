@@ -1,0 +1,90 @@
+# ============================================================
+# .clangd —— C / C++ 通用配置
+# 位置：项目根目录；修改后执行 "clangd: Restart language server"
+# ============================================================
+
+# ---------- 通用部分：对所有文件生效 ----------
+CompileFlags:
+  Add:
+    - -Wall
+    - -Wextra
+    - -Wno-unused-parameter               # 未使用参数不报（老旧代码常用）
+    - -Wno-unsafe-buffer-usage            # 关闭 strcpy/sprintf 安全提示
+    # 项目头文件路径（没有 compile_commands.json 时的兜底）
+    - -I./include
+    - -I./src
+    - -I.
+  Remove:
+    - /W*                                 # 剔除 MSVC 专属参数
+    - /std:*
+    - -fanalyzer                          # 剔除 GCC 专属参数
+    - -mcpu=*                             # 交叉编译参数 clang 不认识时剔除
+
+Diagnostics:
+  Includes:
+    IgnoreMissing: true                   # 找不到的第三方头文件不报错
+  Suppress:
+    - unused-includes                     # 未使用头文件的波浪线
+  ClangTidy:
+    Add: [bugprone-*, performance-*, readability-*]
+    Remove:
+      - readability-magic-numbers         # 数字字面量警告，太吵
+      - readability-uppercase-literal-suffix
+	  - modernize-*                       # 用 nullptr / auto / 范围for 等
+      - cppcoreguidelines-*               # 核心指南：禁 C 数组、禁 malloc 等
+      - hicpp-*                           # 同上，高性能 C++ 规范
+      - google-readability-casting        # 要求 static_cast 而不是 C 风格强转
+      - cert-*                            # 安全编码规范（常针对 C 函数）
+      - misc-const-correctness
+	  - readability-identifier-length
+	  - readability-isolate-declaration
+	  - readability-identifier-naming
+	# Remove:[*]
+    FastCheckFilter: Strict               # 只跑快的检查，避免卡顿
+  UnusedIncludes: None                    # 彻底关闭 unused-include（和 Suppress 二选一）
+  MissingIncludes: None
+
+Index:
+  Background: Build                       # 后台全量索引，跳转/查找引用才完整
+
+InlayHints:
+  Enabled: true                           # 参数名 / 类型内联提示
+  ParameterNames: true
+  DeducedTypes: true
+
+Hover:
+  ShowAKA: true                           # hover 时显示 typedef/using 原名
+
+Completion:
+  AllScopes: true                         # 补全不限于当前作用域
+
+# ---------- C 文件专属 ----------
+---
+If:
+  PathMatch: [.*\.c, .*\.h]               # .h 默认按 C 处理（纯 C 项目）
+                                          # 混合项目建议删掉 .h，让 clangd 自动推断
+
+CompileFlags:
+  Add:
+    - -std=c11                            # 按需改 c99 / c17 / c23
+  Remove:
+    - -std=c++*                           # 防止 C++ 标准参数污染 C 文件
+
+# ---------- C++ 文件专属 ----------
+---
+If:
+  PathMatch: [.*\.cpp, .*\.cc, .*\.cxx, .*\.hpp, .*\.hxx]
+
+CompileFlags:
+  Add:
+    - -std=c++17
+    # ===== 编译器警告层面：放过 C 风格写法 =====
+    - -Wno-unsafe-buffer-usage            # strcpy / sprintf / memcpy 等 libc 安全提示
+    - -Wno-old-style-cast                 # C 风格强制转换 (int)x
+    - -Wno-cast-qual                      # 强转去掉 const
+    - -Wno-zero-as-null-pointer-constant  # 用 0/NULL 而不是 nullptr
+    - -Wno-deprecated-declarations        # "已弃用，请用 xxx_s" 类提示
+    - -Wno-writable-strings               # char* p = "abc" （老标准写法）
+    - -Wno-format-security                # printf 格式串安全检查
+    - -Wno-unused-result                  # 忽略函数返回值（fscanf 等）
+
