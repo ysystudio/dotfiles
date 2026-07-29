@@ -56,7 +56,7 @@ local keys = {
    -- copy/paste --
    { key = 'c',          mods = 'CTRL|SHIFT',  action = act.CopyTo('Clipboard') },
    { key = 'v',          mods = 'CTRL|SHIFT',  action = act.PasteFrom('Clipboard') },
-   { key = 'c',          mods = 'CTRL',  action = act.CopyTo('Clipboard') },
+  --  { key = 'c',          mods = 'CTRL',  action = act.CopyTo('Clipboard') },
    { key = 'v',          mods = 'CTRL',  action = act.PasteFrom('Clipboard') },
 
    -- tabs --
